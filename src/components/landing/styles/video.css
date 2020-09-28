@@ -1,0 +1,11 @@
+/* .containerVideoHome{
+  width:100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+} */
+.videoHome{
+  width:100vw;
+  /* height: 200px; */
+  /* object-fit:cover; */
+} 

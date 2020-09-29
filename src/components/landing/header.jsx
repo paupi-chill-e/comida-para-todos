@@ -1,17 +1,16 @@
 import React from 'react';
 import logox from '../../img/logo.png'
 import './styles/header.css';
+import IconBurgerToggle from './iconBurgerToggle';
 
 const Header = () => {
   return (
-    <div className='header'>
+    <header className='header'>
       <div className='containerLogoHome'>
         <img src={logox} alt="" className='logoHome' />
       </div>
-      <div>
-        <span>&#9776;</span>
-      </div>
-    </div>
+      <IconBurgerToggle/>
+    </header>
   )
 }
 

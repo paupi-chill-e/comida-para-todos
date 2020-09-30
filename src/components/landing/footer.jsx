@@ -11,7 +11,7 @@ function Footer() {
           <img src={logox} alt="" className='logoFooter' />
         </div>
         <div className='containerIconsFooter'>
-          <img src={chems} className='iconFooter' />
+          <img src={chems} alt="" className='iconFooter' />
         </div>
       </div>
       <div className='infoFooter'>

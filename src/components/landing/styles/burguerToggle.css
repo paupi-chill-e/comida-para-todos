@@ -27,18 +27,18 @@
   transition: transform 0.3s ease-in-out;
   /* z-index:2; */
 }
-/* adiosmundo */
 
-.containerBurguerToggle{
+/* .containerBurguerToggle{
   position: fixed;
-  z-index: 1; /* Sit on top */
-  /* left: 0;
-  top: 0; */
-  width: 100vw; /* Full width */
-  height: 100vh; /* Full height */
-  background-color: rgba(0,0,0,0.8); /* Black w/ opacity */
+  z-index: 1; 
+  left: 0;
+  top: 0;
+  width: 100vw; 
+  height: 100vh; 
+  background-color: rgba(0,0,0,0.8); 
   opacity:100;
-}
+} */
+
 .textBurgerToggle{
   text-decoration: none;
 }

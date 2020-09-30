@@ -1,0 +1,39 @@
+.donateSectionPage{
+    display:flex;
+    flex-flow:column nowrap;
+    margin:16px 60px;
+}
+
+.containerDonates{
+    display:flex;
+    flex-flow:row wrap;
+    justify-content: center;
+}
+
+.eachDonateContainer{
+    margin-right:10px;
+}
+
+.imgDonate{
+    border-radius:50%;
+    height:100px;
+    width:100px;
+}
+
+.iconPlusDonate{
+    border:2px solid black;
+    border-radius:50%;
+    height:15px;
+    width:15px;
+    padding:1px;
+    z-index:1;
+    position: absolute;
+    display:flex;
+    justify-content: center;
+}
+
+.donateIcon{
+    font-weight: bold;
+    text-align:center;
+    /* top:2px; */
+}

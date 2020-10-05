@@ -12,7 +12,9 @@ const LandingPage = () => {
       <Video />
       <DonateSection/>
       <Footer/>
+    
     </Fragment>
+    
   );
 }
 

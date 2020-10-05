@@ -1,5 +1,5 @@
-import { Link } from 'react-router-dom';
 import React from 'react';
+import { Link } from 'react-router-dom';
 import './styles/burguerToggle.css';
 
 const BurguerToggle = (props) => {
@@ -7,14 +7,20 @@ const BurguerToggle = (props) => {
   return (
     <div className='containerBurguerToggle'>
       <div className={classToogle}>
-        <Link to="/">
-          <p className='textBurgerToggle'>Quienes somos</p>
+        <Link to="/Nosotros">
+          <a className='textBurgerToggle'>Quiénes somoss</a>
         </Link>
-        <Link to="/">
-          <p className='textBurgerToggle'>Objetivos</p>
+        <Link to="/Nosotros">
+          <p className='textBurgerToggle'>Qué hacemos</p>
         </Link>
-        <Link to="/">
+        <Link to="/Donaciones">
+          <p className='textBurgerToggle'>Cómo ayudar</p>
+        </Link>
+        <Link to="/Nosotros">
           <p className='textBurgerToggle'>Transparencia</p>
+        </Link>
+        <Link to="/Donaciones">
+          <p className='textBurgerToggle'>DONAR ALMUERZOS</p>
         </Link>
       </div>
     </div>

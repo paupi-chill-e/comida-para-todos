@@ -2,7 +2,7 @@ import React, { Fragment } from "react";
 import { Carousel } from 'react-responsive-carousel';
 import fotoprueba from '../../img/foto.jpeg';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
-import './style/Carousel2.css';
+import './styles/Carousel2.css'
 
 const Carousel2= () => {
     return (

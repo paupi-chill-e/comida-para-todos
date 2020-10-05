@@ -1,11 +1,12 @@
 import React from 'react';
-import  Hambre from '../../img/hambre.gif';
+import banner from '../../img/tikit.png';
+import './styles/banner.css';
 
 
 function Banner() {
   return (
     <div className='containerBanner'>
-       <img /> 
+       <img src={banner} className='banner'/> 
     </div>
   );
 }

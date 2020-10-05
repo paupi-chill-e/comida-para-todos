@@ -1,0 +1,24 @@
+.sectionWhatWeArchived{
+    display: flex;
+    flex-flow: column nowrap;
+    margin:30px 16px 0px 16px;
+}
+.containerWhatWeArchived{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+}
+
+.photowahtwearchived{
+    width: 100%;
+    border-radius: 50%;
+}
+.photowahtwearchived{
+    width: 80px;
+    height: 80px;
+}
+.containerPhotoText{
+    text-align: center;
+    margin:20px 30px 40px 0px;
+
+}

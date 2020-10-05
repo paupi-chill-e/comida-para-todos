@@ -1,6 +1,6 @@
 import React, { Fragment } from "react";
 import Header from '../components/landing/header';
-import Footer from '../components/landing/footer';
+import GaleryPhoto from '../components/aboutUs/galeryPhotos';
 import Banner from '../components/aboutUs/banner';
 import History from '../components/aboutUs/sectionHistory';
 import Team from '../components/aboutUs/team';
@@ -16,10 +16,10 @@ const AboutUs = () => {
       <Banner/>
       <History/>
       <Team/>
+      <GaleryPhoto/>
       <WhatWeDo/>
       <WhatWeArchived/>
       <Transparency/>
-      <Footer />
     </Fragment>
   );
 }

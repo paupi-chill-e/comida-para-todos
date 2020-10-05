@@ -1,29 +1,31 @@
 import React from 'react';
+import photo from '../../img/foto.jpeg';
+import './styles/team.css';
 
 function Team() {
   return (
     <div className='sectionTeam'>
-      <h1>Equipo</h1>
+      <h1 className='title'>EQUIPO</h1>
       <div className='containerTeam'>
         <div className='eachTeamMate'>
           <div className='containerPhotoTeam'>
-            <img />
+            <img src={photo} className='photo'/>
           </div>
-          <p>Juan Perez</p>
+          <p className='textTeam'>Juan Perez</p>
           <p>Colaborador</p>
         </div>
         <div className='eachTeamMate'>
           <div className='containerPhotoTeam'>
-            <img />
+            <img src={photo} className='photo'/>
           </div>
-          <p>Juan Perez</p>
+          <p className='textTeam'>Juan Perez</p>
           <p>Colaborador</p>
         </div>
         <div className='eachTeamMate'>
           <div className='containerPhotoTeam'>
-            <img />
+            <img src={photo} className='photo'/>
           </div>
-          <p>Juan Perez</p>
+          <p className='textTeam'>Juan Perez</p>
           <p>Colaborador</p>
         </div>
       </div>

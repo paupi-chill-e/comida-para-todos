@@ -1,13 +1,14 @@
 .donateSectionPage{
     display:flex;
     flex-flow:column nowrap;
-    margin:16px 60px;
+    margin:16px 16px;
 }
 
 .containerDonates{
-    display:flex;
-    flex-flow:row wrap;
+    display: flex;
+    flex-flow: row wrap;
     justify-content: center;
+    margin: 1.5rem auto;
 }
 
 .eachDonateContainer{
@@ -21,19 +22,39 @@
 }
 
 .iconPlusDonate{
-    border:2px solid black;
-    border-radius:50%;
-    height:15px;
-    width:15px;
-    padding:1px;
-    z-index:1;
+    border: 2px solid #fd4c00;
+    border-radius: 50%;
+    height: 17px;
+    width: 17px;
+    padding: 5px;
+    z-index: 1;
     position: absolute;
-    display:flex;
-    justify-content: center;
+    display: flex;
+    justify-content: space-evenly;
+    background-color: #fd4c00;
+    align-items: flex-end;
+    margin-inline-start: 60px;
+    margin-block-start: -24px;
 }
 
 .donateIcon{
     font-weight: bold;
     text-align:center;
-    /* top:2px; */
+    color: white;
+}
+
+.btnDonation{
+    background-color: #fd4c00;
+    border:#fd4c00 solid 1px;
+    color: white;
+    font-family: 'Work Sans', sans-serif;
+    font-size: 1.3rem;
+    width: 100%;
+    height: 2.2rem;
+    margin: 1.5rem auto;
+    border-radius: 5rem;
+
+}
+.textDonateSectionPage{
+    background-color: white;
 }

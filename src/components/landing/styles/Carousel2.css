@@ -1,6 +1,6 @@
 .carro{
   width: 100%;
-    
+  margin: 2.5rem auto;
 }
 
 .imgCarro{
@@ -10,4 +10,13 @@
 
 .legend{
     width: 5%;
+}
+
+.carousel .slide{
+  min-width: 50%;
+  margin: 0;
+  position: relative;
+  text-align: center;
+  background: white;
+  padding: 10px;
 }

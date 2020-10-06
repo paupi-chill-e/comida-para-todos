@@ -15,7 +15,7 @@
   background-color: white;
   display: flex;
   flex-direction: column;
-  position: fixed;
+  position: absolute;
   transform: translateX(0%);
   padding:5px 10px;
   right: 0px;
@@ -24,6 +24,7 @@
   border:0.5px solid #929292;
   box-sizing: border-box;
   transition: transform 0.3s ease-in-out;
+  z-index: 3;
 }
 
 /* .containerBurguerToggle{

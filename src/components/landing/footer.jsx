@@ -16,29 +16,30 @@ function Footer() {
         <div className='containerIconsFooter'>
           <img src={Ig} alt="" className='iconFooter' />
           <img src={Linked} alt="" className='iconFooter' />
-          <img src={Mail} alt="" className='iconFooter' />
+          <img src={Mail} alt="" className='iconFooter' /> 
         </div>
       </div>
       <div className='infoFooter'>
-      <div className='descriptionMotivation'>
+      <div className='descriptionFooter'>
         <p>• Quiénes somos</p>
         </div>
-        <div className='descriptionMotivation'>
+        <div className='descriptionFooter'>
         <p >• Transparencia</p>
         </div>
-        <div className='descriptionMotivation'>
+        <div className='descriptionFooter'>
         <p >• Qué hacemos</p>
         </div>
-        <div className='descriptionMotivation'>
+        <div className='descriptionFooter'>
         <p>• Cómo ayudar</p>
         </div>
         </div>
-      <div className= 'btnFootertwo'>
-      <Link to="/">
-          <button className="btnFooter">Hazte Parte</button>
+        <div className='btnFootertwo'>
+    <Link to="/">
+          <button className="btnFooter">DONACIONES</button>
         </Link>
         </div>
     </footer>
+    
   );
 }
 

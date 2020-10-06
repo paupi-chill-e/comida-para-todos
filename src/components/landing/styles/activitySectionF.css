@@ -9,6 +9,7 @@
     display: flex;
     flex-flow: row wrap;
     justify-content: space-evenly;
+    margin: 1.5rem auto;
 
 }
 
@@ -20,4 +21,5 @@ border: none;
     display: flex;
     flex-flow: column nowrap;
     margin: 16px 16px;
+    margin-top: 3.5rem ;
 }

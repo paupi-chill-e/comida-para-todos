@@ -1,4 +1,5 @@
 import React from 'react';
+import DonateFood from './donateFood';
 import DonateHuertas from './donateHuertas';
 import './styles/archiveButtons.css'
 
@@ -10,6 +11,7 @@ function ArchiveButtons() {
       <button>Despensa</button>
       <button>Educación</button>
       <DonateHuertas/>
+      <DonateFood/>
     </div>
   );
 }

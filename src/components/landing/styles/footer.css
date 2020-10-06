@@ -7,14 +7,13 @@ footer{
     height: 100px;
     padding: 10px;
     bottom: 0px;
-    position: absolute;
-    /* le puse el absolute por mientras para que esté abajo */
+
 }
 
 .imgsFooter{
     display: flex;
     flex-flow: column nowrap;
-    align-items: center;
+    align-items: start;
 }
 
 .containerLogoFooter{
@@ -27,8 +26,8 @@ footer{
 }
 
 .iconFooter{
-    width: 20px;
-    height: 20px;
+    width: 15%;
+ 
 }
 
 .infoFooter{
@@ -36,3 +35,41 @@ footer{
     line-height: 30px;
     text-align: left;
 }
+.btnFooter{
+    background-color: #fd4c00;
+    border:#fd4c00 solid 1px;
+    color: white;
+    font-family: 'Work Sans', sans-serif;
+    font-size: 1.3rem;
+    width: 100%;
+    height: 2.2rem;
+    margin: 1.5rem auto;
+    border-radius: 5rem; 
+}
+
+.containerIconsFooter{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+    width: 60%;
+    margin-inline-start: -17px;
+}
+
+.infoFooter{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    width: 162rem;
+}
+
+.btnFootertwo{
+    width: 100%;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+}
+
+.descriptionMotivation{
+    text-align: start;
+}
+

@@ -1,0 +1,23 @@
+.imgActivity{
+    width:10rem;
+    height:12rem;
+    border: 3px solid #fd4c00;
+}
+
+
+.containerActivitySection{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+
+}
+
+.btnhref{
+border: none;
+}
+
+.textActivitySection{
+    display: flex;
+    flex-flow: column nowrap;
+    margin: 16px 16px;
+}

@@ -1,0 +1,14 @@
+.sectionTransparency{
+    display: flex;
+    flex-flow: column nowrap;
+    margin:20px 16px 0px 16px;
+}
+.containerTransparency{
+    align-self: center;
+    margin-top: 20px;
+    width: 280px;
+    height: 280px;
+}
+.graphic{
+    width: 100%;
+}

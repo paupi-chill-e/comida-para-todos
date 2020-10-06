@@ -4,13 +4,16 @@ import './styles/archiveButtons.css'
 
 function ArchiveButtons() {
   return (
-    <div>
-      <button>Huertas</button>
-      <button>Talento</button>
-      <button>Despensa</button>
-      <button>Educación</button>
-      <DonateHuertas/>
+    <div className='containerSectionArchiveBtnAndDonateForms'>
+        <div className='sectionArchiveButtons'>
+          <button className='archiveBtn'>Huertas</button>
+          <button className='archiveBtn'>Talento</button>
+          <button className='archiveBtn'>Despensa</button>
+          <button className='archiveBtn'>Educación</button>
+        </div>
+        <DonateHuertas/>
     </div>
+  
   );
 }
 

@@ -10,7 +10,7 @@ const DonationPage= () => {
       <Header/>
       <BecomePart/>
       <ArchiveButtons/>
-      {/* <Footer/> */}
+      <Footer/>
     </Fragment>
   );
 }

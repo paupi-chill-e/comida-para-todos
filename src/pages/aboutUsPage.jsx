@@ -7,6 +7,7 @@ import Team from '../components/aboutUs/team';
 import WhatWeDo from '../components/aboutUs/whatWeDo';
 import WhatWeArchived from '../components/aboutUs/whatWeArchived';
 import Transparency from '../components/aboutUs/transparency';
+import Footer from '../components/landing/footer';
 
 
 const AboutUs = () => {
@@ -20,6 +21,7 @@ const AboutUs = () => {
       <WhatWeDo/>
       <WhatWeArchived/>
       <Transparency/>
+      <Footer/>
     </Fragment>
   );
 }

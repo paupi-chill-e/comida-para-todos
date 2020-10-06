@@ -9,8 +9,6 @@ function DonateHuertas() {
 
 	const enviarDatos = (data, event) => {
 		console.log(data)
-		console.log("oli")
-
 		setFormHuerta([...formHuerta, data])
 		event.preventDefault();
 		event.target.reset();
@@ -19,19 +17,20 @@ function DonateHuertas() {
 
 	return (
 		<Fragment>
-			<div>
-				<h1><span>¿Cómo funciona?</span></h1>
-				<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni cumque, amet officia,
+			<div className='sectionTitleText'>
+				<h1 className='title'><span>¿Cómo funciona?</span></h1>
+				<p className='text'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni cumque, amet officia,
 					obcaecati est architecto soluta accusamus enim repudiandae modi</p>
-				<h1><span>¿Cómo puedo ayudar?</span></h1>
-				<p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+				<br/>
+				<h1 className='title'><span>¿Cómo puedo ayudar?</span></h1>
+				<p className='text'>Lorem ipsum dolor sit amet consectetur adipisicing elit.
 				Dignissimos impedit ab esse mollitia tempora, minus ratione assumenda placeat aut odit.
 					Nobis corporis sapiente asperiores deserunt soluta totam culpa aut! Quidem!</p>
 			</div>
-			<form onSubmit={handleSubmit(enviarDatos)}>
-
-					<p>Nombre completo</p>
+			<form className='formHuertasSection' onSubmit={handleSubmit(enviarDatos)}>
+					<p className='titleForms'>Nombre completo</p>
 					<input
+						className='inputsFormHuertas'
 						name="nombre"
 						ref={
 							register({
@@ -40,13 +39,13 @@ function DonateHuertas() {
 						}
 						placeholder="Ej. Juan Pérez"
 					/>
-					<span>
+					<span className='erorsText'>
 						{errors?.nombre?.message}
 					</span>
-		
 				<div>
-					<p>¿Cómo nos referimos a ti?</p>
+					<p className='titleForms'>¿Cómo nos referimos a ti?</p>
 					<select
+					    className='selectFormHuertas'
 						name="sexo"
 						ref={
 							register({
@@ -58,13 +57,14 @@ function DonateHuertas() {
 						<option>Hombre</option>
 						<option>Sin género</option>
 					</select>
-					<span>
+					<span className='erorsText'>
 						{errors?.sexo?.message}
 					</span>
 				</div>
 				<div>
-					<p>Déjanos tu correo</p>
+					<p className='titleForms'>Déjanos tu correo</p>
 					<input
+						className='inputsFormHuertas'
 						name="correo"
 						type="email"
 						ref={
@@ -75,12 +75,13 @@ function DonateHuertas() {
 						placeholder="Ej. juanperez@mail.com"
 					/>
 				</div>
-				<span>
+				<span className='erorsText'>
 						{errors?.email?.message}
 					</span>
 				<div>
-					<p>Número de contacto</p>
+					<p className='titleForms'>Número de contacto</p>
 					<input
+						className='inputsFormHuertas'
 						name="numero"
 						ref={
 							register({
@@ -91,13 +92,14 @@ function DonateHuertas() {
 						}
 						placeholder="+569XXXXXXXX"
 					/>
-					<span>
+					<span className='erorsText'>
 						{errors?.numero?.message}
 					</span>
 				</div>
 				<div>
-					<p>¿En qué comuna te encuentras?</p>
+					<p className='titleForms'>¿En qué comuna te encuentras?</p>
 					<select
+						className='selectFormHuertas'
 						name="comuna"
 						ref={
 							register({
@@ -109,14 +111,16 @@ function DonateHuertas() {
 						<option>P.Sherman calle wallabi</option>
 					</select>
 				</div>
-				<div>
-					<p><input 
+				<div className='textandCheckbox'>
+					<p className='titleFormsCheckbox'><input 
+					className='formCheckbox'
 					name="ayudarHuerta" 
 					type="checkbox" 
 					value="yes"
 					ref={register}
 					/> Quiero ayudar en la mantención de huertas comunitarias. </p>
-					<p><input 
+					<p className='titleFormsCheckbox'><input 
+					className='formCheckbox'
 					name="DonarHuerta" 
 					type="checkbox" 
 					value="yes"
@@ -124,8 +128,9 @@ function DonateHuertas() {
 					/> Quiero donar espacio para comenzar una huerta comunitaria </p>
 				</div>
 				<div>
-					<p>¿Cuántos m2 tiene el espacio?</p>
+					<p className='titleForms'>¿Cuántos m2 tiene el espacio?</p>
 					<input
+						className='inputsFormHuertas'
 						name="m2"
 						ref={
 							register({
@@ -134,13 +139,14 @@ function DonateHuertas() {
 						}
 						placeholder="Ej 6m2 o 2x3m"
 					/>
-					<span>
+					<span className='erorsText'>
 						{errors?.m2?.message}
 					</span>
 				</div>
 				<div>
-					<p>¿El espacio está en su casa o barrio? Cuéntanos todos los detalles que puedas</p>
-					<input
+					<p className='titleForms'>¿El espacio está en su casa o barrio? Cuéntanos todos los detalles que puedas</p>
+					<textarea
+						className='textareaSection'
 						name="detalle"
 						ref={
 							register({
@@ -149,11 +155,11 @@ function DonateHuertas() {
 						}
 						placeholder="Ej. Tengo un espacio de 1m de ancho y 7 de largo en la vereda afuera de mi entrada"
 					/>
-					<span>
+					<span className='erorsText'>
 						{errors?.detalle?.message}
 					</span>
 				</div>
-				<button type="submit">ENVIAR FORMULARIO</button>
+				<button className='btnSubmitForm' type="submit">ENVIAR FORMULARIO</button>
 			</form>
 		</Fragment>
 	);

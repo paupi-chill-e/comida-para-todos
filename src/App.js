@@ -4,7 +4,7 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import LandingPage from './pages/landingPage'
 import DonationPage from './pages/donationPage';
 import AboutUs from './pages/aboutUsPage';
-import Prueba from './pages/prueba';
+// import LogIn from './';
 
 function App() {
   return (
@@ -19,8 +19,8 @@ function App() {
         <Route path="/Nosotros">
           <AboutUs/>
         </Route>
-        <Route path="/" Prueba >
-          <Prueba/>
+        <Route path='/Intranet=?#!Login'>
+          {/* <LogIn/> */}
         </Route>
       </Switch>
     </Router>

@@ -10,7 +10,6 @@ import ActivitySectionF from '../components/landing/activitySection'
 const LandingPage = () => {
   return (
     <Fragment>
-     
       <Header/>
       <Video />
       <DonateSection/>

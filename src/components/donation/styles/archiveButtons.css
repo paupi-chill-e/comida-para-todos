@@ -3,14 +3,14 @@
   flex-flow: row nowrap;
   margin:0px 16px 0px 16px;
 }
-.containerSectionArchiveBtnAndDonateForms{
+/* .containerSectionArchiveBtnAndDonateForms{
   background-color: #b42c41;
   margin: 5% auto auto 5%;
   display:flex;
   width: 45%;
   border-top-right-radius: 10px;
   border-top-left-radius: 10px;
-}
+} */
 .archiveBtnOff{
   width: 25%;
   height: 40px;

@@ -1,52 +1,53 @@
 import React, { Fragment, useState } from 'react';
 import { useForm } from 'react-hook-form';
 import './styles/donateHuertas.css'
+import {firebase} from '../../firebase'
 
 function DonateHuertas() {
+	const db = firebase.firestore()
 	const { register, errors, handleSubmit } = useForm()
 
 	const [formHuerta, setFormHuerta] = useState([]);
 
-	const enviarDatos = (data, event) => {
-		console.log(data)
-		setFormHuerta([...formHuerta, data])
-		event.preventDefault();
-		event.target.reset();
-		//lo de firebase aca?
+	const enviarDatos =  (data, event) => {
+			setFormHuerta([...formHuerta, data])
+			event.preventDefault();
+			event.target.reset();
+			console.log(data)
+			db.collection("Huertas").doc(data.nombreCompleto).set({
+				data
+			})	
 	}
 
 	return (
 		<Fragment>
 			<div className='sectionTitleText'>
 				<h1 className='title'><span>¿Cómo funciona?</span></h1>
-				<p className='text'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni cumque, amet officia,
-					obcaecati est architecto soluta accusamus enim repudiandae modi</p>
-				<br/>
+				<p className='text'>Queremos aprovechar los espacios en desuso, de tu patio, casa, comunidad, la casa de tu awela, todos, donalooooos</p>
+				<br />
 				<h1 className='title'><span>¿Cómo puedo ayudar?</span></h1>
-				<p className='text'>Lorem ipsum dolor sit amet consectetur adipisicing elit.
-				Dignissimos impedit ab esse mollitia tempora, minus ratione assumenda placeat aut odit.
-					Nobis corporis sapiente asperiores deserunt soluta totam culpa aut! Quidem!</p>
+				<p className='text'>Usaremos los espacios que tengas disponibles para gestionar huertas urbanas, que se mantengan con permacultura y de manera comunitaria.</p>
 			</div>
 			<form className='formHuertasSection' onSubmit={handleSubmit(enviarDatos)}>
-					<p className='titleForms'>Nombre completo</p>
-					<input
-						className='inputsFormHuertas'
-						name="nombre"
-						ref={
-							register({
-								required: { value: true, message: 'Ingrese su nombre' }
-							})
-						}
-						placeholder="Ej. Juan Pérez"
-					/>
-					<span className='erorsText'>
-						{errors?.nombre?.message}
-					</span>
+				<p className='titleForms'>Nombre completo</p>
+				<input
+					className='inputsFormHuertas'
+					name="nombreCompleto"
+					ref={
+						register({
+							required: { value: true, message: 'Ingrese su nombre' }
+						})
+					}
+					placeholder="Ej. Juan Pérez"
+				/>
+				<span className='erorsText'>
+					{errors?.nombreCompleto?.message}
+				</span>
 				<div>
 					<p className='titleForms'>¿Cómo nos referimos a ti?</p>
 					<select
-					    className='selectFormHuertas'
-						name="sexo"
+						className='selectFormHuertas'
+						name="genero"
 						ref={
 							register({
 								required: { value: true, message: 'Ingrese su identificación' }
@@ -58,7 +59,7 @@ function DonateHuertas() {
 						<option>Sin género</option>
 					</select>
 					<span className='erorsText'>
-						{errors?.sexo?.message}
+						{errors?.genero?.message}
 					</span>
 				</div>
 				<div>
@@ -76,24 +77,24 @@ function DonateHuertas() {
 					/>
 				</div>
 				<span className='erorsText'>
-						{errors?.email?.message}
-					</span>
+					{errors?.correo?.message}
+				</span>
 				<div>
-					<p className='titleForms'>Número de contacto</p>
+					<p className='erorsText'>Número de contacto</p>
 					<input
 						className='inputsFormHuertas'
-						name="numero"
+						name="numeroTelefonico"
 						ref={
 							register({
 								required: { value: true, message: 'Ingrese su número telefónico' },
-								maxLength: {value:12,  message: 'Ingrese un número válido'},
-								minLength: {value:12,  message: 'Ingrese un número válido'},
+								maxLength: { value: 12, message: 'Ingrese un número válido' },
+								minLength: { value: 12, message: 'Ingrese un número válido' },
 							})
 						}
 						placeholder="+569XXXXXXXX"
 					/>
 					<span className='erorsText'>
-						{errors?.numero?.message}
+						{errors?.numeroTelefonico?.message}
 					</span>
 				</div>
 				<div>
@@ -110,28 +111,31 @@ function DonateHuertas() {
 						<option>Springfield</option>
 						<option>P.Sherman calle wallabi</option>
 					</select>
+					<span className='erorsText'>
+						{errors?.comuna?.message}
+					</span>
 				</div>
 				<div className='textandCheckbox'>
-					<p className='titleFormsCheckbox'><input 
-					className='formCheckbox'
-					name="ayudarHuerta" 
-					type="checkbox" 
-					value="yes"
-					ref={register}
+					<p className='titleFormsCheckbox'><input
+						className='formCheckbox'
+						name="ayudarHuerta"
+						type="checkbox"
+						value={true}
+						ref={register}
 					/> Quiero ayudar en la mantención de huertas comunitarias. </p>
-					<p className='titleFormsCheckbox'><input 
-					className='formCheckbox'
-					name="DonarHuerta" 
-					type="checkbox" 
-					value="yes"
-					ref={register}
+					<p className='titleFormsCheckbox'><input
+						className='formCheckbox'
+						name="donarHuerta"
+						type="checkbox"
+						value={true}
+						ref={register}
 					/> Quiero donar espacio para comenzar una huerta comunitaria </p>
 				</div>
 				<div>
 					<p className='titleForms'>¿Cuántos m2 tiene el espacio?</p>
 					<input
 						className='inputsFormHuertas'
-						name="m2"
+						name="tamanoTerreno"
 						ref={
 							register({
 								required: { value: true, message: 'Ingrese cantidad de m2' },
@@ -140,7 +144,7 @@ function DonateHuertas() {
 						placeholder="Ej 6m2 o 2x3m"
 					/>
 					<span className='erorsText'>
-						{errors?.m2?.message}
+						{errors?.tamanoTerreno?.message}
 					</span>
 				</div>
 				<div>

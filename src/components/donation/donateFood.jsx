@@ -1,39 +1,39 @@
 import React, { Fragment, useState } from 'react';
 import { useForm } from 'react-hook-form';
-import './styles/donateFood.css'
+import './styles/donateFood.css';
+import {firebase} from '../../firebase';
 
 
 function DonateFood ()  {
-	const { register, errors, handleSubmit } = useForm()
+	const db = firebase.firestore()
+	const { register, errors, handleSubmit } = useForm();
 
 	const [formFood, setFormFood] = useState([]);
 
 	const enviarDatos = (data, event) => {
-		console.log(data)
-		console.log("oli")
-
 		setFormFood([...formFood, data])
 		event.preventDefault();
 		event.target.reset();
-		//lo de firebase aca?
-	}
+		console.log(data)
+		db.collection("Despensa").doc(data.nombreCompleto).set({data})	
+	};
 
 	return (
 		<Fragment>
-			<div>
-				<h1><span>¿Cómo funciona?</span></h1>
-				<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni cumque, amet officia,
+			<div className='sectionTitleText'>
+				<h1 className='title'><span>¿Cómo funciona?</span></h1>
+				<p className='text'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni cumque, amet officia,
 					obcaecati est architecto soluta accusamus enim repudiandae modi</p>
-				<h1><span>¿Cómo puedo ayudar?</span></h1>
+				<h1><span className='title'>¿Cómo puedo ayudar?</span></h1>
 				<p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
 				Dignissimos impedit ab esse mollitia tempora, minus ratione assumenda placeat aut odit.
 					Nobis corporis sapiente asperiores deserunt soluta totam culpa aut! Quidem!</p>
 			</div>
-			<form onSubmit={handleSubmit(enviarDatos)}>
+			<form className='formHuertasSection' onSubmit={handleSubmit(enviarDatos)}>
 
-					<p>Nombre completo</p>
-					<input
-						name="nombre"
+					<p className='titleForms'>Nombre completo</p>
+					<input className='inputsFormHuertas'
+						name="nombreCompleto"
 						ref={
 							register({
 								required: { value: true, message: 'Ingrese su nombre' }
@@ -41,14 +41,14 @@ function DonateFood ()  {
 						}
 						placeholder="Ej. Juan Pérez"
 					/>
-					<span>
-						{errors?.nombre?.message}
+					<span className='errorsText'>
+						{errors?.nombreCompleto?.message}
 					</span>
 		
 				<div>
-					<p>¿Cómo nos referimos a ti?</p>
-					<select
-						name="sexo"
+					<p className='titleForms'>¿Cómo nos referimos a ti?</p>
+					<select className='selectFormHuertas'
+						name="genero"
 						ref={
 							register({
 								required: { value: true, message: 'Ingrese su identificación' }
@@ -59,13 +59,13 @@ function DonateFood ()  {
 						<option>Hombre</option>
 						<option>Sin género</option>
 					</select>
-					<span>
-						{errors?.sexo?.message}
+					<span  className='erorsText'>
+						{errors?.genero?.message}
 					</span>
 				</div>
 				<div>
-					<p>Déjanos tu correo</p>
-					<input
+					<p className='titleForms'>Déjanos tu correo</p>
+					<input className='inputsFormHuertas'
 						name="correo"
 						type="email"
 						ref={
@@ -76,13 +76,14 @@ function DonateFood ()  {
 						placeholder="Ej. juanperez@mail.com"
 					/>
 				</div>
-				<span>
-						{errors?.email?.message}
+				<span className='errorsText'>
+						{errors?.correo?.message}
 					</span>
 				<div>
-					<p>Número de contacto</p>
-					<input
-						name="numero"
+					<p className='errorsText'>Número de contacto</p>
+					
+					<input className='inputsFormHuertas'
+						name="numeroTelefonico"
 						ref={
 							register({
 								required: { value: true, message: 'Ingrese su número telefónico' },
@@ -92,13 +93,14 @@ function DonateFood ()  {
 						}
 						placeholder="+569XXXXXXXX"
 					/>
-					<span>
-						{errors?.numero?.message}
+					<p className='errorsText'>Número de contacto</p>
+					<span className='errorsText'>
+						{errors?.numeroTelefonico?.message}
 					</span>
 				</div>
 				<div>
-					<p>¿En qué comuna te encuentras?</p>
-					<select
+					<p className='titleForms'>¿En qué comuna te encuentras?</p>
+					<select 	className='selectFormHuertas'
 						name="comuna"
 						ref={
 							register({
@@ -109,42 +111,45 @@ function DonateFood ()  {
 						<option>Springfield</option>
 						<option>P.Sherman calle wallabi</option>
 					</select>
+					<span className='errorsText'>
+						{errors?.comuna?.message}
+					</span>
 				</div>
-				<div>
-					<p><input 
+				<div className='textandCheckbox'>
+					<p  className='titleFormsCheckbox'><input 
 					name="helpFood" 
 					type="checkbox" 
-					value="yes"
+					value={true}
 					ref={register}
 					/> Quiero hacer una colecta en mi comunidad y trasladar los alimentos </p>
-					<p><input 
+					<p className='titleFormsCheckbox'><input className='formCheckbox'
 					name="DonarFood" 
 					type="checkbox" 
-					value="yes"
+					value={true}
 					ref={register}
 					/> Quiero donar alimentos para ser trasladados por Empresas Amigas </p>
 				</div>
 				<div>
-				<p>¿Con qué Empresa Amiga agendaste tu pedido?</p>
-					<select
-						name="comuna"
+				<p className='titleFormsCheckbox'>¿Con qué Empresa Amiga agendaste tu pedido?</p>
+					<select className='selectFormHuertas'
+						name="empresa"
 						ref={
 							register({
-								required: { value: true, message: 'Ingrese su comuna' },
+								required: { value: true, message: 'Ingrese la empresa' },
 							})
 						}
 					>
 						<option>Restaurant Don Gollo</option>
 						<option>Repartos Willy Wonka</option>
 					</select>
-					<span>
-						{errors?.m2?.message}
+					<span className='errorsText'>
+						{errors?.empresa?.message}
 					</span>
 				</div>
 				<div>
-					<p>Ingresa tu número de pedido </p>
-					<input
-						name="numero"
+					<p className='titleFormsCheckbox'>Ingresa tu número de pedido </p>
+					<input className='inputsFormHuertas'
+						name="numeroPedido"
 						ref={
 							register({
 								required: { value: true, message: 'Ingrese numero de pedido' },
@@ -152,13 +157,13 @@ function DonateFood ()  {
 						}
 						placeholder="Ej #00123456"
 					/>
-					<span>
-						{errors?.detalle?.message}
+					<span className='errorsText'>
+						{errors?.numeroPedido?.message}
 					</span>
 				</div>
 				<div>
-					<p>Describe los alimentos y cantidades a donar para asegurarles un lugar dentro del transporte</p>
-					<input
+					<p className='titleFormsCheckbox'>Describe los alimentos y cantidades a donar para asegurarles un lugar dentro del transporte</p>
+					<input className='inputsFormHuertas'
 						name="detalle"
 						ref={
 							register({
@@ -167,11 +172,11 @@ function DonateFood ()  {
 						}
 						placeholder="Ej. 2 kilos de papas, 3 paquetes de fideos, 2 lechugas costinas."
 					/>
-					<span>
+					<span className='errorsText'>
 						{errors?.detalle?.message}
 					</span>
 				</div>
-				<button type="submit">ENVIAR FORMULARIO</button>
+				<button  className='btnSubmitForm'type="submit">ENVIAR FORMULARIO</button>
 			</form>
 		</Fragment>
 	);

@@ -9,7 +9,7 @@ const BurguerToggle = (props) => {
       <div className={classToogle}>
         <Link to="/Nosotros" className='oli'>
           <div className='boxSection'>
-            <p className='textBurgerToggle'>Quiénes somoss</p>
+            <p className='textBurgerToggle'>Quiénes somos</p>
           </div>
         </Link>
         <Link to="/Nosotros" className='oli'>

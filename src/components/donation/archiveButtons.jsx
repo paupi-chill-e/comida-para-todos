@@ -1,11 +1,5 @@
-<<<<<<< HEAD
-import React, { Fragment } from 'react';
-import { Link } from 'react-router-dom';
-import DonateFood from './donateFood';
-=======
 import React, { useState } from 'react';
 import DonateEducation from './donateEducation';
->>>>>>> ea671dcf1a9861842017703a314c746642be2d0e
 import DonateHuertas from './donateHuertas';
 // import DonateTalent from './donateTalent';
 // import DonateFood from './donateFood';
@@ -43,23 +37,6 @@ function ArchiveButtons() {
   console.log(formToShow)
   
   return (
-<<<<<<< HEAD
-
-    <Fragment>
-            <div className='containerSectionArchiveBtnAndDonateForms'>
-            <button onClick={DonateHuertas} className='archiveBtn'>Huertas
-               
-                </button>
-              
-               <button onClick={DonateFood} className='archiveBtn'>Despensa
-              </button>
-            </div>
-          <br/>
-          <br/>
-          <br/>
-          <br/>
-        </Fragment>
-=======
     <div className='containerSectionArchiveBtnAndDonateForms'>
         <div className='sectionArchiveButtons'>
           <button className={classButtonArchiveHuerta} onClick={handleHuertas}>Huertas</button>
@@ -70,7 +47,6 @@ function ArchiveButtons() {
         {formToShow}
 
     </div>
->>>>>>> ea671dcf1a9861842017703a314c746642be2d0e
   
   );
 }

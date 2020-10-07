@@ -11,27 +11,6 @@
   border-top-right-radius: 10px;
   border-top-left-radius: 10px;
 }
-<<<<<<< HEAD
-
-.menu-option {
-  box-sizing: border-box;
-  margin:0 auto 0 auto;
-  display:inline-block;
-  padding: 5%;
-  width:50%;
-}
-
-.menu-option-unselected {
-  box-sizing: border-box;
-  margin:0 auto 0 auto;
-  display:inline-block;
-  padding: 5%;
-  width:50%;
-  background-color: rgba(0, 0, 0, 0.3);
-}
-
-.archiveBtn{
-=======
 .archiveBtnOff{
   width: 25%;
   height: 40px;
@@ -41,7 +20,6 @@
 }
 
 .archiveBtnOn{
->>>>>>> ea671dcf1a9861842017703a314c746642be2d0e
   width: 25%;
   height: 40px;
   background: none;

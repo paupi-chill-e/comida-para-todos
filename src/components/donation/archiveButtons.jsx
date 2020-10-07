@@ -1,6 +1,7 @@
 import React from 'react';
 import DonateHuertas from './donateHuertas';
 import './styles/archiveButtons.css'
+import DonateTalent from './donateTalent';
 
 function ArchiveButtons() {
   return (
@@ -11,7 +12,8 @@ function ArchiveButtons() {
           <button className='archiveBtn'>Despensa</button>
           <button className='archiveBtn'>Educación</button>
         </div>
-        <DonateHuertas/>
+        {/* <DonateHuertas/> */}
+        <DonateTalent/>
     </div>
   
   );

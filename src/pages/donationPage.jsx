@@ -3,22 +3,28 @@ import Footer from '../components/landing/footer';
 import Header from '../components/landing/header';
 import BecomePart from '../components/donation/becomePart'
 import ArchiveButtons from '../components/donation/archiveButtons';
-import DonateFood from '../components/donation/donateFood';
-import DonateHuertas from '../components/donation/donateHuertas';
+import ModalSalon from '../components/donation/modal-salon';
 
-const DonationPage= (props) => {
+const DonationPage= () => {
+  const [showMsalon, setShowMsalon] = useState(false);
+	setShowMsalon(true);
 
-  
+	const closeModalSalon = () => {
+		setShowMsalon(false);
+	  }
 
-  return (
+      return (
+
+
     <Fragment>
       <Header/>
-      <BecomePart/>
-      <ArchiveButtons 
-      onClick={DonateHuertas}
-      onClick={DonateFood}
-      />
+      <BecomePart /> 
+    
+      
+	
+      <ArchiveButtons/>
       <Footer/>
+
     </Fragment>
   );
 }

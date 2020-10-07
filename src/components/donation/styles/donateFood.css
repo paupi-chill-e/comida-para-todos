@@ -1,8 +1,69 @@
-input{
-    width: 343px;
-    height: 40px;
-  
-    border: 1px solid #929292;
-    box-sizing: border-box;
-    border-radius: 24px;
-  }
+.inputsFormHuertas, .textareaSection, .selectFormHuertas{
+  width: 343px;
+  height: 40px;
+  border: 1px solid #929292;
+  box-sizing: border-box;
+  border-radius: 24px;
+  padding:9px 0px 12px 16px;
+  font-size:14px;
+}
+.textareaSection{
+  width:343px;
+  height:80px;
+  padding:16px 16px 26px 16px;
+}
+
+.sectionTitleText{
+  display:flex;
+  flex-flow:column nowrap;
+  margin:24px 16px 30px 16px;
+}
+
+.formHuertasSection{
+  display:flex;
+  flex-flow: column nowrap;
+  margin:0px 16px 0px 16px;
+}
+
+.titleForms,.titleFormsCheckbox{
+  font-size:16px;
+  text-align: left;
+  margin:16px 0px 16px 0px;
+}
+
+.btnSubmitForm{
+  width: 343px;
+  height: 40px;
+  padding:11px 91px 10px 92px;
+  border-radius: 24px;
+  border: 0.5px solid #929292;
+  margin: 22px 0px 32px 0px;
+  align-self: center;
+}
+.erorsText{
+  color:red;
+  font-size:16px;
+  padding:5px 0px 0px 8px;
+}
+.textandCheckbox{
+  display:flex;
+  flex-flow:row wrap;
+  text-align: left;
+}
+.formCheckbox{
+  margin:0px 24px 0px 0px;
+}
+.titleFormsCheckbox{
+  width:287px;
+  height:38px;
+}
+
+
+/* .container-option-menu {
+  background-color: #b42c41;
+  margin: 5% auto auto 5%;
+  display:flex;
+  width: 45%;
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
+} */

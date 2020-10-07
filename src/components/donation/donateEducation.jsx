@@ -1,18 +1,20 @@
 import React, { Fragment, useState } from 'react';
 import { useForm } from 'react-hook-form';
 // import './styles/donateHuertas.css'
+import {firebase} from '../../firebase';
 
 const DonateEducation = () => {
   const { register, errors, handleSubmit } = useForm()
-
   const [formEducation, setFormEducation] = useState([]);
+  const db = firebase.firestore();
 
   const enviarDatos = (data, event) => {
-		console.log(data)
 		setFormEducation([...formEducation, data])
 		event.preventDefault();
 		event.target.reset();
-		//lo de firebase aca?
+    db.collection("Educacion").doc(data.nombreCompleto).set({
+      data
+    })
 	}
 
   return (
@@ -31,7 +33,7 @@ const DonateEducation = () => {
         <p className='titleForms'>Nombre completo</p>
         <input
           className='inputsFormHuertas'
-          name="nombre"
+          name="nombreCompleto"
           ref={
             register({
               required: { value: true, message: 'Ingrese su nombre' }
@@ -40,13 +42,13 @@ const DonateEducation = () => {
           placeholder="Ej. Juan Pérez"
         />
         <span className='erorsText'>
-          {errors?.nombre?.message}
+          {errors?.nombreCompleto?.message}
         </span>
         <div>
           <p className='titleForms'>¿Cómo nos referimos a ti?</p>
           <select
             className='selectFormHuertas'
-            name="sexo"
+            name="genero"
             ref={
               register({
                 required: { value: true, message: 'Ingrese su identificación' }
@@ -58,7 +60,7 @@ const DonateEducation = () => {
             <option>Sin género</option>
           </select>
           <span className='erorsText'>
-            {errors?.sexo?.message}
+            {errors?.genero?.message}
           </span>
         </div>
         <div>
@@ -76,13 +78,13 @@ const DonateEducation = () => {
           />
         </div>
         <span className='erorsText'>
-          {errors?.email?.message}
+          {errors?.correo?.message}
         </span>
         <div>
           <p className='titleForms'>Número de contacto</p>
           <input
             className='inputsFormHuertas'
-            name="numero"
+            name="numeroTelefonico"
             ref={
               register({
                 required: { value: true, message: 'Ingrese su número telefónico' },
@@ -93,7 +95,7 @@ const DonateEducation = () => {
             placeholder="+569XXXXXXXX"
           />
           <span className='erorsText'>
-            {errors?.numero?.message}
+            {errors?.numeroTelefonico?.message}
           </span>
         </div>
         <div>
@@ -110,6 +112,9 @@ const DonateEducation = () => {
             <option>Springfield</option>
             <option>P.Sherman calle wallabi</option>
           </select>
+          <span className='erorsText'>
+            {errors?.comuna?.message}
+          </span>
         </div>
         <div>
           <p className='titleForms'>¿En qué te gustaria ofrecer capacitación?</p>
@@ -118,10 +123,10 @@ const DonateEducation = () => {
             name="capacitacion"
             ref={
               register({
-                required: { value: true, message: 'Ingrese cantidad de m2' },
+                required: { value: true, message: 'Ingrese capacitación a realizar' },
               })
             }
-            placeholder="Ej 6m2 o 2x3m"
+            placeholder="Ej. Quiero enseñar sobre finanza personal"
           />
           <span className='erorsText'>
             {errors?.capacitacion?.message}
@@ -134,7 +139,7 @@ const DonateEducation = () => {
             name="horario"
             ref={
               register({
-                required: { value: true, message: 'Ingrese cantidad de m2' },
+                required: { value: true, message: 'Ingrese su disponibilidad horaria' },
               })
             }
             placeholder="Ej. Lunes y miércoles después de las 16 hrs"

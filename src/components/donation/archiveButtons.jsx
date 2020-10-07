@@ -1,10 +1,9 @@
 import React, { useState } from 'react';
 import DonateEducation from './donateEducation';
 import DonateHuertas from './donateHuertas';
-// import DonateTalent from './donateTalent';
-// import DonateFood from './donateFood';
-import './styles/archiveButtons.css'
 import DonateTalent from './donateTalent';
+import DonateFood from './donateFood';
+import './styles/archiveButtons.css'
 
 function ArchiveButtons() {
   
@@ -16,11 +15,11 @@ function ArchiveButtons() {
     setClassToShow('Huertas')
   }
   const handleTalent=()=>{
-    // setFormToShow(<DonateTalent/>)
+    setFormToShow(<DonateTalent/>)
     setClassToShow('Talent')
   }
   const handleFood=()=>{
-    // setFormToShow(<DonateFood/>)
+    setFormToShow(<DonateFood/>)
     setClassToShow('Food')
   }
   const handleEducation=()=>{
@@ -28,28 +27,22 @@ function ArchiveButtons() {
     setClassToShow('Education')
   }
 
-
   const classButtonArchiveHuerta = classToShow === 'Huertas'?'archiveBtnOn': 'archiveBtnOff';
-  // const classButtonArchiveTalent = classToShow === 'Talent' ?'archiveBtnOn': 'archiveBtnOff';
-  // const classButtonArchiveFood = classToShow === 'Food'?'archiveBtnOn': 'archiveBtnOff';
+  const classButtonArchiveTalent = classToShow === 'Talent' ?'archiveBtnOn': 'archiveBtnOff';
+  const classButtonArchiveFood = classToShow === 'Food'?'archiveBtnOn': 'archiveBtnOff';
   const classButtonArchiveEducation = classToShow === 'Education'?'archiveBtnOn': 'archiveBtnOff';
-
-  console.log(formToShow)
   
   return (
     <div className='containerSectionArchiveBtnAndDonateForms'>
         <div className='sectionArchiveButtons'>
           <button className={classButtonArchiveHuerta} onClick={handleHuertas}>Huertas</button>
-          <button className='archiveBtnOff' onClick={handleTalent}>Talento</button>
-          <button className='archiveBtnOff' onClick={handleFood}>Despensa</button>
+          <button className={classButtonArchiveTalent} onClick={handleTalent}>Talento</button>
+          <button className={classButtonArchiveFood} onClick={handleFood}>Despensa</button>
           <button className={classButtonArchiveEducation} onClick={handleEducation}>Educación</button>
         </div>
         {formToShow}
-
     </div>
-  
   );
 }
-
 
 export default ArchiveButtons;

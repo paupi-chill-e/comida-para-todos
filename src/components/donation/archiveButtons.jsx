@@ -4,6 +4,7 @@ import DonateHuertas from './donateHuertas';
 // import DonateTalent from './donateTalent';
 // import DonateFood from './donateFood';
 import './styles/archiveButtons.css'
+import DonateTalent from './donateTalent';
 
 function ArchiveButtons() {
   
@@ -44,6 +45,7 @@ function ArchiveButtons() {
           <button className={classButtonArchiveEducation} onClick={handleEducation}>Educación</button>
         </div>
         {formToShow}
+
     </div>
   
   );

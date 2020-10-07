@@ -7,20 +7,30 @@ const BurguerToggle = (props) => {
   return (
     <div className='containerBurguerToggle'>
       <div className={classToogle}>
-        <Link to="/Nosotros">
-          <a className='textBurgerToggle'>Quiénes somoss</a>
+        <Link to="/Nosotros" className='oli'>
+          <div className='boxSection'>
+            <p className='textBurgerToggle'>Quiénes somoss</p>
+          </div>
         </Link>
-        <Link to="/Nosotros">
-          <p className='textBurgerToggle'>Qué hacemos</p>
+        <Link to="/Nosotros" className='oli'>
+          <div className='boxSection'>
+            <p className='textBurgerToggle'>Qué hacemos</p>
+          </div>
         </Link>
-        <Link to="/Donaciones">
-          <p className='textBurgerToggle'>Cómo ayudar</p>
+        <Link to="/Donaciones" className='oli'>
+          <div className='boxSection'>
+            <p className='textBurgerToggle'>Cómo ayudar</p>
+          </div> 
         </Link>
-        <Link to="/Nosotros">
-          <p className='textBurgerToggle'>Transparencia</p>
+        <Link to="/Nosotros" className='oli'>
+          <div className='boxSection'>
+            <p className='textBurgerToggle'>Transparencia</p>
+          </div>
         </Link>
-        <Link to="/Donaciones">
-          <p className='textBurgerToggle'>DONAR ALMUERZOS</p>
+        <Link to="/Donaciones" className='oli'>
+          <div className='boxSection'>
+            <p className='textBurgerToggle'>Donar almuerzos</p>
+          </div>
         </Link>
       </div>
     </div>

@@ -2,7 +2,8 @@ import React, { Fragment, useState } from 'react';
 import { useForm } from 'react-hook-form';
 import './styles/donateFood.css'
 
-function DonateFood() {
+
+function DonateFood ()  {
 	const { register, errors, handleSubmit } = useForm()
 
 	const [formFood, setFormFood] = useState([]);
@@ -115,30 +116,48 @@ function DonateFood() {
 					type="checkbox" 
 					value="yes"
 					ref={register}
-					/> Quiero ayudar donando alimentos a la despensa. </p>
+					/> Quiero hacer una colecta en mi comunidad y trasladar los alimentos </p>
 					<p><input 
 					name="DonarFood" 
 					type="checkbox" 
 					value="yes"
 					ref={register}
-					/> ¿Con qué Empresa Amiga agendaste tu pedido?</p>
+					/> Quiero donar alimentos para ser trasladados por Empresas Amigas </p>
 				</div>
 				<div>
-					<input
-						name="m2"
+				<p>¿Con qué Empresa Amiga agendaste tu pedido?</p>
+					<select
+						name="comuna"
 						ref={
 							register({
-								required: { value: true, message: 'Ingrese cantidad de m2' },
+								required: { value: true, message: 'Ingrese su comuna' },
 							})
 						}
-						placeholder="Ej 6m2 o 2x3m"
-					/>
+					>
+						<option>Restaurant Don Gollo</option>
+						<option>Repartos Willy Wonka</option>
+					</select>
 					<span>
 						{errors?.m2?.message}
 					</span>
 				</div>
 				<div>
-					<p>¿El espacio está en su casa o barrio? Cuéntanos todos los detalles que puedas</p>
+					<p>Ingresa tu número de pedido </p>
+					<input
+						name="numero"
+						ref={
+							register({
+								required: { value: true, message: 'Ingrese numero de pedido' },
+							})
+						}
+						placeholder="Ej #00123456"
+					/>
+					<span>
+						{errors?.detalle?.message}
+					</span>
+				</div>
+				<div>
+					<p>Describe los alimentos y cantidades a donar para asegurarles un lugar dentro del transporte</p>
 					<input
 						name="detalle"
 						ref={
@@ -146,7 +165,7 @@ function DonateFood() {
 								required: { value: true, message: 'Ingresa los detalles' },
 							})
 						}
-						placeholder="Ej. Tengo un espacio de 1m de ancho y 7 de largo en la vereda afuera de mi entrada"
+						placeholder="Ej. 2 kilos de papas, 3 paquetes de fideos, 2 lechugas costinas."
 					/>
 					<span>
 						{errors?.detalle?.message}

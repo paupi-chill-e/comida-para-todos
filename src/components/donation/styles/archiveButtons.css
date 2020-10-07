@@ -8,12 +8,21 @@
   flex-flow:column nowrap;
   margin:24px 0px 30px 0px;
 }
-.archiveBtn{
+.archiveBtnOff{
+  width: 25%;
+  height: 40px;
+  background: #F4F4F4;;
+  border: 1px solid #000000;
+  box-sizing: border-box;
+}
+
+.archiveBtnOn{
   width: 25%;
   height: 40px;
   background: none;
   border: 1px solid #000000;
+  border-bottom: none;
   box-sizing: border-box;
-  /* solo para el elegido */
-  box-shadow: 2px 0px 4px rgba(0, 0, 0, 0.25);
+  box-shadow: 2px -3px 4px rgba(0, 0, 0, 0.25);
+
 }

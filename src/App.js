@@ -3,7 +3,8 @@ import './App.css';
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import LandingPage from './pages/landingPage'
 import DonationPage from './pages/donationPage';
-import AboutUs from './pages/aboutUsPage'
+import AboutUs from './pages/aboutUsPage';
+import Prueba from './pages/prueba';
 
 function App() {
   return (
@@ -17,6 +18,9 @@ function App() {
         </Route>
         <Route path="/Nosotros">
           <AboutUs/>
+        </Route>
+        <Route path="/" Prueba >
+          <Prueba/>
         </Route>
       </Switch>
     </Router>

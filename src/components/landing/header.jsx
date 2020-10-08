@@ -10,6 +10,7 @@ const Header = () => {
         <img src={logox} alt="" className='logoHome' />
       </div>
       <IconBurgerToggle/>
+      
     </header>
   )
 }

@@ -4,6 +4,8 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import LandingPage from './pages/landingPage'
 import DonationPage from './pages/donationPage';
 import AboutUs from './pages/aboutUsPage';
+// import DataGridDemo from './components/intranetData/intranetTable';
+import GetData from './components/intranetData/getData';
 // import LogIn from './';
 
 function App() {
@@ -19,8 +21,8 @@ function App() {
         <Route path="/Nosotros">
           <AboutUs/>
         </Route>
-        <Route path='/Intranet=?#!Login'>
-          {/* <LogIn/> */}
+        <Route path='/Intranet'>
+          <GetData/>
         </Route>
       </Switch>
     </Router>

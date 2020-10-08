@@ -6,12 +6,11 @@ import DonateSection from '../components/landing/donateSection';
 import Carousel2 from '../components/landing/Carousel';
 import MotivationSectionF from '../components/landing/motivationSection'
 import ActivitySectionF from '../components/landing/activitySection'
-import ModalSalon2 from '../components/donation/modal-salon';
+
 const LandingPage = () => {
   return (
     <Fragment>
-    <ModalSalon2/>
-      <Header/>
+    <Header/>
       <Video />
       <DonateSection/>
       <MotivationSectionF/>

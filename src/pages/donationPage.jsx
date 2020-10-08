@@ -3,7 +3,7 @@ import Footer from '../components/landing/footer';
 import Header from '../components/landing/header';
 import BecomePart from '../components/donation/becomePart'
 import ArchiveButtons from '../components/donation/archiveButtons';
-import Garzon from '../components/donation/garzon';
+
 
 const DonationPage= () => {
  

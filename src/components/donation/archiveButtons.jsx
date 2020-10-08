@@ -3,12 +3,14 @@ import DonateEducation from './donateEducation';
 import DonateHuertas from './donateHuertas';
 import DonateTalent from './donateTalent';
 import DonateFood from './donateFood';
-import './styles/archiveButtons.css'
+import './styles/archiveButtons.css';
+
 
 function ArchiveButtons() {
   
   const [formToShow, setFormToShow] = useState(null);
   const [classToShow, setClassToShow] = useState(null)
+  
 
   const handleHuertas=()=>{
     setFormToShow(<DonateHuertas/>)
@@ -27,6 +29,8 @@ function ArchiveButtons() {
     setClassToShow('Education')
   }
 
+
+
   const classButtonArchiveHuerta = classToShow === 'Huertas'?'archiveBtnOn': 'archiveBtnOff';
   const classButtonArchiveTalent = classToShow === 'Talent' ?'archiveBtnOn': 'archiveBtnOff';
   const classButtonArchiveFood = classToShow === 'Food'?'archiveBtnOn': 'archiveBtnOff';
@@ -41,6 +45,7 @@ function ArchiveButtons() {
           <button className={classButtonArchiveEducation} onClick={handleEducation}>Educación</button>
         </div>
         {formToShow}
+      
     </div>
   );
 }

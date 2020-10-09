@@ -1,51 +1,39 @@
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
 import DonateEducation from './donateEducation';
 import DonateHuertas from './donateHuertas';
 import DonateTalent from './donateTalent';
 import DonateFood from './donateFood';
+import {ShowContext} from '../../App'
 import './styles/archiveButtons.css';
 
 
 function ArchiveButtons() {
   
-  const [formToShow, setFormToShow] = useState(null);
-  const [classToShow, setClassToShow] = useState(null)
-  
+  const [formToShow, setFormToShow] = useContext(ShowContext);
 
-  const handleHuertas=()=>{
-    setFormToShow(<DonateHuertas/>)
-    setClassToShow('Huertas')
-  }
-  const handleTalent=()=>{
-    setFormToShow(<DonateTalent/>)
-    setClassToShow('Talent')
-  }
-  const handleFood=()=>{
-    setFormToShow(<DonateFood/>)
-    setClassToShow('Food')
-  }
-  const handleEducation=()=>{
-    setFormToShow(<DonateEducation/>)
-    setClassToShow('Education')
-  }
+  const classButtonArchiveHuerta = formToShow === 'Huertas'?'archiveBtnOn': 'archiveBtnOff';
+  const classButtonArchiveTalent = formToShow === 'Talent' ?'archiveBtnOn': 'archiveBtnOff';
+  const classButtonArchiveFood = formToShow === 'Food'?'archiveBtnOn': 'archiveBtnOff';
+  const classButtonArchiveEducation = formToShow === 'Education'?'archiveBtnOn': 'archiveBtnOff';
+
+  let form = '';
+
+  if (formToShow=== 'Huertas') form=<DonateHuertas/>
+  if (formToShow=== 'Talent') form=<DonateTalent/>
+  if (formToShow=== 'Food') form=<DonateFood/>
+  if (formToShow=== 'Education') form=<DonateEducation/>
 
 
-
-  const classButtonArchiveHuerta = classToShow === 'Huertas'?'archiveBtnOn': 'archiveBtnOff';
-  const classButtonArchiveTalent = classToShow === 'Talent' ?'archiveBtnOn': 'archiveBtnOff';
-  const classButtonArchiveFood = classToShow === 'Food'?'archiveBtnOn': 'archiveBtnOff';
-  const classButtonArchiveEducation = classToShow === 'Education'?'archiveBtnOn': 'archiveBtnOff';
   
   return (
     <div className='containerSectionArchiveBtnAndDonateForms'>
         <div className='sectionArchiveButtons'>
-          <button className={classButtonArchiveHuerta} onClick={handleHuertas}>Huertas</button>
-          <button className={classButtonArchiveTalent} onClick={handleTalent}>Talento</button>
-          <button className={classButtonArchiveFood} onClick={handleFood}>Despensa</button>
-          <button className={classButtonArchiveEducation} onClick={handleEducation}>Educación</button>
+          <button className={classButtonArchiveHuerta} onClick={()=>setFormToShow('Huertas')}>Huertas</button>
+          <button className={classButtonArchiveTalent} onClick={()=>setFormToShow('Talent')}>Talento</button>
+          <button className={classButtonArchiveFood} onClick={()=>setFormToShow('Food')}>Despensa</button>
+          <button className={classButtonArchiveEducation} onClick={()=>setFormToShow('Education')}>Educación</button>
         </div>
-        {formToShow}
-      
+        {form}  
     </div>
   );
 }

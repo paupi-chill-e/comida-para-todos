@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './App.css';
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import LandingPage from './pages/landingPage'
@@ -8,25 +8,34 @@ import AboutUs from './pages/aboutUsPage';
 import GetData from './components/intranetData/getData';
 import LogIn from './components/intranetLogin/login';
 
+
+export const ShowContext = React.createContext(null);
+
 function App() {
+  const [formToShow, setFormToShow] = useState(null);
+
   return (
     <Router>
       <Switch>
         <Route path="/" exact >
-          <LandingPage />
+          <ShowContext.Provider value={[formToShow, setFormToShow]}>
+            <LandingPage />
+          </ShowContext.Provider>
         </Route>
         <Route path="/Donaciones" >
-          <DonationPage />
+          <ShowContext.Provider value={[formToShow, setFormToShow] }>
+            <DonationPage />
+          </ShowContext.Provider>
         </Route>
         <Route path="/Nosotros">
-          <AboutUs/>
+          <AboutUs />
         </Route>
         <Route path='/Intranet'>
-          {/* <GetData/> */}
           <LogIn/>
+          <GetData />
         </Route>
       </Switch>
-    </Router>
+    </Router >
   );
 }
 export default App;

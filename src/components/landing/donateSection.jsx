@@ -7,16 +7,15 @@ function DonateSection() {
   return (
     <div className='donateSectionPage'>
     <div className='textDonateSectionPage'>
-     <strong>Garantizar comida para todos, es un esfuerzo de equipo.</strong>
+     <p>Garantizar comida para todos,<strong> es un esfuerzo de equipo.</strong> </p>
      
       <Link to="/">
           <button className="btnDonation">Hazte Parte</button>
         </Link>
-
-      <p>Con tu ayuda podemos reactivar a pequeños productores, restaurantes y transportes para entregar almuerzos nutritivos a comedores solidarios en la región.</p>
+      <p>Con tu ayuda<strong> podemos reactivar</strong>  a pequeños productores, restaurantes y transportes para entregar almuerzos nutritivos a comedores solidarios en la región.</p>
+      <p>Fortalecemos a las comunidades para proteger su seguridad alimentaria <strong>¡Descubre cómo puedes ayudar!</strong></p>
       </div>
-      <div className='containerDonates'>
-        <div className='eachDonateContainer'>
+      <div className='singleContainerDonate'>
           <Link to="/Donaciones">
             <img className='imgDonate' src={fotoprueba} alt='Huertas' />
             </Link>
@@ -24,6 +23,7 @@ function DonateSection() {
               <p className='donateIcon'>+</p>
             </div>
         </div>
+      <div className='containerDonates'>
         <div className='eachDonateContainer'>
           <Link to="/Donaciones">
           

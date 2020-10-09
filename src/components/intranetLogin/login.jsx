@@ -1,5 +1,7 @@
 import React, { Fragment, useState } from 'react';
-import { firebase } from '../../firebase'
+import { firebase } from '../../firebase';
+import {logo} from '../../img/logo.png';
+import '../intranetLogin/login.css';
 
 const Login = () => {
 
@@ -11,36 +13,38 @@ const Login = () => {
   }
 
   return (
-    <div className='authPageBackground'>
       <div className='authPageContent'>
         <div className='logoContainer'>
-          <img src={bqtrans} className="imgLogoAuth" alt="logo" />
+          <img src={logo} className="logoFooter" alt="logo" />
         </div>
         <div className='authContainer'>
-          <form className='formCont'  >
+          <h1 className='titleIntranet'>¡Bienvenido!</h1>
+          <p className='textintranet'>Aquí podrás revisar los datos los voluntarios que han postulado a través de formularios.</p>
+          <form className='formIntranet'>
             <label htmlFor='email'
+            className='textintranetInput'
             >
-              Ingresar email: </label>
+              Ingresar tu correo </label>
             <input type='email'
               placeholder='Correo Electrónico'
               autoComplete='username'
-              className='inputAuth'
+              className='inputIntranet'
               onChange={(e) => setEmail(e.target.value)}
             />
-            <label htmlFor='password'>Ingresar contraseña: </label>
+            <label htmlFor='password'
+            className='textintranetInput'>Contraseña </label>
             <input type='password'
               placeholder='Contraseña'
               autoComplete='current-password'
-              className='inputAuth'
+              className='inputIntranet'
               onChange={(e) => setPassword(e.target.value)} />
             <button
-              className='btnAuthPage' onClick={eventClick}>
-              Ingresar
+              className='btnAuthPage'>
+              Entrar
             </button>
           </form>
         </div>
       </div>
-    </div>
   );
 
 

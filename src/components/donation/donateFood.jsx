@@ -46,9 +46,9 @@ function DonateFood ()  {
 					</span>
 		
 				<div>
-					<p className='titleForms'>¿Cómo nos referimos a ti?</p>
+					<p className='titleForms'>Selecciona tu región</p>
 					<select className='selectFormHuertas'
-						name="genero"
+						name="region"
 						ref={
 							register({
 								required: { value: true, message: 'Ingrese su identificación' }
@@ -60,7 +60,7 @@ function DonateFood ()  {
 						<option>Sin género</option>
 					</select>
 					<span  className='erorsText'>
-						{errors?.genero?.message}
+						{errors?.region?.message}
 					</span>
 				</div>
 				<div>

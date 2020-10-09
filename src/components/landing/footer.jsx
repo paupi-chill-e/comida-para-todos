@@ -3,40 +3,28 @@ import { Link } from "react-router-dom";
 import './styles/footer.css';
 import logox from '../../img/logo.png'
 import  Ig from '../../img/ig.png';
-import Linked from '../../img/linked.png';
+
 import Mail from '../../img/mail.png';
 
 function Footer() {
   return (
     <footer>
-      <div className='imgsFooter'>
         <div className='containerLogoFooter'>
           <img src={logox} alt="" className='logoFooter' />
         </div>
-        <div className='containerIconsFooter'>
-          <img src={Ig} alt="" className='iconFooter' />
-          <img src={Linked} alt="" className='iconFooter' />
-          <img src={Mail} alt="" className='iconFooter' /> 
-        </div>
-      </div>
-      <div className='infoFooter'>
-      <div className='descriptionFooter'>
-        <p>• Quiénes somos</p>
-        </div>
-        <div className='descriptionFooter'>
-        <p >• Transparencia</p>
-        </div>
-        <div className='descriptionFooter'>
-        <p >• Qué hacemos</p>
-        </div>
-        <div className='descriptionFooter'>
-        <p>• Cómo ayudar</p>
-        </div>
-        </div>
-        <div className='btnFootertwo'>
-    <Link to="/">
-          <button className="btnFooter">DONACIONES</button>
-        </Link>
+        <div className='containerIconsTextFooter'>
+          <div className='containerEachContact'>
+            <img src={Ig} alt="instaicon" className='iconFooter'/>
+            <p className='textFooter'>@comidaparatodos</p>
+          </div>
+          <div className='containerEachContact'>
+            <img src={Mail} alt="mailIcon" className='iconFooter'/> 
+            <p className='textFooter'>hola@comidaparatodos.cl</p>
+          </div>
+          <div className='containerEachContact'>
+          <img src={Mail} alt="mailIcon" className='iconFooter'/> 
+          <p className='textFooter'>Dir. calle Lorem #463</p>
+          </div>
         </div>
     </footer>
     

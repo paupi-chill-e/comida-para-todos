@@ -6,7 +6,7 @@ import DonationPage from './pages/donationPage';
 import AboutUs from './pages/aboutUsPage';
 // import DataGridDemo from './components/intranetData/intranetTable';
 import GetData from './components/intranetData/getData';
-// import LogIn from './';
+import LogIn from './components/intranetLogin/login';
 
 function App() {
   return (
@@ -22,7 +22,8 @@ function App() {
           <AboutUs/>
         </Route>
         <Route path='/Intranet'>
-          <GetData/>
+          {/* <GetData/> */}
+          <LogIn/>
         </Route>
       </Switch>
     </Router>

@@ -8,19 +8,23 @@
 .textTeam{
     font-size: 16px;
     margin-top: 5px;
-    text-align: center;
+   
 }
 .containerTeam{
     display: flex;
     flex-flow: row wrap;
     margin-top: 16px;
     justify-content: center;
+    align-content: center;
 }
 .eachTeamMate{
     display: flex;
     flex-flow: column nowrap;
     align-items: center;
-    margin-right: 20px;
+    margin:0px 50px 0px 0px;
+    width: 122.52px;
+    height: 189.16px;
+    text-align: center;
 }
 
 .containerPhotoTeam{

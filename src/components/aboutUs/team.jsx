@@ -11,22 +11,43 @@ function Team() {
           <div className='containerPhotoTeam'>
             <img src={photo} className='photo'/>
           </div>
-          <p className='textTeam'>Juan Perez</p>
-          <p>Colaborador</p>
+          <p className='textTeam'>Rafael Rincón</p>
+          <p>Director Ejecutivo</p>
         </div>
         <div className='eachTeamMate'>
           <div className='containerPhotoTeam'>
             <img src={photo} className='photo'/>
           </div>
-          <p className='textTeam'>Juan Perez</p>
-          <p>Colaborador</p>
+          <p className='textTeam'>Enrique Gellona</p>
+          <p>Dir. de Finanzas y Administración</p>
         </div>
         <div className='eachTeamMate'>
           <div className='containerPhotoTeam'>
             <img src={photo} className='photo'/>
           </div>
-          <p className='textTeam'>Juan Perez</p>
-          <p>Colaborador</p>
+          <p className='textTeam'>Juan Gatica</p>
+          <p>Dir. de Innovación Social</p>
+        </div>
+        <div className='eachTeamMate'>
+          <div className='containerPhotoTeam'>
+            <img src={photo} className='photo'/>
+          </div>
+          <p className='textTeam'>Camila Moreno</p>
+          <p>Coord. General</p>
+        </div>
+        <div className='eachTeamMate'>
+          <div className='containerPhotoTeam'>
+            <img src={photo} className='photo'/>
+          </div>
+          <p className='textTeam'>Takehiro Kadena</p>
+          <p>Coord. Territorial</p>
+        </div>
+        <div className='eachTeamMate'>
+          <div className='containerPhotoTeam'>
+            <img src={photo} className='photo'/>
+          </div>
+          <p className='textTeam'>Louisa Fernández</p>
+          <p>Coord. Territorial</p>
         </div>
       </div>
     </div>

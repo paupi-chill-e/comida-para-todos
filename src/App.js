@@ -6,7 +6,7 @@ import DonationPage from './pages/donationPage';
 import AboutUs from './pages/aboutUsPage';
 // import DataGridDemo from './components/intranetData/intranetTable';
 import GetData from './components/intranetData/getData';
-// import LogIn from './';
+import LogIn from './components/intranetLogin/login';
 
 
 export const ShowContext = React.createContext(null);
@@ -31,6 +31,7 @@ function App() {
           <AboutUs />
         </Route>
         <Route path='/Intranet'>
+          <LogIn/>
           <GetData />
         </Route>
       </Switch>

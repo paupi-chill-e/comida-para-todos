@@ -23,10 +23,10 @@ function DonateHuertas() {
 		<Fragment>
 			<div className='sectionTitleText'>
 				<h1 className='title'><span>¿Cómo funciona?</span></h1>
-				<p className='text'>Queremos aprovechar los espacios en desuso, de tu patio, casa, comunidad, la casa de tu awela, todos, donalooooos</p>
+				<p className='text'>Queremos aprovechar cualquier espacio que tengas para comenzar huertas urbanas permaculturales, que nos permitan abastecer a comedores y emprendimientos de nuestra red.</p>
 				<br />
 				<h1 className='title'><span>¿Cómo puedo ayudar?</span></h1>
-				<p className='text'>Usaremos los espacios que tengas disponibles para gestionar huertas urbanas, que se mantengan con permacultura y de manera comunitaria.</p>
+				<p className='text'>¡Podemos inaugurar juntos nuevas huertas comunitarias! Si hay espacios disponibles en tu barrio o si quieres regalarnos un espacio de tu patio. También puedes ofrecerte a mantener huertas existentes.</p>
 			</div>
 			<form className='formHuertasSection' onSubmit={handleSubmit(enviarDatos)}>
 				<p className='titleForms'>Nombre completo</p>
@@ -38,28 +38,28 @@ function DonateHuertas() {
 							required: { value: true, message: 'Ingrese su nombre' }
 						})
 					}
-					placeholder="Ej. Juan Pérez"
+					placeholder="Ej. Juan Pérez Abarca"
 				/>
 				<span className='erorsText'>
 					{errors?.nombreCompleto?.message}
 				</span>
 				<div>
-					<p className='titleForms'>¿Cómo nos referimos a ti?</p>
+					<p className='titleForms'>Selecciona tu región</p>
 					<select
 						className='selectFormHuertas'
-						name="genero"
+						name="region"
 						ref={
 							register({
 								required: { value: true, message: 'Ingrese su identificación' }
 							})
 						}
 					>
-						<option>Mujer</option>
-						<option>Hombre</option>
-						<option>Sin género</option>
+						<option>no</option>
+						<option>se</option>
+						<option>cuales</option>
 					</select>
 					<span className='erorsText'>
-						{errors?.genero?.message}
+						{errors?.region?.message}
 					</span>
 				</div>
 				<div>

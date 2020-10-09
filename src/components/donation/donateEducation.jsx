@@ -39,16 +39,16 @@ const DonateEducation = () => {
               required: { value: true, message: 'Ingrese su nombre' }
             })
           }
-          placeholder="Ej. Juan Pérez"
+          placeholder="Ej. Juan Pérez Abarca"
         />
         <span className='erorsText'>
           {errors?.nombreCompleto?.message}
         </span>
         <div>
-          <p className='titleForms'>¿Cómo nos referimos a ti?</p>
+          <p className='titleForms'>Selecciona tu región</p>
           <select
             className='selectFormHuertas'
-            name="genero"
+            name="region"
             ref={
               register({
                 required: { value: true, message: 'Ingrese su identificación' }
@@ -60,7 +60,7 @@ const DonateEducation = () => {
             <option>Sin género</option>
           </select>
           <span className='erorsText'>
-            {errors?.genero?.message}
+            {errors?.region?.message}
           </span>
         </div>
         <div>

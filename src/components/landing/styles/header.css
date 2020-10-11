@@ -1,19 +1,22 @@
 .header{
-    display: flex;
-    width:100%;
-    flex-flow:row nowrap;
-    justify-content:space-between;
-    align-items: center;
-    height:80px;
-    padding:7px 16px;
+
+  position: fixed;
+  height:88px;
+  background-color: white;
+  width:100%;
+  display: flex;
+  flex-flow:row nowrap;
+  justify-content:space-between;
+  align-items: center;
 }
 
 .containerLogoHome{
-    width:100%;
+  width:64px;
+  margin-left: 16px;
+  /* height: auto; */
 }
 
 .logoHome{
-    width:69px;
-    height:auto;
+  width: 100%;
 }
 

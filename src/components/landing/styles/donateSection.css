@@ -1,7 +1,7 @@
 .donateSectionPage{
     display:flex;
     flex-flow:column nowrap;
-    /* margin:16px 16px; */
+    align-items: center;
 }
 .singleContainerDonate{
     display: flex;
@@ -56,9 +56,9 @@
     font-size: 33px;
 }
 
-.btnDonation, .btnDonation2{
+.btnDonation{
     background-color: #fd4c00;
-    border:#fd4c00 solid 1px;
+    border:#929292 solid 1px;
     color: white;
     font-size: 18px;
     width: 100%;
@@ -68,10 +68,14 @@
     line-height: 22px;
     margin-top: 24px;
 }
-.btnDonation2{
-    margin-left: 16px;
-    width: 370px;
+.btnSectionPage{
+    width: 100%;
 }
+.btnSectionMargin{
+    margin-left: 16px;
+    margin-right: 16px;
+}
+
 h2{
     margin:0px 0px 24px 0px;
 }

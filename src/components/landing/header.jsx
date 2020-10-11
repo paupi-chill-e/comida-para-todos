@@ -9,7 +9,7 @@ const Header = () => {
       <div className='containerLogoHome'>
         <img src={logox} alt="" className='logoHome' />
       </div>
-      <IconBurgerToggle/>
+      <IconBurgerToggle />
     </header>
   )
 }

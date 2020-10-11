@@ -17,11 +17,6 @@ const BurguerToggle = (props) => {
             <p className='textBurgerToggle'>Qué hacemos</p>
           </div>
         </Link>
-        <Link to="/Donaciones" className='oli'>
-          <div className='boxSection'>
-            <p className='textBurgerToggle'>Cómo ayudar</p>
-          </div> 
-        </Link>
         <Link to="/Nosotros" className='oli'>
           <div className='boxSection'>
             <p className='textBurgerToggle'>Transparencia</p>

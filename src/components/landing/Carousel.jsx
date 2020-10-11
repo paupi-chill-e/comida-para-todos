@@ -1,33 +1,25 @@
-import React, { Fragment } from "react";
+import React, { Fragment, useState} from "react";
 import { Carousel } from 'react-responsive-carousel';
-import fotoprueba from '../../img/foto.jpeg';
+import colab from './data.json';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
 import './styles/Carousel2.css'
 
 const Carousel2= () => {
+    const [Colab] = useState(colab);
     return (
         <Fragment>
+          
 
+        
         <Carousel autoPlay showThumbs={false} infiniteLoop={true}>
-        <div className='carro'>
-            <img className='imgCarro' alt="" src={fotoprueba} />
-            <p className="legend">Legend 1</p>
-        </div>
-        <div className='carro'>
-            <img className='imgCarro' alt="" src={fotoprueba} />
-            <p className="legend">Legend 2</p>
-        </div>
-        <div className='carro'>
-            <img className='imgCarro' alt="" src={fotoprueba} />
-            <p className="legend">Legend 3</p>
-        </div>
-        <div className='carro'>
-            <img className='imgCarro' alt="" src={fotoprueba}/>
-            <p className="legend">Legend 4</p>
-        </div>
+            {
+                Colab.map((item) =>
+                <div className='carro' key={item.id}>
+                  <img className='imgCarro' src={item.img} alt='ayuda'/>
+                </div>
+              )}
         
         </Carousel>
-        
         </Fragment>
         )
         } 

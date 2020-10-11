@@ -1,12 +1,13 @@
 import React from 'react';
-import videox from '../../img/comidaparatodos.mp4';
+// import videox from '../../img/comidaparatodos.mp4';
+import banner from '../../img/Banners/landing.gif';
 import './styles/video.css'; 
 
 
 function Video() {
   return (
     <div className='containerVideoHome'>
-      <video className='videoHome' src={videox} autoPlay muted loop />
+      <img className='videoHome' src={banner}/>
     </div>
   );
 }

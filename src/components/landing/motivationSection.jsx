@@ -1,5 +1,8 @@
 import React, { Fragment } from "react";
-import fotoprueba from "../../img/foto.jpeg";
+import food from '../../img/Landing/Iconos/1-alimento-bueno.png';
+import job from '../../img/Landing/Iconos/2-empleo.png';
+import education from '../../img/Landing/Iconos/3-educacion.png';
+import comunity from '../../img/Landing/Iconos/4-comunidad.png';
 import './styles/motivationSectionF.css'
 
 const motivationSectionF = () => {
@@ -10,7 +13,7 @@ const motivationSectionF = () => {
       </div>
       <div className="containerMotivation">
         <div className="eachMotivation">
-          <img className="imgDonate" src={fotoprueba} alt="" />
+          <img className="imgDonate2" src={food} alt="food"/>
           <div className="descriptionMotivation">
             <p>
               Gestionamos <strong>almuerzos nutritivos</strong> para quienes más
@@ -20,7 +23,7 @@ const motivationSectionF = () => {
         </div>
 
         <div className="eachMotivation">
-          <img className="imgDonate" src={fotoprueba} alt="" />
+          <img className="imgDonate2" src={job} alt="job" />
           <div className="descriptionMotivation">
             <p>
               {" "}
@@ -31,7 +34,7 @@ const motivationSectionF = () => {
         </div>
 
         <div className="eachMotivation">
-          <img className="imgDonate" src={fotoprueba} alt="" />
+          <img className="imgDonate2" src={education} alt="education" />
           <div className="descriptionMotivation">
             <p>
               {" "}
@@ -42,7 +45,7 @@ const motivationSectionF = () => {
         </div>
 
         <div className="eachMotivation">
-          <img className="imgDonate" src={fotoprueba} alt="" />
+          <img className="imgDonate2" src={comunity} alt="comunity" />
           <div className="descriptionMotivation">
             <p>
               {" "}

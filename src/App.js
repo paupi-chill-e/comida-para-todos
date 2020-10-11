@@ -22,12 +22,12 @@ function App() {
             <LandingPage />
           </ShowContext.Provider>
         </Route>
-        <Route path="/Donaciones" >
+        <Route path="/Donaciones" exact >
           <ShowContext.Provider value={[formToShow, setFormToShow] }>
             <DonationPage />
           </ShowContext.Provider>
         </Route>
-        <Route path="/Nosotros">
+        <Route path="/Nosotros" exact >
           <AboutUs />
         </Route>
         <Route path='/Intranet'>

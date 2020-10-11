@@ -176,7 +176,7 @@ function DonateFood ()  {
 						{errors?.detalle?.message}
 					</span>
 				</div>
-				<button  className='btnSubmitForm'type="submit">ENVIAR FORMULARIO</button>
+				<button className='btnSubmitForm'type="submit">ENVIAR FORMULARIO</button>
 			</form>
 		</Fragment>
 	);

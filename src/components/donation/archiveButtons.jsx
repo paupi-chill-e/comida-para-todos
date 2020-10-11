@@ -5,6 +5,7 @@ import DonateTalent from './donateTalent';
 import DonateFood from './donateFood';
 import {ShowContext} from '../../App'
 import './styles/archiveButtons.css';
+import { animateScroll as scroll} from 'react-scroll';
 
 
 function ArchiveButtons() {
@@ -28,7 +29,7 @@ function ArchiveButtons() {
   return (
     <div className='containerSectionArchiveBtnAndDonateForms'>
         <div className='sectionArchiveButtons'>
-          <button className={classButtonArchiveHuerta} onClick={()=>setFormToShow('Huertas')}>Huertas</button>
+          <button className={classButtonArchiveHuerta} onClick={()=>{setFormToShow('Huertas')}}>Huertas</button>
           <button className={classButtonArchiveTalent} onClick={()=>setFormToShow('Talent')}>Talento</button>
           <button className={classButtonArchiveFood} onClick={()=>setFormToShow('Food')}>Despensa</button>
           <button className={classButtonArchiveEducation} onClick={()=>setFormToShow('Education')}>Educación</button>

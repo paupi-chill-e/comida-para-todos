@@ -1,6 +1,6 @@
 import React from 'react';
 import './styles/transparency.css';
-import graphic from '../../img/gatito.jpg';
+import graphic from '../../img/AboutUs/transparency.png';
 
 function Transparency() {
 	return (

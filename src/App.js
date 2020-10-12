@@ -6,7 +6,7 @@ import DonationPage from './pages/donationPage';
 import AboutUs from './pages/aboutUsPage';
 // import DataGridDemo from './components/intranetData/intranetTable';
 import GetData from './components/intranetData/getData';
-import LogIn from './components/intranetLogin/login';
+import Login from './components/intranetLogin/login'
 
 
 export const ShowContext = React.createContext(null);
@@ -28,13 +28,15 @@ function App() {
             <DonationPage />
           </ShowContext.Provider>
         </Route>
-        <ShowContext.Provider value={[positionScroll, setPositionScroll]}>
-          <Route path="/Nosotros" exact >
+        <Route path="/Nosotros" exact >
+          <ShowContext.Provider value={[positionScroll, setPositionScroll]}>
             <AboutUs />
-          </Route>
-        </ShowContext.Provider>
-        <Route path='/Intranet'>
-          <LogIn />
+          </ShowContext.Provider>
+        </Route>
+        <Route path="/Intranet/Login" exact >
+          <Login />
+        </Route>
+        <Route path="/Intranet/Formularios" exact>
           <GetData />
         </Route>
       </Switch>

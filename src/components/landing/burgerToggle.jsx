@@ -15,16 +15,16 @@ const BurguerToggle = (props) => {
       <div className={classToogle}>
         <Link to="/Nosotros" className='oli'>
           <div className='boxSection'>
-            <p className='textBurgerToggle' onClick={()=>{ props.setBurgerOn(!props.burgerOn)}}>Quiénes somos</p>
+            <p className='textBurgerToggle' onClick={()=>{setPositionScroll(0); scroll.scrollTo(0); props.setBurgerOn(!props.burgerOn)}}>Quiénes somos</p>
           </div>
         </Link>
         <Link to="/Nosotros" className='oli'>
-          <div className='boxSection' onClick={()=>{setPositionScroll(2850); scroll.scrollTo(2850); props.setBurgerOn(!props.burgerOn) }}>
+          <div className='boxSection' onClick={()=>{setPositionScroll(1620); scroll.scrollTo(1620); props.setBurgerOn(!props.burgerOn) }}>
             <p className='textBurgerToggle'>Qué hacemos</p>
           </div>
         </Link>
         <Link to="/Nosotros" className='oli'>
-          <div className='boxSection' onClick={()=>{setPositionScroll(4000); scroll.scrollTo(4000); props.setBurgerOn(!props.burgerOn)}}>
+          <div className='boxSection' onClick={()=>{setPositionScroll(300); scroll.scrollTo(3000); props.setBurgerOn(!props.burgerOn)}}>
             <p className='textBurgerToggle'>Transparencia</p>
           </div>
         </Link>

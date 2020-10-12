@@ -30,6 +30,7 @@ function DonateSection() {
       <div className='singleContainerDonate'>
         <Link to="/Donaciones" onClick={() => {setPositionScrollFormValue(0) }}>
           <img className='imgDonate' src={almuerzos} alt='almuerzos' />
+          <div className='textBtnDonate'>Almuerzos</div>
           <div className='iconPlusDonate'>
             <p className='donateIcon'>&#43;</p>
           </div>
@@ -39,6 +40,7 @@ function DonateSection() {
         <div className='eachDonateContainer'>
           <Link to="/Donaciones" onClick={() => { setFormToShowValue('Food'); setPositionScrollFormValue(390) }}>
             <img className='imgDonate' src={despensa} alt='despensa' />
+            <div className='textBtnDonates'>Despensa</div>
             <div className='iconPlusDonate'>
               <p className='donateIcon'>&#43;</p>
             </div>
@@ -47,6 +49,7 @@ function DonateSection() {
         <div className='eachDonateContainer'>
           <Link to="/Donaciones" onClick={() => { setFormToShowValue('Talent'); setPositionScrollFormValue(390) }}>
             <img className='imgDonate' src={talento} alt='talento' />
+            <div className='textBtnDonates'>Talento</div>
             <div className='iconPlusDonate'>
               <p className='donateIcon'>&#43;</p>
             </div>
@@ -55,6 +58,7 @@ function DonateSection() {
         <div className='eachDonateContainer'>
           <Link to="/Donaciones" onClick={() => { setFormToShowValue('Education'); setPositionScrollFormValue(390) }}>
             <img className='imgDonate' src={educacion} alt='educacion' />
+            <div className='textBtnDonates'>Educación</div>
             <div className='iconPlusDonate'>
               <p className='donateIcon'>&#43;</p>
             </div>
@@ -63,6 +67,7 @@ function DonateSection() {
         <div className='eachDonateContainer'>
           <Link to="/Donaciones" onClick={() => { setFormToShowValue('Huertas'); setPositionScrollFormValue(390) }}>
             <img className='imgDonate' src={huertas} alt='huertas' />
+            <div className='textBtnDonates'>Huertas</div>
             <div className='iconPlusDonate'>
               <p className='donateIcon'>&#43;</p>
             </div>

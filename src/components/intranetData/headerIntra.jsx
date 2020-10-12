@@ -1,6 +1,7 @@
 import React from 'react';
 import logo from '../../img/logo.png';
 import '../landing/styles/header.css';
+import IconBurgerToggleIntranet from './iconBurguerToggleIntranet'
 
 const HeaderIntranet = () => {
     return (
@@ -8,7 +9,7 @@ const HeaderIntranet = () => {
         <div className='containerLogoHome'>
             <img src={logo} alt="logo" className='logoHome' />
         </div>
-        {/* aqui va el burguer intranet */}
+        <IconBurgerToggleIntranet />
       </header>
     )
   }

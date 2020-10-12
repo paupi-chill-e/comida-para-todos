@@ -1,6 +1,6 @@
 footer{
   display: flex;
-  flex-flow: row wrap;
+  flex-flow: row nowrap;
   background-color: #B7B7B7;;
   width:100%;
   height: 151px;

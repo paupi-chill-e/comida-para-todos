@@ -80,7 +80,7 @@ function DonateHuertas() {
 					{errors?.correo?.message}
 				</span>
 				<div>
-					<p className='erorsText'>Número de contacto</p>
+					<p className='titleForms'>Número de contacto</p>
 					<input
 						className='inputsFormHuertas'
 						name="numeroTelefonico"

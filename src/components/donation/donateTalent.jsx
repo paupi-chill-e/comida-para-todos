@@ -25,7 +25,7 @@ function DonateTalent() {
         <p className='text'>Cuéntanos a qué te dedicas o cuál es tu pasión, buscaremos la manera de que puedas ejercerlo al servicio de las comunidades que apoyamos.</p>
         <br />
         <h1 className='title'><span>¿Cómo puedo ayudar?</span></h1>
-        <p className='text'>Desde realizar la contabilidad para una pyme, hasta hacer un show de stand-up en un comedor solidario de la red <strong>¡Cuéntanos cuál es tu talento!</strong></p>
+        <p className='text'>Desde realizar la contabilidad para una pyme, hasta hacer un show de stand-up en un comedor solidario de la red <strong>¡Dinos cuál es tu talento!</strong></p>
       </div>
       <form className='formTalentSection' onSubmit={handleSubmit(datos)}>
         <div>

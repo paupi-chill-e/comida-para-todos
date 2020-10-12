@@ -16,7 +16,7 @@ function WhatWeArchived() {
         <div className='eachPhotoArchived'>
           <img src={lunch} className='photowahtwearchived'/>
         </div>
-        <p className='textx'>97.644
+        <p className='textx'><strong>97.644</strong>
         <br/>
         Almuerzos Solidarios</p>
       </div>
@@ -24,7 +24,7 @@ function WhatWeArchived() {
         <div className='eachPhotoArchived'>
           <img src={restorant} className='photowahtwearchived' />
         </div>
-        <p className='textx'>19
+        <p className='textx'><strong>19</strong>
         <br/>
         Restaurantes colaboradores</p>
       </div>
@@ -32,7 +32,7 @@ function WhatWeArchived() {
         <div className='eachPhotoArchived'>
           <img src={peque} className='photowahtwearchived'/>
         </div>
-        <p className='textx'>19
+        <p className='textx'><strong>19</strong>
         <br/>
         Pequeños productores</p>
       </div>
@@ -40,7 +40,7 @@ function WhatWeArchived() {
         <div className='eachPhotoArchived'>
           <img src={transportis} className='photowahtwearchived'/>
         </div>
-        <p className='textx'>8
+        <p className='textx'><strong>8</strong>
         <br/>
         Transportista</p>
       </div>
@@ -48,7 +48,7 @@ function WhatWeArchived() {
         <div className='eachPhotoArchived'>
           <img src={comedor} className='photowahtwearchived'/>
         </div>
-        <p className='textx'>28
+        <p className='textx'><strong>28</strong>
         <br/>
         Comedores comunitarios</p>
       </div>
@@ -56,7 +56,7 @@ function WhatWeArchived() {
         <div className='eachPhotoArchived'>
           <img src={region} className='photowahtwearchived'/>
         </div>
-        <p className='textx'>4
+        <p className='textx'><strong>4</strong>
         <br/>
         Regiones</p>
       </div>

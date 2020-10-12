@@ -21,13 +21,10 @@ const DonateEducation = () => {
     <Fragment>
       <div className='sectionTitleText'>
         <h1 className='title'><span>¿Cómo funciona?</span></h1>
-        <p className='text'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni cumque, amet officia,
-					obcaecati est architecto soluta accusamus enim repudiandae modi</p>
+        <p className='text'>Regalar conocimiento es otorgar herramientas de superación, atrévete a capacitar a beneficiarios de nuestra red.</p>
         <br />
         <h1 className='title'><span>¿Cómo puedo ayudar?</span></h1>
-        <p className='text'>Lorem ipsum dolor sit amet consectetur adipisicing elit.
-        Dignissimos impedit ab esse mollitia tempora, minus ratione assumenda placeat aut odit.
-					Nobis corporis sapiente asperiores deserunt soluta totam culpa aut! Quidem!</p>
+        <p className='text'>Piensa en ese tema en que eres experto y cómo podría favorecer a la comunidad, cuéntanos tu disponibilidad y planeemos unas clases.</p>
       </div>
       <form className='formHuertasSection' onSubmit={handleSubmit(enviarDatos)}>
         <p className='titleForms'>Nombre completo</p>
@@ -126,7 +123,7 @@ const DonateEducation = () => {
                 required: { value: true, message: 'Ingrese capacitación a realizar' },
               })
             }
-            placeholder="Ej. Quiero enseñar sobre finanza personal"
+            placeholder="Ej. Quiero enseñar sobre finanzas personales"
           />
           <span className='erorsText'>
             {errors?.capacitacion?.message}

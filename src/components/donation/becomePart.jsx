@@ -23,12 +23,12 @@ function BecomePart() {
 		
 		<div className='sectionBecomePart'>
 			<h1 className='title'>¡HAZTE PARTE!</h1>
-			<p className='text'>En Comida para todos queremos llevar almuerzos nutritivos a comunidades vulnerables, pero más aún<strong> queremos otorgar herramientas y crear redes</strong> que les permitan proteger su propia seguridad alimentaria en el futuro.</p>
+			<p className='textbecomepart'>En Comida para todos queremos llevar almuerzos nutritivos a comunidades vulnerables, pero más aún queremos<strong> otorgar herramientas y crear redes</strong> que les permitan proteger su propia seguridad alimentaria en el futuro.</p>
 			<BtnModal showModal={openModalPre} />
             
 			{showModalPre === false ? null : <ModalDonation close={closeModalPre} />}
 			
-			<p className='textCenter'><strong>¡Cocinemos juntos un rico almuerzo solidario con calidad nutricional garantizada!</strong></p>
+			<h4 className='textCenter'><strong>¡Cocinemos juntos un generoso almuerzo solidario con calidad nutricional garantizada!</strong></h4>
         
 		
 		

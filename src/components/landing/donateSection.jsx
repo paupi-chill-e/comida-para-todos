@@ -28,7 +28,7 @@ function DonateSection() {
         <p className='moretext'>Con tu ayuda<strong> podemos reactivar</strong> a pequeños productores, restaurantes y transportes para entregar <strong>almuerzos nutritivos</strong> a comedores solidarios y <strong>fortalecer a sus comunidades.</strong></p>
       </div>
       <div className='singleContainerDonate'>
-        <Link to="/Donaciones" onClick={() => { setFormToShowValue('Huertas'); setPositionScrollFormValue(0) }}>
+        <Link to="/Donaciones" onClick={() => {setPositionScrollFormValue(0) }}>
           <img className='imgDonate' src={almuerzos} alt='almuerzos' />
           <div className='iconPlusDonate'>
             <p className='donateIcon'>&#43;</p>

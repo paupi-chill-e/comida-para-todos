@@ -8,7 +8,7 @@ function IconBurgerToggle() {
   return (
     <div>
       <span className='iconBurgerToggle' onClick={()=>setBurgerOn(!burgerOn)}>&#9776;</span>
-      <BurguerToggle burgerOn={burgerOn}/>
+      <BurguerToggle burgerOn={burgerOn} setBurgerOn={setBurgerOn}/>
     </div>
   );
 }

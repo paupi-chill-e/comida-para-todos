@@ -6,16 +6,13 @@ import DonateSection from '../components/landing/donateSection';
 import Carousel2 from '../components/landing/Carousel';
 import MotivationSectionF from '../components/landing/motivationSection';
 import ActivitySectionF from '../components/landing/activitySection';
-import  DataTableFilterDemo from '../components/demo/DataTableFilterDemo';
-import DataDo from '../components/landing/data2';
+
 
 const LandingPage = () => {
+  
+  
   return (
     <Fragment>
-    <DataDo/>
-     <DataTableFilterDemo/>
-    <Header/>
-    <obtenerDatos/>
       <Video />
       <DonateSection/>
       <MotivationSectionF/>

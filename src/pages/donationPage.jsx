@@ -10,10 +10,12 @@ const DonationPage= () => {
       return (
     <Fragment>
       <Header/>
+      
       <BecomePart /> 
       <ArchiveButtons/>
       <Footer/>
     </Fragment>
+    
   );
 }
 

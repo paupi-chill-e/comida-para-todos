@@ -13,25 +13,28 @@ export const ShowContext = React.createContext(null);
 
 function App() {
   const [formToShow, setFormToShow] = useState(null);
+  const [positionScroll, setPositionScroll] = useState(0);
 
   return (
     <Router>
       <Switch>
         <Route path="/" exact >
-          <ShowContext.Provider value={[formToShow, setFormToShow]}>
+          <ShowContext.Provider value={[formToShow, setFormToShow]} value={[positionScroll, setPositionScroll]}>
             <LandingPage />
           </ShowContext.Provider>
         </Route>
         <Route path="/Donaciones" exact >
-          <ShowContext.Provider value={[formToShow, setFormToShow] }>
+          <ShowContext.Provider value={[formToShow, setFormToShow]}>
             <DonationPage />
           </ShowContext.Provider>
         </Route>
-        <Route path="/Nosotros" exact >
-          <AboutUs />
-        </Route>
+        <ShowContext.Provider value={[positionScroll, setPositionScroll]}>
+          <Route path="/Nosotros" exact >
+            <AboutUs />
+          </Route>
+        </ShowContext.Provider>
         <Route path='/Intranet'>
-          <LogIn/>
+          <LogIn />
           <GetData />
         </Route>
       </Switch>

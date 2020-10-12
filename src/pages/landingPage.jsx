@@ -1,4 +1,4 @@
-import React, { Fragment } from "react";
+import React, { Fragment, useEffect } from "react";
 import Header from '../components/landing/header';
 import Video from '../components/landing/video';
 import Footer from '../components/landing/footer';
@@ -8,16 +8,19 @@ import MotivationSectionF from '../components/landing/motivationSection'
 import ActivitySectionF from '../components/landing/activitySection'
 
 const LandingPage = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  })
   return (
     <Fragment>
-    <Header/>
+      <Header />
       <Video />
-      <DonateSection/>
-      <MotivationSectionF/>
-      <ActivitySectionF/>
-      <Carousel2/>
-      <Footer/>
-    </Fragment>  
+      <DonateSection />
+      <MotivationSectionF />
+      <ActivitySectionF />
+      <Carousel2 />
+      <Footer />
+    </Fragment>
   );
 }
 

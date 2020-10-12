@@ -1,5 +1,22 @@
 .contentIntranetForms{
     display: flex;
     flex-flow: column nowrap;
-    padding:88px 16px 0px 16px;
+    padding:124px 16px 0px 16px;
+    background:  #F4F4F4;
+}
+.titleIntranetForms{
+    margin-bottom: 20px;
+}
+.textIntranetForms{
+    margin-bottom: 32px;
+}
+.tableIntra{
+    margin-left: 16px;
+    width: 350px;
+    height: 345px;
+}
+.btnsIntranetForms{
+    display:flex;
+    flex-flow: row nowrap;
+    width: 350px;
 }

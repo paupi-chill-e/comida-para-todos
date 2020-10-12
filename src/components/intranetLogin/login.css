@@ -1,46 +1,41 @@
-.authPageBackground{
-    background: #E5E5E5;
-    position: fixed;
-    height: 100vh;
-    width: 100vw;
-    background-size: cover;
-    display: flex;
-}
 .authPageContent{
     display: flex;
     flex-flow: column nowrap;
-    text-align: center;
-    align-content: center;
+    align-items: center;
     justify-content: center;
-    width: 359px;
-    height: 536px;
-    margin-top: 32px;
-    margin-bottom: 99px;
-    margin-left: 8px;
-    margin-right: 8px;
-    background-color: white;
+    background-color:#F4F4F4;
     color: black;
-    z-index: 5;
-    border-radius: 24px;
+    padding:56px 32px 190px 32px;
 }
+
 .logoContainer{
-    width: 92px;
+    width: 88px;
+    margin-bottom: 16px;
 }
+
 .titleIntranet, .textintranet{
-    text-align: start;
-    margin-bottom: 34px;
+    text-align: center;
+    font-size: 16px;
+}
+
+.titleIntranet{
+    margin-bottom: 16px;
+}
+.textintranet{
+    margin-bottom: 13px;
 }
 .formIntranet{
     display: flex;
     flex-flow: column nowrap;
     justify-content: center;
-    width: 215px;
-    height: 206px;
+    align-items: center;
+    text-align: start;
 }
 .textintranetInput{
     text-align: start;
     margin-bottom: 8px;
     margin-top: 16px;
+   
 }
 .btnAuthPage{
     margin-top: 16px;
@@ -52,11 +47,14 @@
     border-radius: 24px;
     border: none;
 }
+.btnAuthPage:hover{
+    background: #FD4C00;
+}
 .inputIntranet{
     width: 215px;
     height: 40px;
     border-radius: 24px;
-    padding:6px 0px 6px 6px;
+    padding:8px 15px 13px 11px;
+    border: 1px solid #929292;
+    box-sizing: border-box;
 }
-/* Ya no sé como chucha hacer que se vea tipo modal o que se 
-vea la foto o que la cagá esté centrada por la chucha */

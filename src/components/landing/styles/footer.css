@@ -33,3 +33,8 @@ footer{
 .containerIconsTextFooter{
   margin-left: 16px;
 }
+.linkExterno{
+  text-decoration: none;
+  display: flex;
+  flex-flow: row nowrap;
+}

@@ -16,7 +16,10 @@
 .sectionTitleText{
   display:flex;
   flex-flow:column nowrap;
-  margin:24px 16px 30px 16px;
+  margin:0px 16px 30px 16px;
+}
+.marginTopForm{
+  margin-top:24px
 }
 
 .formHuertasSection{
@@ -67,3 +70,14 @@
   border-top-right-radius: 10px;
   border-top-left-radius: 10px;
 } */
+
+.containerBannerForm{
+  display: flex;
+  width:100%;
+  height: 88px;
+  opacity: 70%;
+}
+.bannerForm{
+  width: 100%;
+  object-fit: cover;
+}

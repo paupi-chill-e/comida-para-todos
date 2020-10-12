@@ -1,6 +1,7 @@
 .banner{
     width:100%;
     object-fit: cover;
+    z-index: -3;
 }
 .containerBanner{
     display: flex;

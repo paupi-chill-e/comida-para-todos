@@ -2,6 +2,7 @@ import React, { Fragment, useState } from 'react';
 import { useForm } from 'react-hook-form';
 import './styles/donateHuertas.css'
 import {firebase} from '../../firebase'
+import banner from '../../img/Landing/Donar/huertas.jpg'
 
 function DonateHuertas() {
 	const db = firebase.firestore()
@@ -22,7 +23,10 @@ function DonateHuertas() {
 	return (
 		<Fragment>
 			<div className='sectionTitleText'>
-				<h1 className='title'><span>¿Cómo funciona?</span></h1>
+			<div className='containerBannerForm'>
+          <img src={banner} className='bannerForm' />
+        </div>
+				<h1 className='title marginTopForm'><span>¿Cómo funciona?</span></h1>
 				<p className='text'>Queremos aprovechar cualquier espacio que tengas para comenzar huertas urbanas permaculturales, que nos permitan abastecer a comedores y emprendimientos de nuestra red.</p>
 				<br />
 				<h1 className='title'><span>¿Cómo puedo ayudar?</span></h1>

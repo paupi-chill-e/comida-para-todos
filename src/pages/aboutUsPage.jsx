@@ -9,17 +9,16 @@ import WhatWeArchived from '../components/aboutUs/whatWeArchived';
 import Transparency from '../components/aboutUs/transparency';
 import Footer from '../components/landing/footer';
 import {ShowContext} from '../App'
-
-
+import { animateScroll as scroll } from 'react-scroll';
 
 const AboutUs = () => {
 
-  const [positionScroll, setPositionScroll] = useContext(ShowContext);
+  // // me traigo valores del contexto
+  // const { positionScroll } = useContext(ShowContext);
 
-  useEffect(() => {
-    window.scrollTo(0,positionScroll);
-  })
-  
+  // // le doy un valor a los estados de cada objeto
+  // const [positionScrollValue, setPositionScrollValue] = positionScroll
+
   return (
     <Fragment>
       <Header/>

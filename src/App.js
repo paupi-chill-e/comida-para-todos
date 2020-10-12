@@ -5,7 +5,7 @@ import LandingPage from './pages/landingPage'
 import DonationPage from './pages/donationPage';
 import AboutUs from './pages/aboutUsPage';
 // import DataGridDemo from './components/intranetData/intranetTable';
-import IntranetPage from './pages/aboutUsPage';
+import IntranetPage from './pages/intranet';
 import Login from './components/intranetLogin/login'
 
 

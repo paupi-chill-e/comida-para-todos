@@ -13,11 +13,11 @@ import Footer from '../components/landing/footer';
 const AboutUs = () => {
   return (
     <Fragment>
-      <Header />
+      <Header/>
       <Banner/>
       <History/>
       <Team/>
-      <GaleryPhoto/>
+      {/* <GaleryPhoto/> */}
       <WhatWeDo/>
       <WhatWeArchived/>
       <Transparency/>

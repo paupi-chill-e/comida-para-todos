@@ -5,7 +5,7 @@ import Footer from '../components/landing/footer';
 import DonateSection from '../components/landing/donateSection';
 import Carousel2 from '../components/landing/Carousel';
 import MotivationSectionF from '../components/landing/motivationSection'
-import ActivitySectionF from '../components/landing/activitySection'
+// import ActivitySectionF from '../components/landing/activitySection'
 
 const LandingPage = () => {
   return (
@@ -14,7 +14,7 @@ const LandingPage = () => {
       <Video />
       <DonateSection/>
       <MotivationSectionF/>
-      <ActivitySectionF/>
+      {/* <ActivitySectionF/> */}
       <Carousel2/>
       <Footer/>
     </Fragment>  

@@ -1,6 +1,11 @@
 import React from 'react';
 import './styles/whatWeArchived.css';
-import photo from '../../img/AboutUs/whatWeArchived/almuerzoSolidario.png';
+import lunch from '../../img/AboutUs/whatWeArchived/almuerzoSolidario.png';
+import restorant from '../../img/AboutUs/whatWeArchived/restaurant.png';
+import peque from '../../img/AboutUs/whatWeArchived/pequeProduc.png';
+import transportis from '../../img/AboutUs/whatWeArchived/transporti.png';
+import comedor from '../../img/AboutUs/whatWeArchived/comedor.png';
+import region from '../../img/AboutUs/whatWeArchived/region.png';
 
 function WhatWeArchived() {
   return (
@@ -9,7 +14,7 @@ function WhatWeArchived() {
       <div className='containerWhatWeArchived'>
       <div className='containerPhotoText'>
         <div className='eachPhotoArchived'>
-          <img src={photo} className='photowahtwearchived'/>
+          <img src={lunch} className='photowahtwearchived'/>
         </div>
         <p className='textx'>97.644
         <br/>
@@ -17,7 +22,7 @@ function WhatWeArchived() {
       </div>
       <div className='containerPhotoText'>
         <div className='eachPhotoArchived'>
-          <img src={photo} className='photowahtwearchived' />
+          <img src={restorant} className='photowahtwearchived' />
         </div>
         <p className='textx'>19
         <br/>
@@ -25,7 +30,7 @@ function WhatWeArchived() {
       </div>
       <div className='containerPhotoText'>
         <div className='eachPhotoArchived'>
-          <img src={photo} className='photowahtwearchived'/>
+          <img src={peque} className='photowahtwearchived'/>
         </div>
         <p className='textx'>19
         <br/>
@@ -33,7 +38,7 @@ function WhatWeArchived() {
       </div>
       <div className='containerPhotoText'>
         <div className='eachPhotoArchived'>
-          <img src={photo} className='photowahtwearchived'/>
+          <img src={transportis} className='photowahtwearchived'/>
         </div>
         <p className='textx'>8
         <br/>
@@ -41,7 +46,7 @@ function WhatWeArchived() {
       </div>
       <div className='containerPhotoText'>
         <div className='eachPhotoArchived'>
-          <img src={photo} className='photowahtwearchived'/>
+          <img src={comedor} className='photowahtwearchived'/>
         </div>
         <p className='textx'>28
         <br/>
@@ -49,7 +54,7 @@ function WhatWeArchived() {
       </div>
       <div className='containerPhotoText'>
         <div className='eachPhotoArchived'>
-          <img src={photo} className='photowahtwearchived'/>
+          <img src={region} className='photowahtwearchived'/>
         </div>
         <p className='textx'>4
         <br/>

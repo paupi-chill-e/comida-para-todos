@@ -17,7 +17,7 @@ import './styles/team.css';
 function Team() {
   return (
     <div className='sectionTeam'>
-      <h1 className='title'>EQUIPO</h1>
+      <h1 className='titleTeam'>EQUIPO</h1>
       <div className='containerTeam'>
         <div className='eachTeamMate'>
           <div className='containerPhotoTeam'>

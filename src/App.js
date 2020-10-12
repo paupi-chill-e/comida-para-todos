@@ -5,7 +5,7 @@ import LandingPage from './pages/landingPage'
 import DonationPage from './pages/donationPage';
 import AboutUs from './pages/aboutUsPage';
 // import DataGridDemo from './components/intranetData/intranetTable';
-import GetData from './components/intranetData/getData';
+import IntranetPage from './pages/aboutUsPage';
 import Login from './components/intranetLogin/login'
 
 
@@ -37,7 +37,7 @@ function App() {
           <Login />
         </Route>
         <Route path="/Intranet/Formularios" exact>
-          <GetData />
+          <IntranetPage />
         </Route>
       </Switch>
     </Router >

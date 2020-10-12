@@ -3,7 +3,7 @@ import Footer from '../components/landing/footer';
 import Header from '../components/landing/header';
 import BecomePart from '../components/donation/becomePart'
 import ArchiveButtons from '../components/donation/archiveButtons';
-
+import BannerDonation from '../components/donation/bannerdonation';
 
 const DonationPage = () => {
 
@@ -14,6 +14,7 @@ const DonationPage = () => {
   return (
     <Fragment>
       <Header />
+      <BannerDonation/>
       <BecomePart />
       <ArchiveButtons />
       <Footer />

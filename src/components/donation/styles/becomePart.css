@@ -13,7 +13,7 @@
 .sectionBecomePart{
   display:flex;
   flex-flow:column nowrap;
-  padding-top: 128px;
+  padding-top: 32px;
   margin:0px 16px 0px 16px;
 }
 .textCenter{

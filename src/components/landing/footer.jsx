@@ -14,18 +14,24 @@ function Footer() {
       </div>
       <div className='containerIconsTextFooter'>
         <div className='containerEachContact'>
-          <img src={Ig} alt="instaicon" className='iconFooter' />
-          <p className='textFooter'>@comidaparatodos</p>
+          <a className='linkExterno' href='https://www.instagram.com/comida_para_todos_cl/' target='_blanck'>
+            <img src={Ig} alt="instaicon" className='iconFooter' />
+            <p className='textFooter'>@comidaparatodos</p>
+          </a>
         </div>
         <div className='containerEachContact'>
-          <img src={Mail} alt="mailIcon" className='iconFooter' />
-          <p className='textFooter'>hola@comidaparatodos.cl</p>
+          <a className='linkExterno' href='https://mail.google.com/mail/?view=cm&fs=1&to=rafa.rincon@gastronomia.social' target='_blanck'>
+            <img src={Mail} alt="mailIcon" className='iconFooter' />
+            <p className='textFooter'>rafa.rincon@gastronomia.social</p>
+          </a>
         </div>
         <div className='containerEachContact'>
-          <img src={maps} alt="mailIcon" className='iconFooter' />
-          <p className='textFooter'>Dir. calle Lorem #463</p>
+          <a className='linkExterno' href='https://goo.gl/maps/huAqT7t2g79LgZSb8' target='_blanck'>
+            <img src={maps} alt="mailIcon" className='iconFooter' />
+            <p className='textFooter'>Dir. calle Lorem #463</p>
+            </a>
         </div>
-      </div>
+        </div>
     </footer>
 
   );

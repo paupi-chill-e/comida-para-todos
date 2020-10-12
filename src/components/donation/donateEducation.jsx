@@ -1,7 +1,8 @@
 import React, { Fragment, useState } from 'react';
 import { useForm } from 'react-hook-form';
 // import './styles/donateHuertas.css'
-import {firebase} from '../../firebase';
+import { firebase } from '../../firebase';
+import banner from '../../img/Landing/Donar/educacion.jpg'
 
 const DonateEducation = () => {
   const { register, errors, handleSubmit } = useForm()
@@ -9,18 +10,21 @@ const DonateEducation = () => {
   const db = firebase.firestore();
 
   const enviarDatos = (data, event) => {
-		setFormEducation([...formEducation, data])
-		event.preventDefault();
-		event.target.reset();
+    setFormEducation([...formEducation, data])
+    event.preventDefault();
+    event.target.reset();
     db.collection("Educacion").doc(data.nombreCompleto).set({
       data
     })
-	}
+  }
 
   return (
     <Fragment>
       <div className='sectionTitleText'>
-        <h1 className='title'><span>¿Cómo funciona?</span></h1>
+        <div className='containerBannerForm'>
+          <img src={banner} className='bannerForm' />
+        </div>
+        <h1 className='title marginTopForm'><span>¿Cómo funciona?</span></h1>
         <p className='text'>Regalar conocimiento es otorgar herramientas de superación, atrévete a capacitar a beneficiarios de nuestra red.</p>
         <br />
         <h1 className='title'><span>¿Cómo puedo ayudar?</span></h1>
@@ -146,7 +150,7 @@ const DonateEducation = () => {
           </span>
         </div>
         <div>
-          <p className='titleForms'>Coméntanos si requieres materiales para los asistentes, espacio físico desde el cual 
+          <p className='titleForms'>Coméntanos si requieres materiales para los asistentes, espacio físico desde el cual
           capacitar u otros detalles importantes</p>
           <textarea
             className='textareaSection'

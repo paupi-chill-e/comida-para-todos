@@ -2,6 +2,7 @@ import React, { Fragment, useState } from 'react';
 import { useForm } from 'react-hook-form';
 import './styles/donateTalent.css';
 import {firebase} from '../../firebase';
+import banner from '../../img/Landing/Donar/talento.jpg'
 
 function DonateTalent() {
   const { register, errors, handleSubmit } = useForm();
@@ -21,7 +22,10 @@ function DonateTalent() {
   return (
     <Fragment>
       <div className='sectionTitleText'>
-        <h1 className='title'><span>¿Cómo funciona?</span></h1>
+      <div className='containerBannerForm'>
+          <img src={banner} className='bannerForm' />
+        </div>
+        <h1 className='title marginTopForm'><span>¿Cómo funciona?</span></h1>
         <p className='text'>Cuéntanos a qué te dedicas o cuál es tu pasión, buscaremos la manera de que puedas ejercerlo al servicio de las comunidades que apoyamos.</p>
         <br />
         <h1 className='title'><span>¿Cómo puedo ayudar?</span></h1>

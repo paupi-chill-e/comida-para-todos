@@ -1,0 +1,5 @@
+.contentIntranetForms{
+    display: flex;
+    flex-flow: column nowrap;
+    margin:88px 16px 0px 16px;
+}

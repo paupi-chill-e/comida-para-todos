@@ -1,8 +1,6 @@
 import React, { Fragment, useState, useEffect } from 'react';
 import { firebase } from '../../firebase';
-import HeaderIntranet from './headerIntra';
-
-
+import './styles/getData.css';
 
 const GetData = () => {
   const [showTable, setShowTable] = useState(null)
@@ -24,12 +22,19 @@ const GetData = () => {
 
   return (
     <Fragment>
-      <HeaderIntranet/>
-      <p>Mostrar los postulantes</p>
-      {/* <button onClick={handleHuertaShow}>Huerta</button>
-      <button onClick={handleEducationShow}>Educación</button>
-      <button onClick={handleTalentShow}>Talento</button> */}
-      <button onClick={handleFoodShow}>Despensa</button>
+      <div className='contentIntranetForms'>
+        <div className='textIntranetForms'>
+          <h1 className='titleIntranetForms'>¡Bienvenido!</h1>
+          <p className='paragraphIntranetForms'>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.</p>
+        </div>
+        <div className='containerBtnsFormsIntranet'>
+          {/* <button onClick={handleHuertaShow}>Huerta</button>
+          <button onClick={handleEducationShow}>Educación</button>
+          <button onClick={handleTalentShow}>Talento</button> */}
+          <button onClick={handleFoodShow}>Despensa</button>
+        </div>
+      </div>
+    
     </Fragment>
   );
 }

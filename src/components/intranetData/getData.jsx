@@ -1,5 +1,8 @@
 import React, { Fragment, useState, useEffect } from 'react';
-import { firebase } from '../../firebase'
+import { firebase } from '../../firebase';
+import HeaderIntranet from './headerIntra';
+
+
 
 const GetData = () => {
   const [showTable, setShowTable] = useState(null)
@@ -21,6 +24,7 @@ const GetData = () => {
 
   return (
     <Fragment>
+      <HeaderIntranet/>
       <p>Mostrar los postulantes</p>
       {/* <button onClick={handleHuertaShow}>Huerta</button>
       <button onClick={handleEducationShow}>Educación</button>

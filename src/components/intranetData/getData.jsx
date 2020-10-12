@@ -25,13 +25,13 @@ const GetData = () => {
       <div className='contentIntranetForms'>
         <div className='textIntranetForms'>
           <h1 className='titleIntranetForms'>¡Bienvenido!</h1>
-          <p className='paragraphIntranetForms'>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.</p>
+          <p className='paragraphIntranetForms'>Aquí podrás visualizar en forma de tabla los respectivos postulantes, tan solo haciendo click en los botones adyacentes.</p>
         </div>
-        <div className='containerBtnsFormsIntranet'>
-          {/* <button onClick={handleHuertaShow}>Huerta</button>
-          <button onClick={handleEducationShow}>Educación</button>
-          <button onClick={handleTalentShow}>Talento</button> */}
-          <button onClick={handleFoodShow}>Despensa</button>
+        <div className='btnsIntranetForms'>
+          <button className='archiveBtnOff' >Huerta</button>
+          <button className='archiveBtnOff' >Educación</button>
+          <button className='archiveBtnOff' >Talento</button>
+          <button onClick={handleFoodShow} className='archiveBtnOff' >Despensa</button>
         </div>
       </div>
     

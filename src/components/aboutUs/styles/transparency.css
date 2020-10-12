@@ -5,10 +5,10 @@
 }
 .containerTransparency{
     align-self: center;
-    margin-top: 20px;
-    width: 280px;
-    height: 280px;
+  
 }
 .graphic{
-    width: 100%;
+    width: 346.49px;
+    height: 346.49px;
+    object-fit: cover;
 }

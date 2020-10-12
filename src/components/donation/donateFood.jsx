@@ -22,12 +22,9 @@ function DonateFood ()  {
 		<Fragment>
 			<div className='sectionTitleText'>
 				<h1 className='title'><span>¿Cómo funciona?</span></h1>
-				<p className='text'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni cumque, amet officia,
-					obcaecati est architecto soluta accusamus enim repudiandae modi</p>
+				<p className='text'>Nos juntamos con Empresas Amigas que tienen servicios de delivery a tu hogar, para poder aprovechar su transporte y rescatar alimentos que puedan perderse en tu despensa.</p>
 				<h1><span className='title'>¿Cómo puedo ayudar?</span></h1>
-				<p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
-				Dignissimos impedit ab esse mollitia tempora, minus ratione assumenda placeat aut odit.
-					Nobis corporis sapiente asperiores deserunt soluta totam culpa aut! Quidem!</p>
+				<p className='text'>Con tu número de pedido en Empresas Amigas, puedes inscribir alimentos para donar y que éstos sean recogidos cuando lleven tu envío.</p>
 			</div>
 			<form className='formHuertasSection' onSubmit={handleSubmit(enviarDatos)}>
 

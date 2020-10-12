@@ -11,7 +11,7 @@ const Carousel2= () => {
           
 
         
-        <Carousel autoPlay showThumbs={false} infiniteLoop={true}>
+        {/* <Carousel autoPlay showThumbs={false} infiniteLoop={true}>
             {
                 Colab.map((item) =>
                 <div className='carro' key={item.id}>
@@ -19,7 +19,7 @@ const Carousel2= () => {
                 </div>
               )}
         
-        </Carousel>
+        </Carousel> */}
         </Fragment>
         )
         } 

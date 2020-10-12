@@ -27,7 +27,7 @@ function DonateSection() {
         <Link to="/Donaciones">
           <img className='imgDonate' src={almuerzos} alt='almuerzos' />
           <div className='iconPlusDonate'>
-            <p className='donateIcon'>+</p>
+            <p className='donateIcon'>&#43;</p>
           </div>
         </Link>
       </div>
@@ -36,7 +36,7 @@ function DonateSection() {
           <Link to="/Donaciones" onClick={() => { setFormToShow('Food');  }}>
             <img className='imgDonate' src={despensa} alt='despensa' />
             <div className='iconPlusDonate'>
-              <p className='donateIcon'>+</p>
+              <p className='donateIcon'>&#43;</p>
             </div>
           </Link>
         </div>
@@ -44,7 +44,7 @@ function DonateSection() {
           <Link to="/Donaciones" onClick={() => { setFormToShow('Talent'); }}>
             <img className='imgDonate' src={talento} alt='talento' />
             <div className='iconPlusDonate'>
-              <p className='donateIcon'>+</p>
+              <p className='donateIcon'>&#43;</p>
             </div>
           </Link>
         </div>
@@ -52,7 +52,7 @@ function DonateSection() {
           <Link to="/Donaciones" onClick={() => {setFormToShow('Education'); }}>
             <img className='imgDonate' src={educacion} alt='educacion' />
             <div className='iconPlusDonate'>
-              <p className='donateIcon'>+</p>
+              <p  className='donateIcon'>&#43;</p>
             </div>
           </Link>
         </div>
@@ -60,7 +60,7 @@ function DonateSection() {
           <Link to="/Donaciones" onClick={() =>{setFormToShow('Huertas'); }}>
             <img className='imgDonate' src={huertas} alt='huertas' />
             <div className='iconPlusDonate'>
-              <p className='donateIcon'>+</p>
+              <p className='donateIcon'>&#43;</p>
             </div>
           </Link>
         </div>

@@ -9,8 +9,8 @@
 .containerScheme{
     display: flex;
     margin-top: 16px;
-    width: 343px;
-    height: 279px;
+    width: auto;
+    height: 407px;
 }
 .scheme{
     width: 100%;

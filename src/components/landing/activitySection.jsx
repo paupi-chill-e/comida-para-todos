@@ -40,6 +40,7 @@ const ActivitySectionF = () => {
 
     </div>
     <div className="containerActivitySection">
+    <strong>Nuestros Colaboradores</strong>
     <Carousel autoPlay showThumbs={false} infiniteLoop={true}>
         <div className='eachColab'>
           <img className='imgActivity' src={a} alt='lata'/>

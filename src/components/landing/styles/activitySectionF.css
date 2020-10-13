@@ -3,15 +3,17 @@
     height:12rem;
     border: 3px solid #fd4c00;
 }
-
+.textActivitySection{
+    background-color: #F4F4F4;
+}
 
 .containerActivitySection{
     display: flex;
     flex-flow: row wrap;
     justify-content: space-evenly;
-    margin: 1.5rem auto;
+    margin: 1.5rem 0px;
     background-color: #F4F4F4;
-
+    text-align: start;
 }
 .containerActivitySection:focus{
  
@@ -30,6 +32,7 @@ border: none;
     flex-flow: column nowrap;
     margin: 16px 16px;
     margin-top: 3.5rem ;
+    text-align: start;
 }
 .instagram-media-instagram-media-rendered{
     width: 100%;
@@ -44,4 +47,27 @@ display: none
 
 #editMe{
     display: none
+}
+
+.h2Carrousel{
+background-color: white;
+width: 100%;
+}
+
+
+.titleActSec{
+    text-align: start;
+}
+.bottomTextInsta{
+    font-style: italic;
+    font-size: 16px;
+    color: #929292;
+    font-weight: lighter;
+    text-align: start;
+}
+.titleActSecs{
+    margin-left: 16px;
+}
+.footerframe{
+width: 100%;
 }

@@ -1,6 +1,6 @@
 import React from 'react';
 import './styles/whatWeArchived.css';
-import photo from '../../img/gato.jpg';
+import photo from '../../img/foto.jpeg';
 
 function WhatWeArchived() {
   return (

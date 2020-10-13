@@ -1,5 +1,5 @@
 import React from 'react';
-import banner from '../../img/tikit.png';
+import banner from '../../img/foto.jpeg';
 import './styles/banner.css';
 
 

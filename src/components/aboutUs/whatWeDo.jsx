@@ -1,6 +1,6 @@
 import React from 'react';
 import './styles/whatWeDo.css';
-import photo from '../../img/cat.jpg';
+import photo from '../../img/foto.jpeg';
 
 
 function WhatWeDo() {

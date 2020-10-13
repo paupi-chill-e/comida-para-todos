@@ -12,6 +12,13 @@
     margin: 1.5rem auto;
 
 }
+.containerActivitySection:focus{
+ 
+        outline: -webkit-focus-ring-color auto 1px;
+        outline-color: -webkit-focus-ring-color;
+        outline-style: auto;
+        outline-width: 1px
+}
 
 .btnhref{
 border: none;
@@ -29,6 +36,20 @@ border: none;
     border: 2px solid rgba(0,0,0,.2);
 }
 .renderautomatic{
+    height: 32rem;
+    transition: height 0.3s ease 0s;
+    display: inline;
+    visibility: visible;
+    width: 20rem;
+    border-width: 0.5px;
+    border-style: inset;
+    border-color: initial;
+    border-image: initial;
+    border-right-width: 1px;
+    margin-left: 1rem;
+
+}
+.embed{
     width : 100%;
     height:22.5rem;
     transition: height 0.3s ease 0s; 
@@ -37,5 +58,4 @@ border: none;
     min-width: 100%;
     width: 1px;
 }
-
 

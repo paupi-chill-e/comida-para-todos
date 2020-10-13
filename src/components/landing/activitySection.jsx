@@ -16,15 +16,17 @@ const ActivitySectionF = () => {
         
         
         {/*instagram renderizado de ultimas imgs directo de la ap redirige,publica,likes  */}          
- <iframe className='renderautomatic' src="https://www.powr.io/instagram-feed/u/c349a139_1602450916#platform=embed" ></iframe> 
-      
+        <iframe className="renderautomatic" src="https://www.instagram.com/p/CGQbzXknyKD/embed/?cr=1&amp;v=12&amp;wp=746&amp;rd=http%3A%2F%2Flocalhost%3A3000&amp;rp=%2F#%7B%22ci%22%3A0%2C%22os%22%3A3179.215000000113%2C%22ls%22%3A1943.739999999707%2C%22le%22%3A1954.5149999999012%7D;"></iframe>
+        <div className="Embed " data-ios-link="media?id=2418555277157540483&amp;utm_source=ig_embed&amp;ig_mid=21A3D8C6-3C06-48BB-A4D1-FA9BE06D3EB4" data-permalink="https://www.instagram.com/p/CGQbzXknyKD/?utm_source=ig_embed&amp;ig_mid=21A3D8C6-3C06-48BB-A4D1-FA9BE06D3EB4" data-log-event="bodyClick" data-media-type="GraphSidecar" data-media-id="2418555277157540483" data-owner-id="34668351621">
   
+ 
+        </div>
+       
+
        
       
     </div>
-    <div className="text-center hid btn btn-primary btn-xs design_2 js-hide-if-pos">
-
-</div>
+ 
     </Fragment>
   );
 };

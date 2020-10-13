@@ -2,28 +2,24 @@ import React, { Fragment, useState, useEffect } from 'react';
 import { firebase } from '../../firebase';
 import './styles/getData.css';
 
- const GetData = (props) => {
+const GetData = () => {
+  const [showTable, setShowTable] = useState(null)
 
-  const [showTable, setShowTable] = useState([] )
-  useEffect(() => {
- 
+  const handleFoodShow = () => {
     const obtenerDatos = async () => {
       const db = firebase.firestore()
       try {
         const data = await db.collection('Despensa').get()
-        const arrayData = data.docs.map(doc => ({id: doc.id, ...doc.data()}))
+        const arrayData = data.docs.map(doc => (doc.data()))
         console.log(arrayData)
-        setShowTable(arrayData)
       } catch {
         console.log('error')
       }
     }
-  
     obtenerDatos()
 
-  }, [])
-    
- 
+  }
+
   return (
     <Fragment>
       <div className='contentIntranetForms'>
@@ -43,4 +39,4 @@ import './styles/getData.css';
   );
 }
 
- export default GetData
+export default GetData;

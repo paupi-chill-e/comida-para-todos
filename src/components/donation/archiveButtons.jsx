@@ -53,7 +53,7 @@ function ArchiveButtons() {
         }}>Despensa</button>
         <button className={classButtonArchiveEducation} onClick={() => {
           setFormToShowValue('Education');
-          setPositionScrollFormValue(390)
+          setPositionScrollFormValue(390)scr
         }}>Educación</button>
       </div>
       {form}

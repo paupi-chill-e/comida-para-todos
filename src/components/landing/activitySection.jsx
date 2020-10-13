@@ -37,10 +37,8 @@ const ActivitySectionF = () => {
       <div className='textActivitySection'>
         <strong>ACTIVIDAD RECIENTE</strong>
         {""}
-        <iframe
-          className='instagram-media-instagram-media-rendered'
-          src="https://www.powr.io/instagram-feed/u/c349a139_1602450916#platform=embed" >
-        </iframe>
+        
+        <iframe className='instagram-media-instagram-media-rendered' src="https://www.powr.io/instagram-feed/u/c349a139_1602450916#platform=embed" ></iframe> 
       </div>
       <div className="containerActivitySection">
         <strong>Nuestros Colaboradores</strong>

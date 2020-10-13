@@ -1,69 +1,40 @@
 footer{
   display: flex;
   flex-flow: row nowrap;
-  justify-content: space-evenly;
-  background-color: #F4F4F4;
+  background-color: #B7B7B7;;
   width:100%;
-  height: 100px;
-  padding: 10px;
+  height: 151px;
+  /* padding: 0px 28px 0px 16px; */
   bottom: 0px;
+  align-content: center;
+  align-items: center;
 }
-
-.imgsFooter{
-  display: flex;
-  flex-flow: column nowrap;
-  align-items: start ;
-}
-
 .containerLogoFooter{
-  height: 100%;
+  width:88px;
+  margin-left: 16px;
 }
-
 .logoFooter{
-  width:80px;
-  height: 80px;
+  width: 100%;
 }
-
 .iconFooter{
-  width: 15%;
+  width: 24px;
 } 
-
-.infoFooter{
-  font-size: 14px;
-  line-height: 30px;
-  text-align: left;
-}
-
-.btnFooter{
-  background-color: #fd4c00;
-  border:#fd4c00 solid 1px;
-  color: white;
-  width: 100%;
-  height: 2.2rem;
-  border-radius: 5rem; 
-}
-
-.containerIconsFooter{
+.containerEachContact{
   display: flex;
-  flex-flow: row wrap;
-  justify-content: space-evenly;
-  width: 60%;
-  margin-inline-start: -17px;
+  flex-flow: row nowrap;
+  margin: 19px 0px 19px 24px;
 }
 
-.infoFooter{
+.textFooter{
+  margin-left: 16px;
+  font-size: 16px;
+  color:#FBFBFB;
+}
+.containerIconsTextFooter{
+  margin-left: 16px;
+}
+.linkExterno{
+  text-decoration: none;
   display: flex;
-  flex-flow: row wrap;
+  flex-flow: row nowrap;
 }
-
-.btnFootertwo{
-  width: 100%;
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: space-evenly;
-}
-
-.descriptionFooter{
-  text-align: start;
-}
-

@@ -1,26 +1,29 @@
 .sectionTeam{
-    diplay:flex;
+    display:flex;
+    flex-flow: column nowrap;
     margin:30px 16px 0px 16px;
-}
-.title{
-    font-size: 16px;
+    text-align: center;
 }
 .textTeam{
     font-size: 16px;
     margin-top: 5px;
-    text-align: center;
+    font-weight: bold;
 }
 .containerTeam{
     display: flex;
     flex-flow: row wrap;
     margin-top: 16px;
+    align-content: center; 
     justify-content: center;
 }
 .eachTeamMate{
     display: flex;
     flex-flow: column nowrap;
     align-items: center;
-    margin-right: 20px;
+    margin:0px 16px 0px 0px;
+    width: 122px;
+    height: 193px;
+    text-align: center;
 }
 
 .containerPhotoTeam{
@@ -31,4 +34,11 @@
 .photo{
   width: 100%;
   border-radius:50%;
+  object-fit: cover;
+}
+.titleTeam{
+    font-size: 16px;
+    height: 24px;
+    margin-bottom: 16px;
+    text-align: left;
 }

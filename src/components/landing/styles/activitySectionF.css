@@ -10,6 +10,7 @@
     flex-flow: row wrap;
     justify-content: space-evenly;
     margin: 1.5rem auto;
+    background-color: #F4F4F4;
 
 }
 .containerActivitySection:focus{

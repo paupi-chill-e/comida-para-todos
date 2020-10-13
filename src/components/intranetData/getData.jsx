@@ -1,7 +1,6 @@
-import React, { Fragment, useState,useEffect} from 'react';
+import React, { Fragment, useState, useEffect } from 'react';
 import { firebase } from '../../firebase';
-import ReactTable from 'react-table'
-import IntranetDataExport from './intranetDataExport'
+import './styles/getData.css';
 
  const GetData = (props) => {
 
@@ -26,36 +25,22 @@ import IntranetDataExport from './intranetDataExport'
     
  
   return (
+    <Fragment>
+      <div className='contentIntranetForms'>
+        <div className='textIntranetForms'>
+          <h1 className='titleIntranetForms'>¡Bienvenido!</h1>
+          <p className='paragraphIntranetForms'>Aquí podrás visualizar en forma de tabla los respectivos postulantes, tan solo haciendo click en los botones adyacentes.</p>
+        </div>
+        <div className='btnsIntranetForms'>
+          <button className='archiveBtnOff' >Huerta</button>
+          <button className='archiveBtnOff' >Educación</button>
+          <button className='archiveBtnOff' >Talento</button>
+          <button onClick={handleFoodShow} className='archiveBtnOff' >Despensa</button>
+        </div>
+      </div>
     
-    
-     <Fragment>
-        
-            {
-              showTable.map(data => (
-                
-                <div className="list-group-item" key={data.id}>
-                <div className="box">
-                  <p>{data.nombreCompleto}</p>
-                  </div>
-                  <div className="box">
-                  <p>{data.correo}</p>
-                  </div>
-                </div>
-                ))
-            }
-        
-
-  <p>Mostrar los postulantes</p>
-      {/* <button onClick={handleHuertaShow}>Huerta</button>
-      <button onClick={handleEducationShow}>Educación</button>
-      <button onClick={handleTalentShow}>Talento</button> */}
-      <button onClick={props.obtenerDatos}>Despensa</button>
-
-      <IntranetDataExport/>
-      </Fragment>
-   
-  )
-
+    </Fragment>
+  );
 }
 
  export default GetData

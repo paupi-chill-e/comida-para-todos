@@ -1,9 +1,4 @@
-/* .containerVideoHome{
-  width:100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-} */
 .videoHome{
+  padding-top: 88px;
   width:100%;
 } 

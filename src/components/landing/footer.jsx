@@ -1,45 +1,39 @@
 import React from 'react';
 import { Link } from "react-router-dom";
 import './styles/footer.css';
-import logox from '../../img/logo.png'
-import  Ig from '../../img/ig.png';
-import Linked from '../../img/linked.png';
-import Mail from '../../img/mail.png';
+import logo from '../../img/logo.png'
+import Ig from '../../img/Footer/insta.png';
+import maps from '../../img/Footer/maps.png';
+import Mail from '../../img/Footer/mail.png';
 
 function Footer() {
   return (
     <footer>
-      <div className='imgsFooter'>
-        <div className='containerLogoFooter'>
-          <img src={logox} alt="" className='logoFooter' />
-        </div>
-        <div className='containerIconsFooter'>
-          <img src={Ig} alt="" className='iconFooter' />
-          <img src={Linked} alt="" className='iconFooter' />
-          <img src={Mail} alt="" className='iconFooter' /> 
-        </div>
+      <div className='containerLogoFooter'>
+        <img src={logo} alt="" className='logoFooter' />
       </div>
-      <div className='infoFooter'>
-      <div className='descriptionFooter'>
-        <p>• Quiénes somos</p>
+      <div className='containerIconsTextFooter'>
+        <div className='containerEachContact'>
+          <a className='linkExterno' href='https://www.instagram.com/comida_para_todos_cl/' target='_blanck'>
+            <img src={Ig} alt="instaicon" className='iconFooter' />
+            <p className='textFooter'>@comidaparatodos</p>
+          </a>
         </div>
-        <div className='descriptionFooter'>
-        <p >• Transparencia</p>
+        <div className='containerEachContact'>
+          <a className='linkExterno' href='https://mail.google.com/mail/?view=cm&fs=1&to=rafa.rincon@gastronomia.social' target='_blanck'>
+            <img src={Mail} alt="mailIcon" className='iconFooter' />
+            <p className='textFooter'>rafa.rincon@gastronomia.social</p>
+          </a>
         </div>
-        <div className='descriptionFooter'>
-        <p >• Qué hacemos</p>
+        <div className='containerEachContact'>
+          <a className='linkExterno' href='https://goo.gl/maps/huAqT7t2g79LgZSb8' target='_blanck'>
+            <img src={maps} alt="mailIcon" className='iconFooter' />
+            <p className='textFooter'>Dir. calle Lorem #463</p>
+            </a>
         </div>
-        <div className='descriptionFooter'>
-        <p>• Cómo ayudar</p>
-        </div>
-        </div>
-        <div className='btnFootertwo'>
-    <Link to="/">
-          <button className="btnFooter">DONACIONES</button>
-        </Link>
         </div>
     </footer>
-    
+
   );
 }
 

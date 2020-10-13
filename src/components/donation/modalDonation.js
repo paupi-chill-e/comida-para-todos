@@ -1,20 +1,25 @@
 import React from "react";
 import "../donation/styles/modalDonation.css";
+import logo from '../../img/logo.png'
 
 
 const ModalDonation = (props) => {
   return (
     <div className="modal">
       <div className="modal-content">
-        <p className="modal-text">Esta siendo redirigido a Yodono para efectuar su donacion en dinero</p>
-        <a href="https://yodono.cl/donar/207">
-         <button onClick={props.close} className="btn-modal"  target="_blank" >
-          {" "}
-          OK{" "}
-        </button>
+        <span className="closeModal">X</span>
+        <div className='logoContainerModal'>
+          <img src={logo} className="logoModal" alt="logo" />
+        </div>
+        <p className="modal-text">Te redireccionaremos a nuestra plataforma de donaciones para recibir nuestro aporte. </p>
+        <p className="modal-text">¡Muchas gracias!</p>
+        <a href="https://yodono.cl/donar/207" target='_blanck'>
+          <button onClick={props.close} className="btn-modal" >
+            {" "}
+          IR A YODONO.CL{" "}
+          </button>
         </a>
       </div>
-      
     </div>
   );
 };

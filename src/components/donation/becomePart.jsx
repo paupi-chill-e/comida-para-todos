@@ -1,7 +1,8 @@
 import React,{useState}from "react";
 import './styles/becomePart.css';
 import ModalDonation from "./modalDonation";
-import BtnModal from './btnModal'
+import BtnModal from './btnModal';
+
 
 function BecomePart() {
 
@@ -22,14 +23,14 @@ function BecomePart() {
 	return (
 		
 		<div className='sectionBecomePart'>
-			<h1 className='title'>¡HAZTE PARTE!</h1>
-			<p className='text'>Lorem ipsum dolor sit amet consectetur adipiscing elit, dignissim sagittis faucibus enim rutrum odio vestibulum, cursus natoque mauris mi potenti libero. dona una vez o hazte socio.</p>
-			<p><strong>Ayúdanos a cocinar un almuerzo solidario de 400gr con calidad nutricional garantizada.</strong></p>
 			
+			<h1 className='title'>¡HAZTE PARTE!</h1>
+			<p className='textbecomepart'>En Comida para todos queremos llevar almuerzos nutritivos a comunidades vulnerables, pero más aún queremos<strong> otorgar herramientas y crear redes</strong> que les permitan proteger su propia seguridad alimentaria en el futuro.</p>
 			<BtnModal showModal={openModalPre} />
             
 			{showModalPre === false ? null : <ModalDonation close={closeModalPre} />}
 			
+			<h4 className='textCenter'><strong>¡Cocinemos juntos un generoso almuerzo solidario con calidad nutricional garantizada!</strong></h4>
         
 		
 		

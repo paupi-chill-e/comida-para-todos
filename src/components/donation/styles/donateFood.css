@@ -16,7 +16,7 @@
 .sectionTitleText{
   display:flex;
   flex-flow:column nowrap;
-  margin:24px 16px 30px 16px;
+  margin:0px 16px 30px 16px;
 }
 
 .formHuertasSection{

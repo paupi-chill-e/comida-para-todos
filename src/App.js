@@ -1,31 +1,55 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './App.css';
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import LandingPage from './pages/landingPage'
 import DonationPage from './pages/donationPage';
 import AboutUs from './pages/aboutUsPage';
 // import DataGridDemo from './components/intranetData/intranetTable';
-import GetData from './components/intranetData/getData';
-// import LogIn from './';
+import IntranetPage from './pages/intranet';
+import Login from './components/intranetLogin/login'
+
+export const ShowContext = React.createContext(null);
 
 function App() {
+  const [formToShow, setFormToShow] = useState('Huertas');
+  const [positionScrollForm, setPositionScrollForm] = useState(0);
+
   return (
     <Router>
       <Switch>
         <Route path="/" exact >
-          <LandingPage />
+          <ShowContext.Provider
+            value={{
+              formToShow: [formToShow, setFormToShow],
+              positionScrollForm: [positionScrollForm, setPositionScrollForm]
+            }}
+          >
+            <LandingPage />
+          </ShowContext.Provider>
         </Route>
-        <Route path="/Donaciones" >
-          <DonationPage />
+        <Route path="/Donaciones" exact >
+          <ShowContext.Provider
+            value={{
+              formToShow: [formToShow, setFormToShow],
+              positionScrollForm: [positionScrollForm, setPositionScrollForm]
+            }}
+          >
+            <DonationPage />
+          </ShowContext.Provider>
         </Route>
-        <Route path="/Nosotros">
-          <AboutUs/>
+        <Route path="/Nosotros" exact >
+          <ShowContext.Provider>
+            <AboutUs />
+          </ShowContext.Provider>
         </Route>
-        <Route path='/Intranet'>
-          <GetData/>
+        <Route path="/Intranet/Login" exact >
+          <Login />
+        </Route>
+        <Route path="/Intranet/Formularios" exact>
+          <IntranetPage />
         </Route>
       </Switch>
-    </Router>
+    </Router >
   );
 }
 export default App;

@@ -1,6 +1,12 @@
 .iconBurgerToggle{
-  font-size: 25px;
+  font-size: 35px;
   color:#929292;
-  margin:0px 7px 0px 0px;
+  margin-right: 32px;
+}
+
+@media screen and (min-width:1024px){
+  .iconBurgerToggle{
+    display: none;
+  }
 }
 

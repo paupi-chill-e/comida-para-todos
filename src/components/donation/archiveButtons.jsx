@@ -1,51 +1,62 @@
-import React, { useState } from 'react';
+import React, { useState, useContext, useEffect } from 'react';
 import DonateEducation from './donateEducation';
 import DonateHuertas from './donateHuertas';
 import DonateTalent from './donateTalent';
 import DonateFood from './donateFood';
+import { ShowContext } from '../../App'
 import './styles/archiveButtons.css';
+import { animateScroll as scroll } from 'react-scroll';
 
 
 function ArchiveButtons() {
-  
-  const [formToShow, setFormToShow] = useState(null);
-  const [classToShow, setClassToShow] = useState(null)
-  
 
-  const handleHuertas=()=>{
-    setFormToShow(<DonateHuertas/>)
-    setClassToShow('Huertas')
-  }
-  const handleTalent=()=>{
-    setFormToShow(<DonateTalent/>)
-    setClassToShow('Talent')
-  }
-  const handleFood=()=>{
-    setFormToShow(<DonateFood/>)
-    setClassToShow('Food')
-  }
-  const handleEducation=()=>{
-    setFormToShow(<DonateEducation/>)
-    setClassToShow('Education')
-  }
+  // me traigo valores del contexto
+  const { formToShow, positionScrollForm } = useContext(ShowContext);
 
+  // le doy un valor a los estados de cada objeto
+  const [formToShowValue, setFormToShowValue] = formToShow;
+  const [positionScrollFormValue, setPositionScrollFormValue] = positionScrollForm;
 
+  useEffect(() => {
+    scroll.scrollTo(positionScrollFormValue)
+  }
+  )
 
-  const classButtonArchiveHuerta = classToShow === 'Huertas'?'archiveBtnOn': 'archiveBtnOff';
-  const classButtonArchiveTalent = classToShow === 'Talent' ?'archiveBtnOn': 'archiveBtnOff';
-  const classButtonArchiveFood = classToShow === 'Food'?'archiveBtnOn': 'archiveBtnOff';
-  const classButtonArchiveEducation = classToShow === 'Education'?'archiveBtnOn': 'archiveBtnOff';
-  
+  const classButtonArchiveHuerta = formToShowValue === 'Huertas' ? 'archiveBtnOn' : 'archiveBtnOff';
+  const classButtonArchiveTalent = formToShowValue === 'Talent' ? 'archiveBtnOn' : 'archiveBtnOff';
+  const classButtonArchiveFood = formToShowValue === 'Food' ? 'archiveBtnOn' : 'archiveBtnOff';
+  const classButtonArchiveEducation = formToShowValue === 'Education' ? 'archiveBtnOn' : 'archiveBtnOff';
+
+  let form = '';
+
+  if (formToShowValue === 'Huertas') form = <DonateHuertas />
+  if (formToShowValue === 'Talent') form = <DonateTalent />
+  if (formToShowValue === 'Food') form = <DonateFood />
+  if (formToShowValue === 'Education') form = <DonateEducation />
+
   return (
     <div className='containerSectionArchiveBtnAndDonateForms'>
-        <div className='sectionArchiveButtons'>
-          <button className={classButtonArchiveHuerta} onClick={handleHuertas}>Huertas</button>
-          <button className={classButtonArchiveTalent} onClick={handleTalent}>Talento</button>
-          <button className={classButtonArchiveFood} onClick={handleFood}>Despensa</button>
-          <button className={classButtonArchiveEducation} onClick={handleEducation}>Educación</button>
-        </div>
-        {formToShow}
-      
+      <div className='sectionArchiveButtons'>
+        <button className={classButtonArchiveHuerta}
+          onClick={() => {
+            setFormToShowValue('Huertas');
+            setPositionScrollFormValue(390);
+          }}>Huertas</button>
+        <button className={classButtonArchiveTalent}
+          onClick={() => {
+            setFormToShowValue('Talent');
+            setPositionScrollFormValue(390)
+          }}>Talento</button>
+        <button className={classButtonArchiveFood} onClick={() => {
+          setFormToShowValue('Food');
+          setPositionScrollFormValue(390)
+        }}>Despensa</button>
+        <button className={classButtonArchiveEducation} onClick={() => {
+          setFormToShowValue('Education');
+          setPositionScrollFormValue(390)
+        }}>Educación</button>
+      </div>
+      {form}
     </div>
   );
 }

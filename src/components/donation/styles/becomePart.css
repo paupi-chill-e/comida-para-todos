@@ -13,5 +13,16 @@
 .sectionBecomePart{
   display:flex;
   flex-flow:column nowrap;
-  margin:30px 16px 0px 16px;
+  padding-top: 32px;
+  margin:0px 16px 0px 16px;
+}
+.textCenter{
+  font-size: 16px;
+  margin:24 0px 30px 0px;
+  text-align: left;
+  
+}
+.textbecomepart{
+  width: 343px;
+  height: 95px;
 }

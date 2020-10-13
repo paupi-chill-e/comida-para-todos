@@ -1,11 +1,11 @@
 import React from 'react';
 import './styles/transparency.css';
-import graphic from '../../img/foto.jpeg';
+import graphic from '../../img/AboutUs/transparency.png';
 
 function Transparency() {
 	return (
 		<div className='sectionTransparency'>
-			<h1 className='title'>Transparencia</h1>
+			<h1 className='title'>TRANSPARENCIA</h1>
 			<div className='containerTransparency'>
 				<img src={graphic} className='graphic'/>
 			</div>

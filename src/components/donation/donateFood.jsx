@@ -2,6 +2,7 @@ import React, { Fragment, useState } from 'react';
 import { useForm } from 'react-hook-form';
 import './styles/donateFood.css';
 import {firebase} from '../../firebase';
+import banner from '../../img/Landing/Donar/despensa.jpg'
 
 
 function DonateFood ()  {
@@ -21,13 +22,13 @@ function DonateFood ()  {
 	return (
 		<Fragment>
 			<div className='sectionTitleText'>
-				<h1 className='title'><span>¿Cómo funciona?</span></h1>
-				<p className='text'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni cumque, amet officia,
-					obcaecati est architecto soluta accusamus enim repudiandae modi</p>
+			<div className='containerBannerForm'>
+          <img src={banner} className='bannerForm' />
+        </div>
+				<h1 className='title marginTopForm'><span>¿Cómo funciona?</span></h1>
+				<p className='text'>Nos juntamos con Empresas Amigas que tienen servicios de delivery a tu hogar, para poder aprovechar su transporte y rescatar alimentos que puedan perderse en tu despensa.</p>
 				<h1><span className='title'>¿Cómo puedo ayudar?</span></h1>
-				<p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
-				Dignissimos impedit ab esse mollitia tempora, minus ratione assumenda placeat aut odit.
-					Nobis corporis sapiente asperiores deserunt soluta totam culpa aut! Quidem!</p>
+				<p className='text'>Con tu número de pedido en Empresas Amigas, puedes inscribir alimentos para donar y que éstos sean recogidos cuando lleven tu envío.</p>
 			</div>
 			<form className='formHuertasSection' onSubmit={handleSubmit(enviarDatos)}>
 
@@ -46,9 +47,9 @@ function DonateFood ()  {
 					</span>
 		
 				<div>
-					<p className='titleForms'>¿Cómo nos referimos a ti?</p>
+					<p className='titleForms'>Selecciona tu región</p>
 					<select className='selectFormHuertas'
-						name="genero"
+						name="region"
 						ref={
 							register({
 								required: { value: true, message: 'Ingrese su identificación' }
@@ -60,7 +61,7 @@ function DonateFood ()  {
 						<option>Sin género</option>
 					</select>
 					<span  className='erorsText'>
-						{errors?.genero?.message}
+						{errors?.region?.message}
 					</span>
 				</div>
 				<div>
@@ -176,7 +177,7 @@ function DonateFood ()  {
 						{errors?.detalle?.message}
 					</span>
 				</div>
-				<button  className='btnSubmitForm'type="submit">ENVIAR FORMULARIO</button>
+				<button className='btnSubmitForm'type="submit">ENVIAR FORMULARIO</button>
 			</form>
 		</Fragment>
 	);

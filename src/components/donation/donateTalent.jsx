@@ -2,6 +2,7 @@ import React, { Fragment, useState } from 'react';
 import { useForm } from 'react-hook-form';
 import './styles/donateTalent.css';
 import {firebase} from '../../firebase';
+import banner from '../../img/Landing/Donar/talento.jpg'
 
 function DonateTalent() {
   const { register, errors, handleSubmit } = useForm();
@@ -21,19 +22,19 @@ function DonateTalent() {
   return (
     <Fragment>
       <div className='sectionTitleText'>
-        <h1 className='title'><span>¿Cómo funciona?</span></h1>
-        <p className='text'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni cumque, amet officia,
-					obcaecati est architecto soluta accusamus enim repudiandae modi</p>
+      <div className='containerBannerForm'>
+          <img src={banner} className='bannerForm' />
+        </div>
+        <h1 className='title marginTopForm'><span>¿Cómo funciona?</span></h1>
+        <p className='text'>Cuéntanos a qué te dedicas o cuál es tu pasión, buscaremos la manera de que puedas ejercerlo al servicio de las comunidades que apoyamos.</p>
         <br />
         <h1 className='title'><span>¿Cómo puedo ayudar?</span></h1>
-        <p className='text'>Lorem ipsum dolor sit amet consectetur adipisicing elit.
-        Dignissimos impedit ab esse mollitia tempora, minus ratione assumenda placeat aut odit.
-					Nobis corporis sapiente asperiores deserunt soluta totam culpa aut! Quidem!</p>
+        <p className='text'>Desde realizar la contabilidad para una pyme, hasta hacer un show de stand-up en un comedor solidario de la red <strong>¡Dinos cuál es tu talento!</strong></p>
       </div>
       <form className='formTalentSection' onSubmit={handleSubmit(datos)}>
         <div>
           <p className='titleForms'>Nombre completo</p>
-          <input placeholder='Ej. Juan Perez'
+          <input placeholder='Ej. Juan Perez Abarca'
             className='inputsFormTalent'
             name='nombreCompleto'
             ref={
@@ -50,8 +51,8 @@ function DonateTalent() {
           </span>
         </div>
         <div>
-          <p className='titleForms'>¿Cómo nos referimos a ti?</p>
-          <select name='genero'
+          <p className='titleForms'>Selecciona tu región</p>
+          <select name='region'
             className='selectFormTalent'
             ref={
               register({
@@ -66,7 +67,7 @@ function DonateTalent() {
             <option>Sin género</option>
           </select>
           <span className='erorsText'>
-            {errors?.genero?.message}
+            {errors?.region?.message}
           </span>
         </div>
         <div>

@@ -1,0 +1,60 @@
+.authPageContent{
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    justify-content: center;
+    background-color:#F4F4F4;
+    color: black;
+    padding:56px 32px 190px 32px;
+}
+
+.logoContainer{
+    width: 88px;
+    margin-bottom: 16px;
+}
+
+.titleIntranet, .textintranet{
+    text-align: center;
+    font-size: 16px;
+}
+
+.titleIntranet{
+    margin-bottom: 16px;
+}
+.textintranet{
+    margin-bottom: 13px;
+}
+.formIntranet{
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    text-align: start;
+}
+.textintranetInput{
+    text-align: start;
+    margin-bottom: 8px;
+    margin-top: 16px;
+   
+}
+.btnAuthPage{
+    margin-top: 16px;
+    font-size: 16px;
+    background: #929292;
+    width: 215px;
+    height: 40px;
+    color:white;
+    border-radius: 24px;
+    border: none;
+}
+.btnAuthPage:hover{
+    background: #FD4C00;
+}
+.inputIntranet{
+    width: 215px;
+    height: 40px;
+    border-radius: 24px;
+    padding:8px 15px 13px 11px;
+    border: 1px solid #929292;
+    box-sizing: border-box;
+}

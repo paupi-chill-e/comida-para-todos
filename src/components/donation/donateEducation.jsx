@@ -1,7 +1,8 @@
 import React, { Fragment, useState } from 'react';
 import { useForm } from 'react-hook-form';
 // import './styles/donateHuertas.css'
-import {firebase} from '../../firebase';
+import { firebase } from '../../firebase';
+import banner from '../../img/Landing/Donar/educacion.jpg'
 
 const DonateEducation = () => {
   const { register, errors, handleSubmit } = useForm()
@@ -9,25 +10,25 @@ const DonateEducation = () => {
   const db = firebase.firestore();
 
   const enviarDatos = (data, event) => {
-		setFormEducation([...formEducation, data])
-		event.preventDefault();
-		event.target.reset();
+    setFormEducation([...formEducation, data])
+    event.preventDefault();
+    event.target.reset();
     db.collection("Educacion").doc(data.nombreCompleto).set({
       data
     })
-	}
+  }
 
   return (
     <Fragment>
       <div className='sectionTitleText'>
-        <h1 className='title'><span>¿Cómo funciona?</span></h1>
-        <p className='text'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni cumque, amet officia,
-					obcaecati est architecto soluta accusamus enim repudiandae modi</p>
+        <div className='containerBannerForm'>
+          <img src={banner} className='bannerForm' />
+        </div>
+        <h1 className='title marginTopForm'><span>¿Cómo funciona?</span></h1>
+        <p className='text'>Regalar conocimiento es otorgar herramientas de superación, atrévete a capacitar a beneficiarios de nuestra red.</p>
         <br />
         <h1 className='title'><span>¿Cómo puedo ayudar?</span></h1>
-        <p className='text'>Lorem ipsum dolor sit amet consectetur adipisicing elit.
-        Dignissimos impedit ab esse mollitia tempora, minus ratione assumenda placeat aut odit.
-					Nobis corporis sapiente asperiores deserunt soluta totam culpa aut! Quidem!</p>
+        <p className='text'>Piensa en ese tema en que eres experto y cómo podría favorecer a la comunidad, cuéntanos tu disponibilidad y planeemos unas clases.</p>
       </div>
       <form className='formHuertasSection' onSubmit={handleSubmit(enviarDatos)}>
         <p className='titleForms'>Nombre completo</p>
@@ -39,16 +40,16 @@ const DonateEducation = () => {
               required: { value: true, message: 'Ingrese su nombre' }
             })
           }
-          placeholder="Ej. Juan Pérez"
+          placeholder="Ej. Juan Pérez Abarca"
         />
         <span className='erorsText'>
           {errors?.nombreCompleto?.message}
         </span>
         <div>
-          <p className='titleForms'>¿Cómo nos referimos a ti?</p>
+          <p className='titleForms'>Selecciona tu región</p>
           <select
             className='selectFormHuertas'
-            name="genero"
+            name="region"
             ref={
               register({
                 required: { value: true, message: 'Ingrese su identificación' }
@@ -60,7 +61,7 @@ const DonateEducation = () => {
             <option>Sin género</option>
           </select>
           <span className='erorsText'>
-            {errors?.genero?.message}
+            {errors?.region?.message}
           </span>
         </div>
         <div>
@@ -126,7 +127,7 @@ const DonateEducation = () => {
                 required: { value: true, message: 'Ingrese capacitación a realizar' },
               })
             }
-            placeholder="Ej. Quiero enseñar sobre finanza personal"
+            placeholder="Ej. Quiero enseñar sobre finanzas personales"
           />
           <span className='erorsText'>
             {errors?.capacitacion?.message}
@@ -149,7 +150,7 @@ const DonateEducation = () => {
           </span>
         </div>
         <div>
-          <p className='titleForms'>Coméntanos si requieres materiales para los asistentes, espacio físico desde el cual 
+          <p className='titleForms'>Coméntanos si requieres materiales para los asistentes, espacio físico desde el cual
           capacitar u otros detalles importantes</p>
           <textarea
             className='textareaSection'

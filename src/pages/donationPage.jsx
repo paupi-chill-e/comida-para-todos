@@ -19,6 +19,7 @@ const DonationPage = () => {
       <ArchiveButtons />
       <Footer />
     </Fragment>
+    
   );
 }
 

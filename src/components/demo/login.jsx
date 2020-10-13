@@ -1,7 +1,7 @@
 import React, { Fragment, useState } from 'react';
 import { firebase } from '../../firebase';
 import logo from '../../img/logo.png';
-import '../intranetLogin/login.css';
+import './login.css';
 
 const Login = () => {
 

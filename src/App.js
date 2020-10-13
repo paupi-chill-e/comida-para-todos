@@ -6,7 +6,7 @@ import DonationPage from './pages/donationPage';
 import AboutUs from './pages/aboutUsPage';
 // import DataGridDemo from './components/intranetData/intranetTable';
 import IntranetPage from './pages/intranet';
-import Login from './components/intranetLogin/login'
+import Login from './components/demo/login'
 
 export const ShowContext = React.createContext(null);
 

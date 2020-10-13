@@ -8,21 +8,27 @@ import saveAs from 'file-saver';
 import { exportDataGrid } from 'devextreme/excel_exporter';
 import 'devextreme/data/odata/store';
 
-const HuertasDataSource = {
-  store: {
+const HuertasDataSource = { 
+  
+  // funcion para traer data huerta
+
+  /* store: {
     type: 'odata',
     url: 'https://js.devexpress.com/Demos/DevAV/odata/Products'
   },
   select: ['Product_ID', 'Product_Name', 'Product_Sale_Price', 'Product_Retail_Price'],
-  filter: ['Product_ID', '<', 10]
+  filter: ['Product_ID', '<', 10] */
 };
 const DespensaDataSource = {
-  store: {
+  
+  /* funcion para traer Despensa */
+
+ /*  store: {
     type: 'odata',
     url: 'https://js.devexpress.com/Demos/DevAV/odata/Products'
   },
   select: ['Product_ID', 'Product_Name', 'Product_Consumer_Rating', 'Product_Category'],
-  filter: ['Product_ID', '<', 10]
+  filter: ['Product_ID', '<', 10] */
 };
 
 class IntranetDataExport extends React.Component {
@@ -44,7 +50,7 @@ class IntranetDataExport extends React.Component {
           />
         </div>
         <TabPanel id="tabPanel" deferRendering={false}>
-          <Item title="Donaciones Comida para todos">
+          <Item title="Huertas">
             <DataGrid id="DataGrid" ref={this.HuertasGridRef} dataSource={HuertasDataSource} showBorders={true} rowAlternationEnabled={true}>
               <Column dataField="Product_ID" caption="ID" width={50} />
               <Column dataField="Product_Name" caption="Nombre" />

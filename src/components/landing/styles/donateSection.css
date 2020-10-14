@@ -97,7 +97,6 @@
     box-shadow:  0 0 10px 5px #fd4c0069;
 }
 
-
 h3{
     padding:0px 0px 24px 0px;
     font-size:20px;
@@ -132,6 +131,7 @@ h3{
     margin-left:16px;
     margin-bottom: 48px;
 }
+
 
 @media screen and (min-width:1024px){
     .titledonatesection{

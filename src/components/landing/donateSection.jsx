@@ -78,7 +78,7 @@ function DonateSection() {
         <div className='btnSectionPage'>
           <Link to="/Donaciones" onClick={() => { setPositionScrollFormValue(0) }}>
             <div className='btnSectionMargin'>
-              <button className="btnDonation">COMO AYUDAR</button>
+              <button className="btnDonations">COMO AYUDAR</button>
             </div>
           </Link>
         </div>

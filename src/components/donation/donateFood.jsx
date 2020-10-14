@@ -21,20 +21,19 @@ function DonateFood() {
 
 	return (
 		<Fragment>
-			<div className='sectionTitleText'>
-				<div className='containerBannerForm'>
-					<img src={banner} className='bannerForm' />
-				</div>
-				<h2 className='marginTopForm'>¿Cómo funciona?</h2>
-				<p className='text'>Nos juntamos con Empresas Amigas que tienen servicios de delivery a tu hogar, para poder aprovechar su transporte y rescatar alimentos que puedan perderse en tu despensa.</p>
-				<h2>¿Cómo puedo ayudar?</h2>
-				<p className='text'>Con tu número de pedido en Empresas Amigas, puedes inscribir alimentos para donar y que éstos sean recogidos cuando lleven tu envío.</p>
+			<div className='sectionTitleTextFood'>
+			<div className='containerBannerFormFood'>
+          <img src={banner} className='bannerForm' />
+        </div>
+				<h2 className='marginTopFormFood'>¿Cómo funciona?</h2>
+				<p className='textFood'>Nos juntamos con Empresas Amigas que tienen servicios de delivery a tu hogar, para poder aprovechar su transporte y rescatar alimentos que puedan perderse en tu despensa.</p>
+				<h2 className='marginTopFormFood2'>¿Cómo puedo ayudar?</h2>
+				<p className='textFood'>Con tu número de pedido en Empresas Amigas, puedes inscribir alimentos para donar y que éstos sean recogidos cuando lleven tu envío.</p>
 			</div>
-			<form className='formHuertasSection' onSubmit={handleSubmit(enviarDatos)}>
-			<div>
-					<p className='titleForms'>Nombre completo</p>
-					<input
-						className='inputsFormHuertas'
+			<form className='formHuertasSectionFood' onSubmit={handleSubmit(enviarDatos)}>
+
+					<p className='titleFormsFood'>Nombre completo</p>
+					<input className='inputsFormFood'
 						name="nombreCompleto"
 						ref={
 							register({
@@ -46,11 +45,27 @@ function DonateFood() {
 					<span className='erorsText'>
 						{errors?.nombreCompleto?.message}
 					</span>
+				<div>
+					<p className='titleFormsFood'>Selecciona tu región</p>
+					<select className='selectFormFood'
+						name="region"
+						ref={
+							register({
+								required: { value: true, message: 'Ingrese su identificación' }
+							})
+						}
+					>
+						<option>Mujer</option>
+						<option>Hombre</option>
+						<option>Sin género</option>
+					</select>
+					<span  className='erorsText'>
+						{errors?.region?.message}
+					</span>
 				</div>
 				<div>
-					<p className='titleForms'>Déjanos tu correo</p>
-					<input
-						className='inputsFormHuertas'
+					<p className='titleFormsFood'>Déjanos tu correo</p>
+					<input className='inputsFormFood'
 						name="correo"
 						type="email"
 						ref={
@@ -65,9 +80,8 @@ function DonateFood() {
 					</span>
 				</div>
 				<div>
-					<p className='titleForms'>Número de contacto</p>
-					<input
-						className='inputsFormHuertas'
+					<p className='errorsText'>Número de contacto</p>		
+					<input className='inputsFormFood'
 						name="numeroTelefonico"
 						ref={
 							register({
@@ -83,28 +97,8 @@ function DonateFood() {
 					</span>
 				</div>
 				<div>
-					<p className='titleForms'>Selecciona tu región</p>
-					<select
-						className='selectFormHuertas'
-						name="region"
-						ref={
-							register({
-								required: { value: true, message: 'Ingrese su identificación' }
-							})
-						}
-					>
-						<option>no</option>
-						<option>se</option>
-						<option>cuales</option>
-					</select>
-					<span className='erorsText'>
-						{errors?.region?.message}
-					</span>
-				</div>
-				<div>
-					<p className='titleForms'>¿En qué comuna te encuentras?</p>
-					<select
-						className='selectFormHuertas'
+					<p className='titleFormsFood'>¿En qué comuna te encuentras?</p>
+					<select 	className='selectFormFood'
 						name="comuna"
 						ref={
 							register({
@@ -119,23 +113,23 @@ function DonateFood() {
 						{errors?.comuna?.message}
 					</span>
 				</div>
-				<div className='textandCheckbox'>
-					<p className='titleFormsCheckbox'><input
-						name="helpFood"
-						type="checkbox"
-						value={true}
-						ref={register}
+				<div className='textandCheckboxFood'>
+					<p  className='titleFormsCheckboxFood'><input 
+					name="helpFood" 
+					type="checkbox" 
+					value={true}
+					ref={register}
 					/> Quiero hacer una colecta en mi comunidad y trasladar los alimentos </p>
-					<p className='titleFormsCheckbox'><input className='formCheckbox'
-						name="DonarFood"
-						type="checkbox"
-						value={true}
-						ref={register}
+					<p className='titleFormsCheckboxFood'><input className='formCheckbox'
+					name="DonarFood" 
+					type="checkbox" 
+					value={true}
+					ref={register}
 					/> Quiero donar alimentos para ser trasladados por Empresas Amigas </p>
 				</div>
 				<div>
-					<p className='titleFormsCheckbox'>¿Con qué Empresa Amiga agendaste tu pedido?</p>
-					<select className='selectFormHuertas'
+				<p className='titleFormsCheckboxFood'>¿Con qué Empresa Amiga agendaste tu pedido?</p>
+					<select className='selectFormFood'
 						name="empresa"
 						ref={
 							register({
@@ -151,8 +145,8 @@ function DonateFood() {
 					</span>
 				</div>
 				<div>
-					<p className='titleFormsCheckbox'>Ingresa tu número de pedido </p>
-					<input className='inputsFormHuertas'
+					<p className='titleFormsCheckboxFood'>Ingresa tu número de pedido </p>
+					<input className='inputsFormFood'
 						name="numeroPedido"
 						ref={
 							register({
@@ -166,8 +160,8 @@ function DonateFood() {
 					</span>
 				</div>
 				<div>
-					<p className='titleFormsCheckbox'>Describe los alimentos y cantidades a donar para asegurarles un lugar dentro del transporte</p>
-					<input className='textareaSection'
+					<p className='titleFormsCheckboxFood'>Describe los alimentos y cantidades a donar para asegurarles un lugar dentro del transporte</p>
+					<input className='inputsFormFood'
 						name="detalle"
 						ref={
 							register({
@@ -180,7 +174,7 @@ function DonateFood() {
 						{errors?.detalle?.message}
 					</span>
 				</div>
-				<button className='btnSubmitForm' type="submit">ENVIAR FORMULARIO</button>
+				<button className='btnFood' type="submit">ENVIAR FORMULARIO</button>
 			</form>
 		</Fragment>
 	);

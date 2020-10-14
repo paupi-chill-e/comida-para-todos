@@ -24,8 +24,8 @@ function DonateHuertas() {
 		<Fragment>
 			<div className='sectionTitleText'>
 				<div className='containerBannerForm'>
-					<img src={banner} className='bannerForm' />
-				</div>
+          			<img src={banner} className='bannerForm' />
+        		</div>
 				<h2 className='marginTopForm'>¿Cómo funciona?</h2>
 				<p className='text'>Queremos aprovechar cualquier espacio que tengas para comenzar huertas urbanas permaculturales, que nos permitan abastecer a comedores y emprendimientos de nuestra red.</p>
 				<br />

@@ -24,8 +24,8 @@ function DonateHuertas() {
 		<Fragment>
 			<div className='sectionTitleText'>
 				<div className='containerBannerForm'>
-          			<img src={banner} className='bannerForm' />
-        		</div>
+					<img src={banner} className='bannerForm' />
+				</div>
 				<h2 className='marginTopForm'>¿Cómo funciona?</h2>
 				<p className='text'>Queremos aprovechar cualquier espacio que tengas para comenzar huertas urbanas permaculturales, que nos permitan abastecer a comedores y emprendimientos de nuestra red.</p>
 				<br />
@@ -144,9 +144,6 @@ function DonateHuertas() {
 						name="tamanoTerreno"
 						placeholder="Ej 6m2 o 2x3m"
 					/>
-					<span className='erorsText'>
-						{errors?.tamanoTerreno?.message}
-					</span>
 				</div>
 				<div>
 					<p className='titleForms'>¿El espacio está en su casa o barrio? Cuéntanos todos los detalles que puedas</p>
@@ -155,9 +152,6 @@ function DonateHuertas() {
 						name="detalle"
 						placeholder="Ej. Tengo un espacio de 1m de ancho y 7 de largo en la vereda afuera de mi entrada"
 					/>
-					<span className='erorsText'>
-						{errors?.detalle?.message}
-					</span>
 				</div>
 				<button className='btnSubmitForm' type="submit">ENVIAR FORMULARIO</button>
 			</form>

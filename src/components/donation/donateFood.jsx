@@ -1,11 +1,11 @@
 import React, { Fragment, useState } from 'react';
 import { useForm } from 'react-hook-form';
 import './styles/donateFood.css';
-import {firebase} from '../../firebase';
+import { firebase } from '../../firebase';
 import banner from '../../img/Landing/Donar/despensa.jpg'
 
 
-function DonateFood ()  {
+function DonateFood() {
 	const db = firebase.firestore()
 	const { register, errors, handleSubmit } = useForm();
 
@@ -16,7 +16,7 @@ function DonateFood ()  {
 		event.preventDefault();
 		event.target.reset();
 		console.log(data)
-		db.collection("Despensa").doc(data.nombreCompleto).set({data})	
+		db.collection("Despensa").doc(data.nombreCompleto).set({ data })
 	};
 
 	return (
@@ -40,12 +40,11 @@ function DonateFood ()  {
 								required: { value: true, message: 'Ingrese su nombre' }
 							})
 						}
-						placeholder="Ej. Juan Pérez"
+						placeholder="Ej. Juan Pérez Abarca"
 					/>
-					<span className='errorsText'>
+					<span className='erorsText'>
 						{errors?.nombreCompleto?.message}
 					</span>
-		
 				<div>
 					<p className='titleFormsFood'>Selecciona tu región</p>
 					<select className='selectFormFood'
@@ -76,26 +75,24 @@ function DonateFood ()  {
 						}
 						placeholder="Ej. juanperez@mail.com"
 					/>
-				</div>
-				<span className='errorsText'>
+					<span className='erorsText'>
 						{errors?.correo?.message}
 					</span>
+				</div>
 				<div>
-					<p className='errorsText'>Número de contacto</p>
-					
+					<p className='errorsText'>Número de contacto</p>		
 					<input className='inputsFormFood'
 						name="numeroTelefonico"
 						ref={
 							register({
 								required: { value: true, message: 'Ingrese su número telefónico' },
-								maxLength: {value:12,  message: 'Ingrese un número válido'},
-								minLength: {value:12,  message: 'Ingrese un número válido'},
+								maxLength: { value: 12, message: 'Ingrese un número válido' },
+								minLength: { value: 12, message: 'Ingrese un número válido' },
 							})
 						}
 						placeholder="+569XXXXXXXX"
 					/>
-					<p className='errorsText'>Número de contacto</p>
-					<span className='errorsText'>
+					<span className='erorsText'>
 						{errors?.numeroTelefonico?.message}
 					</span>
 				</div>
@@ -112,7 +109,7 @@ function DonateFood ()  {
 						<option>Springfield</option>
 						<option>P.Sherman calle wallabi</option>
 					</select>
-					<span className='errorsText'>
+					<span className='erorsText'>
 						{errors?.comuna?.message}
 					</span>
 				</div>

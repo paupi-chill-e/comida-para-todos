@@ -76,7 +76,7 @@ function DonateSection() {
           </div>
         </div>
         <div className='btnSectionPage'>
-          <Link to="/Donaciones" onClick={() => { setFormToShowValue('Huertas'); setPositionScrollFormValue(0) }}>
+          <Link to="/Donaciones" onClick={() => { setPositionScrollFormValue(0) }}>
             <div className='btnSectionMargin'>
               <button className="btnDonations">COMO AYUDAR</button>
             </div>

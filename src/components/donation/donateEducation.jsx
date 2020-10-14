@@ -3,20 +3,23 @@ import { useForm } from 'react-hook-form';
 import './styles/donateEducation.css'
 import { firebase } from '../../firebase';
 import banner from '../../img/Landing/Donar/educacion.jpg'
+import MainSelector from "../../modules/MainSelector";
+
 
 const DonateEducation = () => {
-  const { register, errors, handleSubmit } = useForm()
-  const [formEducation, setFormEducation] = useState([]);
-  const db = firebase.firestore();
+	const { register, errors, handleSubmit } = useForm()
+	const [formEducation, setFormEducation] = useState([]);
+	
+	const db = firebase.firestore();
 
-  const enviarDatos = (data, event) => {
-    setFormEducation([...formEducation, data])
-    event.preventDefault();
-    event.target.reset();
-    db.collection("Educacion").doc(data.nombreCompleto).set({
-      data
-    })
-  }
+	const enviarDatos = (data, event) => {
+		setFormEducation([...formEducation, data])
+		event.preventDefault();
+		event.target.reset();
+		db.collection("Educacion").doc(data.nombreCompleto).set({
+			data
+		})
+	}
 
   return (
     <Fragment>
@@ -168,9 +171,8 @@ const DonateEducation = () => {
         </div>
         <button className='btnEducation' type="submit">ENVIAR FORMULARIO</button>
       </form>
-
-    </Fragment>
-  );
+		</Fragment>
+	);
 
 }
 

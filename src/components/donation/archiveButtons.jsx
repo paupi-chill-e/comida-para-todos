@@ -1,4 +1,4 @@
-import React, { useState, useContext, useEffect } from 'react';
+import React, { useContext, useEffect } from 'react';
 import DonateEducation from './donateEducation';
 import DonateHuertas from './donateHuertas';
 import DonateTalent from './donateTalent';

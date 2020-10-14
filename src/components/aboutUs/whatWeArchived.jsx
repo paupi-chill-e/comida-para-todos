@@ -14,7 +14,7 @@ function WhatWeArchived() {
       <div className='containerWhatWeArchived'>
       <div className='containerPhotoText'>
         <div className='eachPhotoArchived'>
-          <img src={lunch} className='photowahtwearchived'/>
+          <img src={lunch} alt="" className='photowahtwearchived'/>
         </div>
         <p className='textx'><strong>97.644</strong>
         <br/>
@@ -22,7 +22,7 @@ function WhatWeArchived() {
       </div>
       <div className='containerPhotoText'>
         <div className='eachPhotoArchived'>
-          <img src={restorant} className='photowahtwearchived' />
+          <img src={restorant} alt="" className='photowahtwearchived' />
         </div>
         <p className='textx'><strong>19</strong>
         <br/>
@@ -30,7 +30,7 @@ function WhatWeArchived() {
       </div>
       <div className='containerPhotoText'>
         <div className='eachPhotoArchived'>
-          <img src={peque} className='photowahtwearchived'/>
+          <img src={peque} alt="" className='photowahtwearchived'/>
         </div>
         <p className='textx'><strong>19</strong>
         <br/>
@@ -38,7 +38,7 @@ function WhatWeArchived() {
       </div>
       <div className='containerPhotoText'>
         <div className='eachPhotoArchived'>
-          <img src={transportis} className='photowahtwearchived'/>
+          <img src={transportis} alt="" className='photowahtwearchived'/>
         </div>
         <p className='textx'><strong>8</strong>
         <br/>
@@ -46,7 +46,7 @@ function WhatWeArchived() {
       </div>
       <div className='containerPhotoText'>
         <div className='eachPhotoArchived'>
-          <img src={comedor} className='photowahtwearchived'/>
+          <img src={comedor} alt="" className='photowahtwearchived'/>
         </div>
         <p className='textx'><strong>28</strong>
         <br/>
@@ -54,7 +54,7 @@ function WhatWeArchived() {
       </div>
       <div className='containerPhotoText'>
         <div className='eachPhotoArchived'>
-          <img src={region} className='photowahtwearchived'/>
+          <img src={region} alt="" className='photowahtwearchived'/>
         </div>
         <p className='textx'><strong>4</strong>
         <br/>

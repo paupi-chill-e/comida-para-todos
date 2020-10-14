@@ -3,7 +3,6 @@ import { useForm } from 'react-hook-form';
 import './styles/donateEducation.css'
 import { firebase } from '../../firebase';
 import banner from '../../img/Landing/Donar/educacion.jpg'
-import MainSelector from "../../modules/MainSelector";
 
 
 const DonateEducation = () => {
@@ -25,13 +24,13 @@ const DonateEducation = () => {
     <Fragment>
       <div className='sectionTitleTextEducation'>
         <div className='containerBannerFormEducation'>
-          <img src={banner} className='bannerForm' />
+          <img src={banner} alt="" className='bannerForm' />
         </div>
         <h2 className='marginTopFormEducation'>¿Cómo funciona?</h2>
         <p className='textEducation'>Regalar conocimiento es otorgar herramientas de superación, atrévete a capacitar a beneficiarios de nuestra red.</p>
         <br />
         <h2 className='marginTopFormEducation2'>¿Cómo puedo ayudar?</h2>
-        <p className='textEducation'>Piensa en ese tema en que eres experto y cómo podría favorecer a la comunidad, cuéntanos tu disponibilidad y planeemos unas clases.</p>
+        <p className='textEducation'>Piensa en ese tema en que eres experto y cómo podría favorecer a la comunidad, cuéntanos tu disponibilidad y <strong>planeemos unas clases</strong>.</p>
       </div>
       <form className='formHuertasSectionEducation' onSubmit={handleSubmit(enviarDatos)}>
         <div>
@@ -92,13 +91,26 @@ const DonateEducation = () => {
             name="region"
             ref={
               register({
-                required: { value: true, message: 'Ingrese su identificación' }
+                required: { value: true, message: 'Ingrese su region' }
               })
             }
           >
-            <option>Mujer</option>
-            <option>Hombre</option>
-            <option>Sin género</option>
+            <option>I Región de Tarapacá</option>
+            <option>II Región de Antofagasta</option>
+            <option>III Región de Atacama</option>
+            <option>IV Región de Coquimbo</option>
+            <option>V Región de Valparaíso</option>
+            <option>VI Región del Libertador General Bernardo O’Higgins</option>
+            <option>VII Región del Maule</option>
+            <option>VIII Región del Biobío</option>
+            <option>IX Región de La Araucanía</option>
+            <option>X Región de Los Lagos</option>
+            <option>XI Región Aysén del General Carlos Ibáñez del Campo</option>
+            <option>XII Región de Magallanes y Antártica Chilena</option>
+            <option selected>Región Metropolitana de Santiago</option>
+            <option>XIV Región de Los Ríos</option>
+            <option>XV Región de Arica y Parinacota</option>
+            <option>XVI Región de Ñuble</option>
           </select>
           <span className='erorsText'>
             {errors?.region?.message}
@@ -106,18 +118,16 @@ const DonateEducation = () => {
         </div>
         <div>
           <p className='titleFormsEducation'>¿En qué comuna te encuentras?</p>
-          <select
-            className='selectFormEducation'
+          <input
+            className='inputsFormEducation'
             name="comuna"
             ref={
               register({
-                required: { value: true, message: 'Ingrese su comuna' },
+                required: { value: true, message: 'Ingrese comuna' },
               })
             }
-          >
-            <option>Springfield</option>
-            <option>P.Sherman calle wallabi</option>
-          </select>
+            placeholder="Ingrese su comuna"
+          />
           <span className='erorsText'>
             {errors?.comuna?.message}
           </span>

@@ -1,4 +1,6 @@
-.inputsFormFood, .textareaSectionFood, .selectFormFood{
+.inputsFormFood, .textareaSectionFood
+,.selectFormFood
+{
   width: 343px;
   height: 40px;
   border: 1px solid #929292;
@@ -58,6 +60,9 @@
   width:100%;
   height: 88px;
 }
+.marginTopFormFood2{
+  margin-top:24px;
+}
 .bannerForm{
   width: 100%;
   object-fit: cover;
@@ -69,11 +74,16 @@
   border-radius: 24px;
   border: 0.5px solid #929292;
   margin: 22px 0px 32px 0px;
-  align-self: center;
-}
-.btnFood:hover{
+  align-self: center; 
   background: #FD4C00;
   color:white;
+}
+.btnFood:hover{
+  box-shadow:  0 0 10px 5px #fd4c0069;
+}
+.textFood{
+  font-size:16px;
+  margin-top:16px;
 }
 
 @media screen and (min-width:1024px){
@@ -83,7 +93,9 @@
     top: 1250px;
     width: 744px;
   }
-  .inputsFormFood, .inputTextFormFood, .selectFormFood{
+  .inputsFormFood, .inputTextFormFood
+  ,.selectFormFood
+  {
     width: 544px;
     height: 56px;
     border-radius: 32px;

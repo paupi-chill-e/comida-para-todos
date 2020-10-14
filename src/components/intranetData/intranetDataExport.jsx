@@ -1,7 +1,7 @@
 import React from 'react';
 import Button from 'devextreme-react/button';
 import TabPanel, { Item } from 'devextreme-react/tab-panel';
-import DataGrid, { Column, Export } from 'devextreme-react/data-grid';
+import DataGrid, { Column } from 'devextreme-react/data-grid';
 import ExcelJS from 'exceljs';
 import saveAs from 'file-saver';
 

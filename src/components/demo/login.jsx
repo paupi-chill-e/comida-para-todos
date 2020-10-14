@@ -2,7 +2,7 @@ import React, { Fragment, useState } from 'react';
 import { firebase } from '../../firebase';
 import logo from '../../img/logo.png';
 import './login.css';
-import imge from '../../img/Landing/Donar/almuerzo2.jpg';
+import imge from '../../img/Landing/Donar/almuerzo.jpg';
 
 const Login = () => {
 

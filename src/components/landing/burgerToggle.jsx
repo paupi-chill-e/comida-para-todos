@@ -1,9 +1,10 @@
-import React, { useContext, useEffect } from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom';
 import './styles/burguerToggle.css';
 import { animateScroll as scroll } from 'react-scroll';
 
 const BurguerToggle = (props) => {
+  // const scroll1= window.screen.width<
 
   const classToogle = props.burgerOn === true ? 'toggleVisible' : 'toggleHidden'
 

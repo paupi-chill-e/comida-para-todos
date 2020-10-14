@@ -23,12 +23,12 @@ function DonateFood() {
 		<Fragment>
 			<div className='sectionTitleTextFood'>
 				<div className='containerBannerFormFood'>
-					<img src={banner} className='bannerForm' />
+					<img src={banner} alt="" className='bannerForm' />
 				</div>
 				<h2 className='marginTopFormFood'>¿Cómo funciona?</h2>
 				<p className='textFood'>Nos juntamos con Empresas Amigas que tienen servicios de delivery a tu hogar, para poder aprovechar su transporte y rescatar alimentos que puedan perderse en tu despensa.</p>
 				<h2 className='marginTopFormFood2'>¿Cómo puedo ayudar?</h2>
-				<p className='textFood'>Con tu número de pedido en Empresas Amigas, puedes inscribir alimentos para donar y que éstos sean recogidos cuando lleven tu envío.</p>
+				<p className='textFood'>Con tu número de pedido en Empresas Amigas, puedes <strong>inscribir alimentos para donar</strong> y que éstos sean recogidos cuando lleven tu envío.</p>
 			</div>
 			<form className='formHuertasSectionFood' onSubmit={handleSubmit(enviarDatos)}>
 				<div>
@@ -63,7 +63,9 @@ function DonateFood() {
 					</span>
 				</div>
 				<div>
+					<br/>
 					<p className='errorsText'>Número de contacto</p>
+					<br/>
 					<input className='inputsFormFood'
 						name="numeroTelefonico"
 						ref={
@@ -80,40 +82,56 @@ function DonateFood() {
 					</span>
 				</div>
 				<div>
-					<p className='titleFormsFood'>Selecciona tu región</p>
-					<select className='selectFormFood'
-						name="region"
-						ref={
-							register({
-								required: { value: true, message: 'Ingrese su región' }
-							})
-						}
-					>
-						<option>Mujer</option>
-						<option>Hombre</option>
-						<option>Sin género</option>
-					</select>
-					<span className='erorsText'>
-						{errors?.region?.message}
-					</span>
-				</div>
-				<div>
-					<p className='titleFormsFood'>¿En qué comuna te encuentras?</p>
-					<select className='selectFormFood'
-						name="comuna"
-						ref={
-							register({
-								required: { value: true, message: 'Ingrese su comuna' },
-							})
-						}
-					>
-						<option>Springfield</option>
-						<option>P.Sherman calle wallabi</option>
-					</select>
-					<span className='erorsText'>
-						{errors?.comuna?.message}
-					</span>
-				</div>
+		  <p className='titleFormsFood'>Selecciona tu región</p>
+          <select
+			className='selectFormFood
+			'
+            name="region"
+            ref={
+              register({
+                required: { value: true, message: 'Ingrese su region' }
+              })
+            }
+          >
+            <option>I Región de Tarapacá</option>
+            <option>II Región de Antofagasta</option>
+            <option>III Región de Atacama</option>
+            <option>IV Región de Coquimbo</option>
+            <option>V Región de Valparaíso</option>
+            <option>VI Región del Libertador General Bernardo O’Higgins</option>
+            <option>VII Región del Maule</option>
+            <option>VIII Región del Biobío</option>
+            <option>IX Región de La Araucanía</option>
+            <option>X Región de Los Lagos</option>
+            <option>XI Región Aysén del General Carlos Ibáñez del Campo</option>
+            <option>XII Región de Magallanes y Antártica Chilena</option>
+            <option selected>Región Metropolitana de Santiago</option>
+            <option>XIV Región de Los Ríos</option>
+            <option>XV Región de Arica y Parinacota</option>
+            <option>XVI Región de Ñuble</option>
+          </select>
+          <span className='erorsText'>
+            {errors?.region?.message}
+          </span>
+        </div>
+        <div>
+		  <p className='titleFormsFood
+		  '>¿En qué comuna te encuentras?</p>
+          <input
+			className='inputsFormFood
+			'
+            name="comuna"
+            ref={
+              register({
+                required: { value: true, message: 'Ingrese comuna' },
+              })
+            }
+            placeholder="Ingrese su comuna"
+          />
+          <span className='erorsText'>
+            {errors?.comuna?.message}
+          </span>
+        </div>
 				<div className='textandCheckboxFood'>
 					<p className='titleFormsCheckboxFood'><input
 						name="helpFood"

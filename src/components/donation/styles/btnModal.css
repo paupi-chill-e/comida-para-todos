@@ -17,6 +17,9 @@
     border-radius: 5rem;
     font-size: 1rem;
 }
+.btn-Modal:hover{
+    box-shadow:  0 0 10px 5px #fd4c0069;
+}
 
 .btn-cancel{
     background-color: #ebcc29;

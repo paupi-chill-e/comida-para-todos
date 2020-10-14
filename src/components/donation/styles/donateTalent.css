@@ -25,7 +25,10 @@
     text-align: left;
     margin:16px 0px 16px 0px;
 }
-
+.textTalent{
+    font-size:16px;
+    margin-top:16px;
+}
 .inputsFormTalent, .inputTextFormTalent, .selectFormTalent{
     width: 343px;
     height: 40px;
@@ -45,11 +48,12 @@
     border-radius: 24px;
     border: 0.5px solid #929292;
     margin: 22px 0px 32px 0px;
-    align-self: center;
-  }
-  .btnTalent:hover{
+    align-self: center; 
     background: #FD4C00;
     color:white;
+  }
+  .btnTalent:hover{
+    box-shadow:  0 0 10px 5px #fd4c0069;
   }
 @media screen and (min-width:1024px){
     .formTalentSection{
@@ -58,7 +62,9 @@
         top: 1250px;
         width: 744px;
     }
-    .inputsFormTalent, .inputTextFormTalent, .selectFormTalent{
+    .inputsFormTalent, .inputTextFormTalent
+    ,.selectFormTalent
+     {
         width: 544px;
         height: 56px;
         border-radius: 32px;

@@ -23,7 +23,7 @@ function DonateTalent() {
     <Fragment>
       <div className='sectionTitleTextTalent'>
         <div className='containerBannerFormTalent'>
-          <img src={banner} className='bannerForm' />
+          <img src={banner} alt="" className='bannerForm' />
         </div>
         <h2 className='marginTopFormTalent'>¿Cómo funciona?</h2>
         <p className='textTalent'>Cuéntanos a qué te dedicas o cuál es tu pasión, buscaremos la manera de que puedas ejercerlo al servicio de las comunidades que apoyamos.</p>
@@ -93,40 +93,53 @@ function DonateTalent() {
           </span>
         </div>
         <div>
-          <p className='titleFormsTalent'>Selecciona tu región</p>
-          <select name='region'
-            className='selectFormTalent'
+          <p className='titleFormsTalent
+          '>Selecciona tu región</p>
+          <select
+            className='selectFormTalent
+            '
+            name="region"
             ref={
               register({
-                required: {
-                  value: true,
-                  message: 'Ingrese su identificación'
-                }
+                required: { value: true, message: 'Ingrese su region' }
               })
-            }>
-            <option>Mujer</option>
-            <option>Hombre</option>
-            <option>Sin género</option>
+            }
+          >
+            <option>I Región de Tarapacá</option>
+            <option>II Región de Antofagasta</option>
+            <option>III Región de Atacama</option>
+            <option>IV Región de Coquimbo</option>
+            <option>V Región de Valparaíso</option>
+            <option>VI Región del Libertador General Bernardo O’Higgins</option>
+            <option>VII Región del Maule</option>
+            <option>VIII Región del Biobío</option>
+            <option>IX Región de La Araucanía</option>
+            <option>X Región de Los Lagos</option>
+            <option>XI Región Aysén del General Carlos Ibáñez del Campo</option>
+            <option>XII Región de Magallanes y Antártica Chilena</option>
+            <option selected>Región Metropolitana de Santiago</option>
+            <option>XIV Región de Los Ríos</option>
+            <option>XV Región de Arica y Parinacota</option>
+            <option>XVI Región de Ñuble</option>
           </select>
           <span className='erorsText'>
             {errors?.region?.message}
           </span>
         </div>
         <div>
-          <p className='titleFormsTalent'>¿En qué comuna te encuentras?</p>
-          <select className='selectFormTalent'
-            name='comuna'
+          <p className='titleFormsTalent
+          '>¿En qué comuna te encuentras?</p>
+          <input
+            className='inputsFormTalent
+            '
+            name="comuna"
             ref={
               register({
-                required: {
-                  value: true,
-                  message: 'Ingrese su comuna'
-                },
+                required: { value: true, message: 'Ingrese comuna' },
               })
-            }>
-            <option>Springfield</option>
-            <option>P.Sherman calle wallabi</option>
-          </select>
+            }
+            placeholder="Ingrese su comuna"
+          />
           <span className='erorsText'>
             {errors?.comuna?.message}
           </span>

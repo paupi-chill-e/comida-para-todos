@@ -24,13 +24,13 @@ function DonateHuertas() {
 		<Fragment>
 			<div className='sectionTitleText'>
 				<div className='containerBannerForm'>
-					<img src={banner} className='bannerForm' />
+					<img src={banner} alt="" className='bannerForm' />
 				</div>
 				<h2 className='marginTopForm'>¿Cómo funciona?</h2>
 				<p className='text'>Queremos aprovechar cualquier espacio que tengas para comenzar huertas urbanas permaculturales, que nos permitan abastecer a comedores y emprendimientos de nuestra red.</p>
 				<br />
 				<h2>¿Cómo puedo ayudar?</h2>
-				<p className='text'>¡Podemos inaugurar juntos nuevas huertas comunitarias! Si hay espacios disponibles en tu barrio o si quieres regalarnos un espacio de tu patio. También puedes ofrecerte a mantener huertas existentes.</p>
+				<p className='text'>¡Podemos inaugurar juntos nuevas huertas comunitarias! Si hay espacios disponibles en tu barrio o si <strong>quieres regalarnos un espacio</strong> de tu patio. También puedes ofrecerte a mantener huertas existentes.</p>
 			</div>
 			<form className='formHuertasSection' onSubmit={handleSubmit(enviarDatos)}>
 				<div>
@@ -85,42 +85,53 @@ function DonateHuertas() {
 					</span>
 				</div>
 				<div>
-					<p className='titleForms'>Selecciona tu región</p>
-					<select
-						className='selectFormHuertas'
-						name="region"
-						ref={
-							register({
-								required: { value: true, message: 'Ingrese su identificación' }
-							})
-						}
-					>
-						<option>no</option>
-						<option>se</option>
-						<option>cuales</option>
-					</select>
-					<span className='erorsText'>
-						{errors?.region?.message}
-					</span>
-				</div>
-				<div>
-					<p className='titleForms'>¿En qué comuna te encuentras?</p>
-					<select
-						className='selectFormHuertas'
-						name="comuna"
-						ref={
-							register({
-								required: { value: true, message: 'Ingrese su comuna' },
-							})
-						}
-					>
-						<option>Springfield</option>
-						<option>P.Sherman calle wallabi</option>
-					</select>
-					<span className='erorsText'>
-						{errors?.comuna?.message}
-					</span>
-				</div>
+          <p className='titleFormsEducation'>Selecciona tu región</p>
+          <select
+            className='selectFormEducation'
+            name="region"
+            ref={
+              register({
+                required: { value: true, message: 'Ingrese su region' }
+              })
+            }
+          >
+            <option>I Región de Tarapacá</option>
+            <option>II Región de Antofagasta</option>
+            <option>III Región de Atacama</option>
+            <option>IV Región de Coquimbo</option>
+            <option>V Región de Valparaíso</option>
+            <option>VI Región del Libertador General Bernardo O’Higgins</option>
+            <option>VII Región del Maule</option>
+            <option>VIII Región del Biobío</option>
+            <option>IX Región de La Araucanía</option>
+            <option>X Región de Los Lagos</option>
+            <option>XI Región Aysén del General Carlos Ibáñez del Campo</option>
+            <option>XII Región de Magallanes y Antártica Chilena</option>
+            <option selected>Región Metropolitana de Santiago</option>
+            <option>XIV Región de Los Ríos</option>
+            <option>XV Región de Arica y Parinacota</option>
+            <option>XVI Región de Ñuble</option>
+          </select>
+          <span className='erorsText'>
+            {errors?.region?.message}
+          </span>
+        </div>
+        <div>
+          <p className='titleFormsEducation'>¿En qué comuna te encuentras?</p>
+          <input
+            className='inputsFormEducation'
+            name="comuna"
+            ref={
+              register({
+                required: { value: true, message: 'Ingrese comuna' },
+              })
+            }
+            placeholder="Ingrese su comuna"
+          />
+          <span className='erorsText'>
+            {errors?.comuna?.message}
+          </span>
+        </div>
 				<div className='textandCheckbox'>
 					<p className='titleFormsCheckbox'><input
 						className='formCheckbox'

@@ -16,7 +16,6 @@
     text-align: start;
 }
 .containerActivitySection:focus{
- 
         outline: -webkit-focus-ring-color auto 1px;
         outline-color: -webkit-focus-ring-color;
         outline-style: auto;
@@ -52,6 +51,7 @@ display: none
 .h2Carrousel{
 background-color: white;
 width: 100%;
+height: 185px;
 }
 
 
@@ -70,4 +70,12 @@ width: 100%;
 }
 .footerframe{
 width: 100%;
+}
+
+
+@media screen and (min-width:1024px){
+    .titleActSecs{
+        font-size: 30px;
+        margin-left: 80px;
+    }
 }

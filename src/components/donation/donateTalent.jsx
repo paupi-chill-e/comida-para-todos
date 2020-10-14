@@ -21,19 +21,19 @@ function DonateTalent() {
 
   return (
     <Fragment>
-      <div className='sectionTitleText'>
-      <div className='containerBannerForm'>
+      <div className='sectionTitleTextTalent'>
+      <div className='containerBannerFormTalent'>
           <img src={banner} className='bannerForm' />
         </div>
-        <h2 className='marginTopForm'>¿Cómo funciona?</h2>
-        <p className='text'>Cuéntanos a qué te dedicas o cuál es tu pasión, buscaremos la manera de que puedas ejercerlo al servicio de las comunidades que apoyamos.</p>
-        <br />
-        <h2 className=''>¿Cómo puedo ayudar?</h2>
-        <p className='text'>Desde realizar la contabilidad para una pyme, hasta hacer un show de stand-up en un comedor solidario de la red <strong>¡Dinos cuál es tu talento!</strong></p>
+        <h2 className='marginTopFormTalent'>¿Cómo funciona?</h2>
+        <p className='textTalent'>Cuéntanos a qué te dedicas o cuál es tu pasión, buscaremos la manera de que puedas ejercerlo al servicio de las comunidades que apoyamos.</p>
+        <br/>
+        <h2 className='marginTopFormTalent2'>¿Cómo puedo ayudar?</h2>
+        <p className='textTalent'>Desde realizar la contabilidad para una pyme, hasta hacer un show de stand-up en un comedor solidario de la red <strong>¡Dinos cuál es tu talento!</strong></p>
       </div>
       <form className='formTalentSection' onSubmit={handleSubmit(datos)}>
         <div>
-          <p className='titleForms'>Nombre completo</p>
+          <p className='titleFormsTalent'>Nombre completo</p>
           <input placeholder='Ej. Juan Perez Abarca'
             className='inputsFormTalent'
             name='nombreCompleto'
@@ -51,7 +51,7 @@ function DonateTalent() {
           </span>
         </div>
         <div>
-          <p className='titleForms'>Selecciona tu región</p>
+          <p className='titleFormsTalent'>Selecciona tu región</p>
           <select name='region'
             className='selectFormTalent'
             ref={
@@ -71,7 +71,7 @@ function DonateTalent() {
           </span>
         </div>
         <div>
-          <p className='titleForms'>Déjanos tu correo</p>
+          <p className='titleFormsTalent'>Déjanos tu correo</p>
           <input placeholder='Ej. juanpereza@gmail.com'
             className='inputsFormTalent'
             name='correo'
@@ -88,7 +88,7 @@ function DonateTalent() {
           </span>
         </div>
         <div>
-          <p className='titleForms'>Número de contacto</p>
+          <p className='titleFormsTalent'>Número de contacto</p>
           <input placeholder='+569 XXXX XXXX'
             className='inputsFormTalent'
             name='numeroTelefonico'
@@ -113,7 +113,7 @@ function DonateTalent() {
           </span>
         </div>
         <div>
-          <p className='titleForms'>¿En qué comuna te encuentras?</p>
+          <p className='titleFormsTalent'>¿En qué comuna te encuentras?</p>
           <select className='selectFormTalent'
             name='comuna'
             ref={
@@ -132,7 +132,7 @@ function DonateTalent() {
           </span>
         </div>
         <div>
-          <p className='titleForms'>¿Qué talento te gustaría ejercer en pos de nuestros beneficiarios?</p>
+          <p className='titleFormsTalent'>¿Qué talento te gustaría ejercer en pos de nuestros beneficiarios?</p>
           <textarea
             placeholder='Ej. Soy diseñador y me gustaría desarrollar logos para los emprendedores de la red'
             className='inputTextFormTalent'
@@ -140,7 +140,7 @@ function DonateTalent() {
             ref={register} />
         </div>
         <div>
-          <p className='titleForms'>¿Cúal es tu disponibilidad horaria?</p>
+          <p className='titleFormsTalent'>¿Cúal es tu disponibilidad horaria?</p>
           <input type='text'
             placeholder='Ej. Lunes y Miércoles desde las 16hrs'
             className='inputsFormTalent'
@@ -148,14 +148,14 @@ function DonateTalent() {
             ref={register} />
         </div>
         <div>
-          <p className='titleForms'>Coméntanos cualquier detalle que consideres necesario</p>
+          <p className='titleFormsTalent'>Coméntanos cualquier detalle que consideres necesario</p>
           <textarea
             placeholder='Ej. Necesitaré conversar con los emprendedores para crear un logo acorde a su negocio'
             className='inputTextFormTalent'
             name='detalle'
             ref={register} />
         </div>
-        <button className='btnSubmitForm' type="submit">ENVIAR FORMULARIO</button>
+        <button className=' btnTalent' type="submit">ENVIAR FORMULARIO</button>
       </form>
     </Fragment>
   );

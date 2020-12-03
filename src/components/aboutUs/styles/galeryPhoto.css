@@ -1,0 +1,18 @@
+.sectionGaleryPhotos{
+    margin:30px 16px 0px 16px;
+    display: flex;
+    flex-flow: column nowrap;
+}
+.titleGalery{
+    font-size: 16px;
+}
+.carousel{
+    margin-top:16px ;
+}
+.carouselContainer{
+    width: 100%;    
+}
+.imgGalery{
+    width: 168px;
+    height: 160px;
+}

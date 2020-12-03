@@ -1,0 +1,84 @@
+.imgActivity{
+  height: 100px;
+  width: 100px;
+ 
+}
+.eachColab{
+  height: 100px;
+  width: 100px;
+}
+.textActivitySection{
+    background-color: #F4F4F4;
+}
+
+.containerActivitySection{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+    margin: 1.5rem 0px;
+    background-color: #F4F4F4;
+    text-align: start;
+}
+.containerActivitySection:focus{
+        outline: -webkit-focus-ring-color auto 1px;
+        outline-color: -webkit-focus-ring-color;
+        outline-style: auto;
+        outline-width: 1px
+}
+
+.btnhref{
+border: none;
+}
+
+.textActivitySection{
+    display: flex;
+    flex-flow: column nowrap;
+    margin: 16px 16px;
+    margin-top: 3.5rem ;
+    text-align: start;
+}
+.instagram-media-instagram-media-rendered{
+    width: 100%;
+    height: 12rem;
+    border: 1px  rgba(0,0,0,.2);
+    
+}
+.text-center.hid.btn.btn-primary.btn-xs.design_2.js-hide-if-pos{
+  display: none
+}
+
+#editMe{
+    display: none
+}
+
+.h2Carrousel{
+background-color: white;
+width: 100%;
+height: 185px;
+}
+
+.titleActSec{
+    text-align: start;
+}
+.bottomTextInsta{
+    font-style: italic;
+    font-size: 16px;
+    color: #929292;
+    font-weight: lighter;
+    text-align: start;
+}
+.titleActSecs{
+    margin-left: 16px;
+}
+.footerframe{
+width: 100%;
+}
+
+
+@media screen and (min-width:1024px){
+    .titleActSecs{
+        font-size: 30px;
+        margin-left: 80px;
+    }
+
+}
